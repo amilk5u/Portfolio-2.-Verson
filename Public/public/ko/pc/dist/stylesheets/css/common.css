@@ -156,7 +156,7 @@ label, button { cursor: pointer; }
 
 .sec1 .title_cont { position: relative; z-index: 1; top: 350px; }
 
-.sec1 h1 { position: relative; font-size: 185px; font-weight: 500; font-family: "Faktum", Arial, Apple SD Gothic Neo, sans-serif; letter-spacing: -10px; }
+.sec1 h1 { position: relative; font-size: 185px; font-weight: 400; font-family: "Faktum", Arial, Apple SD Gothic Neo, sans-serif; letter-spacing: -10px; }
 
 .sec1 .slogan_txt { position: absolute; top: -32%; left: 20%; font-size: 12px; font-family: "YoonGothicPro750", Arial, Apple SD Gothic Neo, sans-serif; }
 
@@ -182,7 +182,7 @@ label, button { cursor: pointer; }
 
 .sec2 .cont_wrap { max-width: 1680px; position: relative; margin: 0 auto; padding: 300px 0; }
 
-.sec2 .txt_wrap h1 { width: 60%; font-size: 80px; font-family: "Faktum", Arial, Apple SD Gothic Neo, sans-serif; font-weight: 400; letter-spacing: -3px; }
+.sec2 .txt_wrap h1 { width: 47%; font-size: 74px; font-family: "Faktum", Arial, Apple SD Gothic Neo, sans-serif; font-weight: 400; letter-spacing: -5px; }
 
 .sec2 .txt_wrap p { font-family: "YoonGothicPro750", Arial, Apple SD Gothic Neo, sans-serif; line-height: 38px; font-size: 19px; letter-spacing: -0.5px; }
 

@@ -7,7 +7,7 @@
 	width: 100%; height: 980px;/* background-color: pink; */
 	.cont_wrap { max-width: 1680px; position: relative; margin: 0 auto; }
 	.title_cont { position: relative; z-index: 1; top: 350px; }
-	h1 { position: relative; font-size: 185px; font-weight: 500; font-family: $Faktum; letter-spacing: -10px;}
+	h1 { position: relative; font-size: 185px; font-weight: $regular; font-family: $Faktum; letter-spacing: -10px;}
 	.slogan_txt { 
 		position: absolute; top: -32%; left: 20%; font-size: 12px; font-family: $YoonGothicPro750;
 		em { color: red; }
@@ -32,7 +32,7 @@
 	width: 100%; background-color: #ccc;
 	.cont_wrap { max-width: 1680px; position: relative; margin: 0 auto; padding: 300px 0; }
 	.txt_wrap {
-		h1 { width: 60%; font-size: 80px; font-family: $Faktum; font-weight: 400; letter-spacing: -3px; }
+		h1 { width: 47%; font-size: 74px; font-family: $Faktum; font-weight: $regular; letter-spacing: -5px; }
 		p { 
 			font-family: $YoonGothicPro750; line-height: 38px; font-size: 19px; letter-spacing: -0.5px;
 			span { display: block; padding: 30px 0 0; }
