@@ -3,16 +3,16 @@
  
 </br>
 
-## 📝 Service Introduce
+## 😜 Service Introduce
 
 </br>
 
-## 🛠 Technology 
+## ⚙ Technology 
 `HTML`, `CSS`, `Javascript`, `sass`, `gulp`, `jQuery`
 
 </br>
 
-## ✒ Part
+## 📲 Part
 - 개인 프로젝트 (디자인 & UI $ 개발 100%)
 
 </br>
