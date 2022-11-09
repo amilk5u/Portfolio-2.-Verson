@@ -1,8 +1,4 @@
 # Portfolio-2.-Verson
-프로젝트 모음 포트폴리오 / Portfolio / 합격가즈아!
-
-
-# Portfolio-2.-Verson
 
 - 프로젝트 모음 포트폴리오 / Portfolio / 합격가즈아!
 
