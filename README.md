@@ -1,7 +1,5 @@
 # Portfolio-2.-Verson
-**프로젝트 모음 포트폴리오 / Portfolio / 합격가즈아!**
-
-Demo : [Appliance Finder UK](https://www.lg.com/uk/washing-machine/appliance-finder)
+<u>**프로젝트 모음 포트폴리오 / Portfolio / 합격가즈아!**</u>
  
 </br>
 
