@@ -51,58 +51,49 @@ function main() {
 
 
 
-      let ddd = '+=' + ($('#lg').height() - window.innerHeight)
-      // console.log(ddd)
-      // console.log($('#lg').height() - window.innerHeight)
       let corporationTimeline = gsap.timeline({
          scrollTrigger: {
             markers: { startColor: "green", endColor: "green" },
             trigger: ".bg_wrap",
-            pin: true,
+            // pin: true,
             scrub: true,
-            start: "top top",
-            end: ddd
+            start: "top-=" + window.innerHeight,
+            end: '+=' + ($('#lg').height() + window.innerHeight *2)
          }
       });
       // 2350
       //3195
-      // corporationTimeline.to('.lg_img', 2, { scale: 1.2 })
-      // corporationTimeline.to('.lg_img', 2, { opacity: 0, delay: -2 })
-      // corporationTimeline.to('.msfk_img', 2, { opacity: 1, delay: -2 })
-      // corporationTimeline.to('.msfk_img', 2, { scale: 1.2, delay: -2 })
+      corporationTimeline.to('.lg_img', { scale: 1.5, duration: 2 })
+      corporationTimeline.to('.msfk_img', { scale: 1.5, delay: -2, duration: 2 })
 
-      corporationTimeline.to('.lg_img', 10, { scale: 1.2 },"-=20")
-      corporationTimeline.to('.lg_img',1.5, { opacity: 0 },"-=12")
-      corporationTimeline.to('.msfk_img',1.5, { opacity: 1 },"-=12")
-      corporationTimeline.to('.msfk_img', 5, { scale: 1.2 },"-=12")
+      // corporationTimeline.to('.lg_img', 10, { scale: 1.2 },"-=20")
+      // corporationTimeline.to('.lg_img',1.5, { opacity: 0 },"-=12")
+      // corporationTimeline.to('.msfk_img',1.5, { opacity: 1 },"-=12")
+      // corporationTimeline.to('.msfk_img', 5, { scale: 1.2 },"-=12")
 
-      // let corporationTimeline = gsap.timeline({
-      // 	scrollTrigger: {
-      // 		trigger: "#lgContents img",
-      // 		// pin: '.sec3',   // pin the trigger element while active
-      // 		start: "top top", // when the top of the trigger hits the top of the viewport
-      // 		end: "+=3000", // end after scrolling 500px beyond the start
-      // 		scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-      // 		markers: { startColor: "red", endColor: "red" },
-      // 		// snap: {
-      // 		// 	snapTo: "labels", // snap to the closest label in the timeline
-      // 		// 	duration: { min: 0.2, max: 3 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
-      // 		// 	delay: 0.2, // wait 0.2 seconds from the last scroll event before doing the snapping
-      // 		// 	ease: "power1.inOut" // the ease of the snap animation ("power3" by default)
-      // 		// }
-      // 	}
-      // });
-
-      // corporationTimeline.to('#lgContents img', { scale: 1.5 })
+      let corporationTimeline1 = gsap.timeline({
+         scrollTrigger: {
+            markers: { startColor: "red", endColor: "red" },
+            trigger: ".bg_wrap",
+            pin: true,
+            scrub: true,
+            start: "top+=80",
+            end: '+=' + ($('#lg').height() - window.innerHeight -160)
+         }
+      });
 
 
-      // $window.scroll(function(){
-      // 	if (winSc > 2800) {
-      // 		// console.log('true')
-      // 		// $('#lgContents').css('position','fixed')
-      // 	}
 
+      $(window).scroll(function () {
+         if (winSc > 3340) {
+            gsap.to($('.lg_img'), .4, { opacity: 0 })
+            gsap.to($('.msfk_img'), .4, { opacity: 1 })
+         } else {
+            gsap.to($('.lg_img'), .4, { opacity: 1 })
+            gsap.to($('.msfk_img'), .4, { opacity: 0 })
+         }
 
+      });
    }
 
 

@@ -160,7 +160,7 @@ label, button { cursor: pointer; }
 
 .sec1 .title_cont { position: relative; z-index: 1; top: 350px; }
 
-.sec1 h1 { position: relative; font-size: 185px; font-weight: 400; letter-spacing: -10px; }
+.sec1 h1 { width: 80%; position: relative; font-size: 185px; font-weight: 400; letter-spacing: -10px; }
 
 .sec1 .slogan_txt { position: absolute; top: -32%; left: 20%; font-size: 12px; /* font-family: $YoonGothicPro750; */ }
 
@@ -178,7 +178,7 @@ label, button { cursor: pointer; }
 
 .sec1 .painting_deo .box1 { width: 150px; height: 150px; top: -4%; right: 28%; }
 
-.sec1 .painting_deo .box2 { width: 110px; height: 200px; top: 41%; right: -8%; }
+.sec1 .painting_deo .box2 { width: 200px; height: 240px; top: 41%; left: 70%; background: url(./../../images/main/img3.png) 0 0 repeat; }
 
 .sec1 .painting_deo .box3 { width: 250px; height: 120px; bottom: -2%; left: 7%; }
 
@@ -206,7 +206,7 @@ label, button { cursor: pointer; }
 
 .sec3 .txt_wrap { width: max-content; margin: 0 auto; color: #fff; }
 
-.sec3 .txt_wrap strong { font-size: 80px; font-weight: 400; font-family: "NeueMachina", "YoonGothicPro750", Arial, Apple SD Gothic Neo, sans-serif; }
+.sec3 .txt_wrap strong { font-size: 120px; font-weight: 400; font-family: "NeueMachina", "YoonGothicPro750", Arial, Apple SD Gothic Neo, sans-serif; }
 
 .sec3 .txt_wrap p { font-size: 20px; }
 
@@ -220,11 +220,13 @@ label, button { cursor: pointer; }
 
 .sec3 .lg_content .msfk_wrap { position: relative; overflow: hidden; padding: 300px 0 500px; }
 
-.sec3 .lg_content .box_cont { padding: 50px 0 0; }
+.sec3 .lg_content .box_cont { width: 1200px; margin: 0 auto; padding: 50px 0 0; }
 
-.sec3 .lg_content .box_cont .cont_elm { width: 750px; height: 650px; background-color: white; margin: 0 auto; }
+.sec3 .lg_content .box_cont .cont_elm { width: 695px; height: 750px; background-color: white; margin: 0 auto; }
 
-.sub1 section { height: 3000px; }
+.ddd { display: block; width: 100%; height: 100%; background-size: cover; background-repeat: no-repeat; background-position: 0 0; animation: minime_animation_pc 25s steps(1) backwards; animation-play-state: paused; animation-iteration-count: initial; animation-duration: 25s; }
+
+@keyframes minime_animation_pc {}.sub1 section { height: 3000px; }
 
 .sub1 .sec2 { height: 3000px; position: relative; background-color: pink; overflow: hidden; }
 
