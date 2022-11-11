@@ -23,6 +23,102 @@ $window.load(function () {
 function layout() {
 }
 function main() {
+
+	function main1() {
+
+
+		var swiper = new Swiper(".mySwiper", {
+			slidesPerView: 2.3,
+			spaceBetween: 450,
+			centeredSlides: true,
+			speed: 2000,
+			pagination: {
+				el: ".swiper-pagination",
+				clickable: true,
+			},
+			pagination: {
+				clickable: true,
+			},
+			on: {
+				slideChange: function () {
+					// console.log(this, '출발')
+				},
+				slideChangeTransitionEnd: function () {
+					// console.log(this, '도착')
+				},
+			}
+		});
+
+
+
+		let ddd = '+=' + $('#lg').height()
+		// console.log(ddd)
+		// let corporationTimeline = gsap.timeline({
+		// 	scrollTrigger: {
+		// 		markers: { startColor: "blue", endColor: "blue" },
+		// 		trigger: ".box1",
+		// 		pin: true,
+		// 		scrub: true,
+		// 		start: "top top",
+		// 		end: ddd
+		// 	}
+		// });
+		// corporationTimeline.to('.box1', { scale: 1.2 })
+
+
+		let corporationTimeline = gsap.timeline({
+			scrollTrigger: {
+				// trigger: ".box1",
+				// pin: '.box1',   // pin the trigger element while active
+				// start: "top top", // when the top of the trigger hits the top of the viewport
+				// // end: "+=500", // end after scrolling 500px beyond the start
+				// scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+				markers: { startColor: "blue", endColor: "blue" },
+				// // snap: {
+				// // 	snapTo: "labels", // snap to the closest label in the timeline
+				// // 	duration: { min: 0.2, max: 3 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
+				// // 	delay: 0.2, // wait 0.2 seconds from the last scroll event before doing the snapping
+				// // 	ease: "power1.inOut" // the ease of the snap animation ("power3" by default)
+				// // }
+				trigger: ".box1",
+				pin: true,
+				scrub: true,
+				start: "top top",
+				end: 2000
+			}
+		});
+		corporationTimeline.to('.box1', { scale: 1.2 })
+
+		// let corporationTimeline = gsap.timeline({
+		// 	scrollTrigger: {
+		// 		trigger: "#lgContents img",
+		// 		// pin: '.sec3',   // pin the trigger element while active
+		// 		start: "top top", // when the top of the trigger hits the top of the viewport
+		// 		end: "+=3000", // end after scrolling 500px beyond the start
+		// 		scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+		// 		markers: { startColor: "red", endColor: "red" },
+		// 		// snap: {
+		// 		// 	snapTo: "labels", // snap to the closest label in the timeline
+		// 		// 	duration: { min: 0.2, max: 3 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
+		// 		// 	delay: 0.2, // wait 0.2 seconds from the last scroll event before doing the snapping
+		// 		// 	ease: "power1.inOut" // the ease of the snap animation ("power3" by default)
+		// 		// }
+		// 	}
+		// });
+
+		// corporationTimeline.to('#lgContents img', { scale: 1.5 })
+
+
+		// $window.scroll(function(){
+		// 	if (winSc > 2800) {
+		// 		// console.log('true')
+		// 		// $('#lgContents').css('position','fixed')
+		// 	}
+
+
+	}
+
+
 	/* (start) smoothScroll	*/
 	smoothScroll(".container");
 	function smoothScroll(content, viewport, smoothness) {
@@ -96,8 +192,54 @@ function main() {
 	/* (end) smoothScroll	*/
 
 
+	let ddd = '+=' + $('.sec2').height()
+	function sub1() {
+		let corporationTimeline = gsap.timeline({
+			scrollTrigger: {
+				// trigger: ".box1",
+				// pin: '.box1',   // pin the trigger element while active
+				// start: "top top", // when the top of the trigger hits the top of the viewport
+				// // end: "+=500", // end after scrolling 500px beyond the start
+				// scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+				markers: { startColor: "blue", endColor: "blue" },
+				// // snap: {
+				// // 	snapTo: "labels", // snap to the closest label in the timeline
+				// // 	duration: { min: 0.2, max: 3 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
+				// // 	delay: 0.2, // wait 0.2 seconds from the last scroll event before doing the snapping
+				// // 	ease: "power1.inOut" // the ease of the snap animation ("power3" by default)
+				// // }
+				trigger: ".box1",
+				pin: true,
+				scrub: true,
+				start: "top top",
+				end: ddd
+			}
+		});
+		corporationTimeline.to('.box1', { scale: 1.2 })
+
+	}
 
 
+	var $sections = document.querySelectorAll(".horizon_box");
+	var tl = gsap.timeline({
+		scrollTrigger: {
+			trigger: "#section2",
+			pin: true,
+			scrub: 0.3,
+			start: "top top",
+			end: "+=3000"
+		}
+	});
+	tl.to($sections, { xPercent: -100, duration: 2, ease: "none", stagger: 3 })
+		.to({}, { duration: 1 });
+
+
+	if ($('.container').hasClass('sub1')) {
+		sub1()
+	}
+	if ($('.container').hasClass('main1')) {
+		main1()
+	}
 
 
 

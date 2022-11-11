@@ -7,18 +7,18 @@
 	width: 100%; height: 980px;/* background-color: pink; */
 	.cont_wrap { max-width: 1680px; position: relative; margin: 0 auto; }
 	.title_cont { position: relative; z-index: 1; top: 350px; }
-	h1 { position: relative; font-size: 185px; font-weight: $regular; font-family: $Faktum; letter-spacing: -10px;}
+	h1 { position: relative; font-size: 185px; font-weight: $regular; letter-spacing: -10px;}
 	.slogan_txt { 
-		position: absolute; top: -32%; left: 20%; font-size: 12px; font-family: $YoonGothicPro750;
+		position: absolute; top: -32%; left: 20%; font-size: 12px; /* font-family: $YoonGothicPro750; */
 		em { color: red; }
 		>span { display: block; padding: 10px 0 0; }
 	}
 	.main_grid_line {
-		width: 50%; height: auto; position: absolute; right: 0; top: 60px; border: 3px solid black;
+		width: 50%; height: auto; position: absolute; right: 0; top: 60px; border: 1px solid black; /* opacity: .2; */
 		@include boxSizing;
 		.img_wrap {
-			width: 840px; height: 840px; background-color: blue; top: 50%;
-			img { width: 100%; }
+			width: 840px; height: 840px; top: 50%;
+			img { width: 100%; /* opacity: .5; */ }
 		}
 	}
 	.painting_deo {
@@ -29,29 +29,118 @@
 	}
 }
 .sec2 {
-	width: 100%; background-color: #ccc;
+	width: 100%;
 	.cont_wrap { max-width: 1680px; position: relative; margin: 0 auto; padding: 300px 0; }
 	.txt_wrap {
-		h1 { width: 47%; font-size: 74px; font-family: $Faktum; font-weight: $regular; letter-spacing: -5px; }
+		h1 { 
+			width: 47%; font-size: 74px; font-weight: $regular; letter-spacing: -5px; 
+			span { color: rgb(105, 65, 250); }
+		}
 		p { 
-			font-family: $YoonGothicPro750; line-height: 38px; font-size: 19px; letter-spacing: -0.5px;
+			/* font-family: $YoonGothicPro750; */ line-height: 38px; font-size: 19px; letter-spacing: -0.5px;
 			span { display: block; padding: 30px 0 0; }
 		}
 	}
 }
 
 .sec3 {
-	width: 100%; height:2100px;
-	background-color: blue;
+	width: 100%; height:2100px; position: relative;
+	.slide_wrap {		
+		// position: relative; overflow: hidden;
+		// > img { 
+		// 	position: absolute; top: 0; left: 0;
+		// 	z-index: -1;
+		// 	// @include scale(2);
+		// }
+		// > video { width: 100%; position: absolute; top: 0; left: 0; }
+		// .mySwiper {
+		// 	// margin: 500px 0;
+		// 	.swiper-slide {
+		// 		height: 800px; background-color: pink;
+		// 	}	
+		// }
+	}
+	// .bg_wrap {
+	// 	position: absolute; top: 0; left: 0;
+	// }
+	.lg_content {
+		height: 3000px; position: relative; background-color: pink;
+		overflow: hidden;
+		.box1 {
+			width:100%; height:100vh;
+			background-color: red; 
+			position: absolute; top:0; left:0;
+			// > img { width:100%; }
+			// > video { width: 100%; height:100%; position: absolute; top: 0; left: 0; }
+			background:url(./../../images/main/img4.jpg) 50% 50% no-repeat;
+			background-size: cover;
+		}
+		.box2 {
+			width:100px; height:100px;
+			background-color: black;
+			position: absolute; top: 20%; left:50%; z-index: 2;
+		}
+		.box3 {
+			width:100px; height:100px;
+			background-color: black;
+			position: absolute; top: 50%; left:50%; z-index: 2;
+		}
+		.box4 {
+			width:100px; height:100px;
+			background-color: black;
+			position: absolute; top: 70%; left:50%; z-index: 2;
+		}
+
+
+
+
+
+
+
+
+
+		.txt_wrap {
+			width: max-content; margin: 0 auto;
+			strong { font-size: 80px; font-weight: $regular; font-family: $NeueMachina; }
+			p { font-size: 20px; }
+		} 
+		.box_cont { 
+			padding: 200px 0 500px;
+		}
+	}
+	.msfk_content {}
+
 }
 
 // 연습 페이지
 .sub1 {
-	.wrap {
-		width: 100%; height: 100%;
-	}
-	.box1 {
-		width:100%; height:100px;
-		background-color: red;
+	section { height: 3000px; }
+	.sec2 {
+		height: 3000px; position: relative; background-color: pink;
+		overflow: hidden;
+		.box1 {
+			width:100%; height:100vh;
+			background-color: red; 
+			position: absolute; top:0; left:0;
+			// > img { width:100%; }
+			// > video { width: 100%; height:100%; position: absolute; top: 0; left: 0; }
+			background:url(./../../images/main/img4.jpg) 50% 50% no-repeat;
+			background-size: cover;
+		}
+		.box2 {
+			width:100px; height:100px;
+			background-color: black;
+			position: absolute; top: 20%; left:50%; z-index: 2;
+		}
+		.box3 {
+			width:100px; height:100px;
+			background-color: black;
+			position: absolute; top: 50%; left:50%; z-index: 2;
+		}
+		.box4 {
+			width:100px; height:100px;
+			background-color: black;
+			position: absolute; top: 70%; left:50%; z-index: 2;
+		}
 	}
 }
