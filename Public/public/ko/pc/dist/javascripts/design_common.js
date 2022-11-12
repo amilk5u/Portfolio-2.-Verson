@@ -25,7 +25,13 @@ function layout() {
 function main() {
 
 	function main1() {
-
+		let ddd = [];
+		$('.main_grid_line line').each(function(i, index){
+			// console.log(i, $(this), index)
+			ddd.push($(this))
+		})
+		console.log(ddd)
+		TweenMax.staggerTo(ddd, .5, { 'stroke-dashoffset': 0 }, 0.07);
 
 		var swiper = new Swiper(".mySwiper", {
 			slidesPerView: 2.3,
@@ -48,8 +54,6 @@ function main() {
 				},
 			}
 		});
-
-
 
 		let corporationTimeline = gsap.timeline({
 			scrollTrigger: {
@@ -83,30 +87,19 @@ function main() {
 			}
 		});
 
-
-
-		$(window).scroll(function () {
-			// if (winSc > 3800 && winSc < 5000) {
-			//    gsap.to($('.lg_img'), .4, { opacity: 0 })
-			//    gsap.to($('.msfk_img'), .4, { opacity: .2 })
-			//    gsap.to($('.msfk_wrap .txt_wrap'), .4, { color: 'black' })
-			// } else {
-			//    gsap.to($('.lg_img'), .4, { opacity: 1 })
-			//    gsap.to($('.msfk_img'), .4, { opacity: 0 })
-			// 	gsap.to($('.msfk_wrap .txt_wrap'), .4, { color: 'white' })
-			// }
+		$window.scroll(function () {
 			if (winSc < 5000) {
 				gsap.to($('.lg_img'), .4, { opacity: 1 })
 				gsap.to($('.msfk_img'), .4, { opacity: 0 })
 				gsap.to($('.hyosung_img'), .4, { opacity: 0 })
 				// gsap.to($('.lg_wrap .txt_wrap'), .4, { color: 'white' })
-			} else if ( winSc >= 5000 && winSc < 6100) {
+			} else if (winSc >= 5000 && winSc < 6100) {
 				gsap.to($('.msfk_img'), .4, { opacity: 1 })
 				gsap.to($('.lg_img'), .4, { opacity: 0 })
 				gsap.to($('.hyosung_img'), .4, { opacity: 0 })
 				// gsap.to($('.msfk_wrap .txt_wrap'), .4, { color: 'white' })
-				
-			} else if ( winSc >= 6100) {
+
+			} else if (winSc >= 6100) {
 				gsap.to($('.hyosung_img'), .4, { opacity: 1 })
 				gsap.to($('.msfk_img'), .4, { opacity: 0 })
 				gsap.to($('.lg_img'), .4, { opacity: 0 })
