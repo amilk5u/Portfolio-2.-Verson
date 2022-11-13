@@ -24,10 +24,12 @@
 		width: 50%; height: auto; position: absolute; right: 0; top: 60px; /* border: 1px solid black; */ /* opacity: .2; */
 		@include boxSizing;
 		svg {
-			width: 840px; height: 840px;
+			width: 850px; height: 850px;
+			// background-color: #ccc;
 			line { 
-				stroke: black;
-				fill :none;
+				stroke: rgb(207, 207, 207);
+				stroke-width: 2px;
+				fill :none; 
 				stroke-miterlimit:10;
 				stroke-dasharray: 420;
 				stroke-dashoffset: 420;

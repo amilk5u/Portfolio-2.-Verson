@@ -1,13 +1,12 @@
 function main() {
 
 	function main1() {
-		let ddd = [];
-		$('.main_grid_line line').each(function(i, index){
-			// console.log(i, $(this), index)
-			ddd.push($(this))
-		})
-		console.log(ddd)
-		TweenMax.staggerTo(ddd, .5, { 'stroke-dashoffset': 0 }, 0.07);
+		// intro line SVG Motion (인트로 라인 모션)
+		for (let i = 0; i < $('.main_grid_line svg g').length; i++) {
+			for (let j = 0; j < $('.main_grid_line svg g').eq(i).find('line').length; j++) {
+				TweenMax.staggerTo($('.main_grid_line svg g').eq(i).find('line').eq(j), .9, { 'stroke-dashoffset': 0 }, .5);
+			}
+		}
 
 		var swiper = new Swiper(".mySwiper", {
 			slidesPerView: 2.3,
