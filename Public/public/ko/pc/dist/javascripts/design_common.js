@@ -25,12 +25,59 @@ function layout() {
 function main() {
 
 	function main1() {
-		// intro line SVG Motion (인트로 라인 모션)
-		for (let i = 0; i < $('.main_grid_line svg g').length; i++) {
-			for (let j = 0; j < $('.main_grid_line svg g').eq(i).find('line').length; j++) {
-				TweenMax.staggerTo($('.main_grid_line svg g').eq(i).find('line').eq(j), .9, { 'stroke-dashoffset': 0 }, .5);
-			}
+		let lineLeftTop = [];
+		let lineLeftBottom = [];
+		let lineRightTop = [];
+		let lineRightBottom = [];
+
+		let mLeftTop = [];
+		let mLeftBottom = [];
+		let mRightTop = [];
+		let mRightBottom = [];
+		$('.main_grid_line .m_right_top line').each(function () {
+			mRightTop.push($(this))
+		})
+		$('.main_grid_line .m_left_top line').each(function () {
+			mLeftTop.push($(this))
+		})
+		$('.main_grid_line .m_left_bottom line').each(function () {
+			mLeftBottom.push($(this))
+		})
+		$('.main_grid_line .m_right_bottom line').each(function () {
+			mRightBottom.push($(this))
+		})
+
+		let introLineSVG1 = [lineLeftTop, lineLeftBottom, lineRightTop, lineRightBottom];
+		let introLineSVG2 = [mLeftTop, mLeftBottom, mRightTop, mRightBottom];
+		$('.main_grid_line .line_left_top line').each(function () {
+			lineLeftTop.push($(this))
+		})
+		$('.main_grid_line .line_left_bottom line').each(function () {
+			lineLeftBottom.push($(this))
+		})
+		$('.main_grid_line .line_right_top line').each(function () {
+			lineRightTop.push($(this))
+		})
+		$('.main_grid_line .line_right_bottom line').each(function () {
+			lineRightBottom.push($(this))
+		})
+		for (let i = 0; i < $('.line_wrap').length; i++) {
+			TweenMax.staggerTo(introLineSVG1[i], 2, { 'stroke-dashoffset': 0, ease: Expo.easeInOut, }, .2);
+			TweenMax.staggerTo(introLineSVG2[i], 2, { 'stroke-dashoffset': 0, ease: Expo.easeInOut }, .2);
 		}
+
+		// TweenMax.staggerTo(mLeftTop, 1, { 'stroke-dashoffset': 0 }, .1);
+		// TweenMax.staggerTo(mLeftBottom, 1, { 'stroke-dashoffset': 0 }, .1);
+		// TweenMax.staggerTo(mRightTop, 1, { 'stroke-dashoffset': 0 }, .1);
+		// TweenMax.staggerTo(mRightBottom, 1, { 'stroke-dashoffset': 0 }, .1);
+
+		// const sec1ContainerTimeLine = gsap.timeline();
+
+		// for (let i = 0; i < $('.main_grid_line svg g').length; i++) {
+		// 	// console.log($('.main_grid_line svg g').eq(i).find('line').eq(0))
+		// 	sec1ContainerTimeLine.to($('.main_grid_line svg g').eq(i).find('line').eq(0), .5, { 'stroke-dashoffset': 0 })
+
+		// }
 
 		var swiper = new Swiper(".mySwiper", {
 			slidesPerView: 2.3,
