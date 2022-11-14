@@ -24,7 +24,7 @@ function layout() {
 }
 function main() {
 
-	function main1() {		
+	function main1() {
 		gsap.to($('.star_svg'), 1, { 'scale': 1, ease: Expo.easeInOut }, .2);
 		gsap.to($('.circle_svg ellipse'), 1.5, { 'stroke-dashoffset': 0, ease: Expo.easeInOut });
 
@@ -45,11 +45,32 @@ function main() {
 		$('.col_line_bottom span').each(function () {
 			introLineSVG4.push($(this))
 		})
-		
+
 		TweenMax.staggerTo(introLineSVG1, 1, { 'width': '100%', ease: Expo.easeInOut }, .15);
 		TweenMax.staggerTo(introLineSVG2, 1, { 'width': '100%', ease: Expo.easeInOut }, .15);
 		TweenMax.staggerTo(introLineSVG3, 1, { 'width': '100%', ease: Expo.easeInOut }, .15);
 		TweenMax.staggerTo(introLineSVG4, 1, { 'width': '100%', ease: Expo.easeInOut }, .15);
+
+
+
+
+
+		// console.log($('.painting_deo .box2').css('backgroundPosition', '100px'))
+
+		let i = 0;
+		let interval = setInterval(callback, 300);
+		function callback() {
+			i++
+			$('.deco_box').css('backgroundPosition', '-=192px')
+			if (i > 8) {
+				i = 0;
+				$('.deco_box').css('backgroundPosition', '0')
+			}
+			console.log(i)
+		}
+
+
+
 
 
 		var swiper = new Swiper(".mySwiper", {
