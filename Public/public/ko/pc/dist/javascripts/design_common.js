@@ -24,60 +24,33 @@ function layout() {
 }
 function main() {
 
-	function main1() {
-		let lineLeftTop = [];
-		let lineLeftBottom = [];
-		let lineRightTop = [];
-		let lineRightBottom = [];
+	function main1() {		
+		gsap.to($('.star_svg'), 1, { 'scale': 1, ease: Expo.easeInOut }, .2);
+		gsap.to($('.circle_svg ellipse'), 1.5, { 'stroke-dashoffset': 0, ease: Expo.easeInOut });
 
-		let mLeftTop = [];
-		let mLeftBottom = [];
-		let mRightTop = [];
-		let mRightBottom = [];
-		$('.main_grid_line .m_right_top line').each(function () {
-			mRightTop.push($(this))
-		})
-		$('.main_grid_line .m_left_top line').each(function () {
-			mLeftTop.push($(this))
-		})
-		$('.main_grid_line .m_left_bottom line').each(function () {
-			mLeftBottom.push($(this))
-		})
-		$('.main_grid_line .m_right_bottom line').each(function () {
-			mRightBottom.push($(this))
-		})
 
-		let introLineSVG1 = [lineLeftTop, lineLeftBottom, lineRightTop, lineRightBottom];
-		let introLineSVG2 = [mLeftTop, mLeftBottom, mRightTop, mRightBottom];
-		$('.main_grid_line .line_left_top line').each(function () {
-			lineLeftTop.push($(this))
+		let introLineSVG1 = [];
+		$('.row_line_top span').each(function () {
+			introLineSVG1.unshift($(this))
 		})
-		$('.main_grid_line .line_left_bottom line').each(function () {
-			lineLeftBottom.push($(this))
+		let introLineSVG2 = [];
+		$('.row_line_bottom span').each(function () {
+			introLineSVG2.push($(this))
 		})
-		$('.main_grid_line .line_right_top line').each(function () {
-			lineRightTop.push($(this))
+		let introLineSVG3 = [];
+		$('.col_line_top span').each(function () {
+			introLineSVG3.unshift($(this))
 		})
-		$('.main_grid_line .line_right_bottom line').each(function () {
-			lineRightBottom.push($(this))
+		let introLineSVG4 = [];
+		$('.col_line_bottom span').each(function () {
+			introLineSVG4.push($(this))
 		})
-		for (let i = 0; i < $('.line_wrap').length; i++) {
-			TweenMax.staggerTo(introLineSVG1[i], 2, { 'stroke-dashoffset': 0, ease: Expo.easeInOut, }, .2);
-			TweenMax.staggerTo(introLineSVG2[i], 2, { 'stroke-dashoffset': 0, ease: Expo.easeInOut }, .2);
-		}
+		
+		TweenMax.staggerTo(introLineSVG1, 1, { 'width': '100%', ease: Expo.easeInOut }, .15);
+		TweenMax.staggerTo(introLineSVG2, 1, { 'width': '100%', ease: Expo.easeInOut }, .15);
+		TweenMax.staggerTo(introLineSVG3, 1, { 'width': '100%', ease: Expo.easeInOut }, .15);
+		TweenMax.staggerTo(introLineSVG4, 1, { 'width': '100%', ease: Expo.easeInOut }, .15);
 
-		// TweenMax.staggerTo(mLeftTop, 1, { 'stroke-dashoffset': 0 }, .1);
-		// TweenMax.staggerTo(mLeftBottom, 1, { 'stroke-dashoffset': 0 }, .1);
-		// TweenMax.staggerTo(mRightTop, 1, { 'stroke-dashoffset': 0 }, .1);
-		// TweenMax.staggerTo(mRightBottom, 1, { 'stroke-dashoffset': 0 }, .1);
-
-		// const sec1ContainerTimeLine = gsap.timeline();
-
-		// for (let i = 0; i < $('.main_grid_line svg g').length; i++) {
-		// 	// console.log($('.main_grid_line svg g').eq(i).find('line').eq(0))
-		// 	sec1ContainerTimeLine.to($('.main_grid_line svg g').eq(i).find('line').eq(0), .5, { 'stroke-dashoffset': 0 })
-
-		// }
 
 		var swiper = new Swiper(".mySwiper", {
 			slidesPerView: 2.3,

@@ -7,7 +7,7 @@
 #intro {
 	width: 100%; height: 980px;/* background-color: pink; */
 	.cont_wrap { max-width: 1680px; position: relative; margin: 0 auto; }
-	.title_cont { position: relative; z-index: 1; top: 350px; }
+	.title_cont { position: relative; z-index: 1; top: 470px; }
 	h1 { 
 		width: 80%; position: relative; font-size: 185px; font-weight: $regular; letter-spacing: -10px; 
 		em {
@@ -16,36 +16,47 @@
 		}
 	}
 	.slogan_txt { 
-		position: absolute; top: -32%; left: 20%; font-size: 12px; /* font-family: $YoonGothicPro750; */
+		position: absolute; top: -70%; left: 20%; font-size: 12px; /* font-family: $YoonGothicPro750; */
 		em { color: red; }
-		>span { display: block; padding: 10px 0 0; }
+		> span { display: block; padding: 10px 0 0; }
 	}
 	.main_grid_line {
-		width: 50%; height: auto; position: absolute; right: 0; top: 60px; /* border: 1px solid black; */ /* opacity: .2; */
+		max-width: 840px; max-height: 840px; position: absolute; right: 0; top: 50px; /* border: 1px solid black; *//* opacity: .2; */
 		@include boxSizing;
-		svg {
-			width: 850px; height: 850px;
-			// background-color: #ccc;
-			line { 
-				stroke: rgb(207, 207, 207);
-				stroke-width: 2px;
-				fill :none; 
-				stroke-miterlimit:10;
-				stroke-dasharray: 420;
-				stroke-dashoffset: 420;
-			}
-			/* path { 
-				stroke: black;
-				fill :none;
-				stroke-miterlimit:10;
-				stroke-dasharray: 420;
-				stroke-dashoffset: 420;
-			} */
+		.circle_svg {
+			width: 239px; height: 240px; position: absolute; bottom: 0; right: 0;
+			ellipse { stroke: rgb(207, 207, 207); stroke-width: 2px; fill: #edece5; stroke-miterlimit: 10; stroke-dasharray: 750; stroke-dashoffset: 750; }
 		}
-		/* .img_wrap {
-			width: 840px; height: 840px; top: 50%;
-			img { width: 100%; }
+		.star_svg {
+			width: 124px; height: 122px; position: absolute; top: 297px; right: 175px;
+			@include scale(0);
+			path { stroke: rgb(207, 207, 207); stroke-width: 2px; fill: #edece5; stroke-miterlimit: 10; stroke-dasharray: 395; stroke-dashoffset: 0; }
+		}
+		.grid_line {
+			width: 100%; height: 100%; position: relative;
+			> img { width: 100%; opacity: 0; }
+			.grid_wrap { width: 100%; height: 100%; position: absolute; top: 0; left: 0; }
+			.row_line {
+				width: 100%; height: 100%;
+				> div { width: 100%; height: auto; }
+				span { display: block; width: 0; height: 2px; background-color:  rgb(207, 207, 207); margin: 0 auto 14%; }
+			}
+			.col_line {
+				width: 100%; height: 100%;
+				@include rotate(90);
+				> div { width: 100%; height: auto; }
+				span { display: block; width: 0; height: 2px; background-color:  rgb(207, 207, 207); margin: 0 auto 14%; }
+			}
+		}
+	/* 	.grid_line_svg {
+			width: 850px; height: 850px;
+			line { stroke: rgb(207, 207, 207); stroke-width: 2px; fill: none; stroke-miterlimit: 10; stroke-dasharray: 420; stroke-dashoffset: 420; }
 		} */
+		.img_wrap {
+			width: 599px; height: 602px; position: absolute; top: 119px; left: -118px;
+			background-color: #ccc;
+			img { width: 100%; }
+		}
 	}
 	.painting_deo {
 		> .deco_box { position: absolute; background-color: black; }
