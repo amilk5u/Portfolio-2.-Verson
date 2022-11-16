@@ -88,7 +88,7 @@ template { display: none; }
 
 [hidden] { display: none; }
 
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; }
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; text-transform: uppercase; }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
 
@@ -108,7 +108,7 @@ table { width: 100%; text-align: left; border-collapse: collapse; border-spacing
 /* Input - color setting */
 /* Button - color setting */
 /** BASE SETTING */
-#project .slide_wrap .cont:after { content: " "; display: block; clear: both; }
+#introduce .top_elm:after, #project .slide_wrap .cont:after { content: " "; display: block; clear: both; }
 
 @media only screen and (max-width: 768px) { html { font-size: 18px !important; } }
 
@@ -148,7 +148,7 @@ select::-ms-expand, input::-ms-expand, button::-ms-expand, textarea::-ms-expand 
 
 html, body { font-family: "Faktum", "YoonGothicPro750", Arial, Apple SD Gothic Neo, sans-serif; font-size: 20px; font-weight: 400; color: #000; word-break: keep-all; line-height: 1; letter-spacing: 0; -webkit-font-smoothing: antialiased; }
 
-strong, h1, h2, h3, h4, h5, h6 { font-weight: 600; }
+strong, h1, h2, h3, h4, h5, h6 { font-weight: 600; text-transform: uppercase; }
 
 label, button { cursor: pointer; }
 
@@ -222,23 +222,51 @@ label, button { cursor: pointer; }
 /* (start) section 2 - introduce */
 #introduce { width: 100%; }
 
-#introduce .cont_wrap { max-width: 1680px; position: relative; margin: 0 auto; padding: 400px 0; }
+#introduce .top_elm { padding: 400px 0 0; position: relative; }
 
-#introduce .txt_wrap h1 { font-size: 74px; font-weight: 400; letter-spacing: -5px; }
+#introduce .top_elm .small_img { width: 400px; position: absolute; left: 0; top: 280px; }
 
-#introduce .txt_wrap h1 span { color: #6941fa; }
+#introduce .top_elm .small_img img { width: 100%; }
 
-#introduce .txt_wrap p { /* font-family: $YoonGothicPro750; */ line-height: 38px; font-size: 19px; letter-spacing: -0.5px; }
+#introduce .top_elm .small_img span { position: absolute; top: -29px; right: 0; font-family: "NeueMachina", "YoonGothicPro750", Arial, Apple SD Gothic Neo, sans-serif; }
 
-#introduce .txt_wrap p span { display: block; padding: 30px 0 0; }
+#introduce .top_elm .img_wrap { width: 800px; float: right; position: relative; }
 
-#introduce .img_wrap { width: 650px; height: 700px; margin: 445px 0 0; background-color: blue; }
+#introduce .top_elm .img_wrap span { position: absolute; bottom: -29px; left: 0; font-family: "NeueMachina", "YoonGothicPro750", Arial, Apple SD Gothic Neo, sans-serif; }
 
-#introduce .img_wrap img { width: 100%; }
+#introduce .top_elm .img_wrap img { width: 100%; }
 
-#introduce .deco_cont { position: absolute; right: 290px; top: 520px; }
+#introduce .top_elm .img_wrap em { position: absolute; left: -20px; font-size: 30px; }
 
-#introduce .deco_cont span { font-size: 130px; }
+#introduce .top_elm .txt_wrap { float: left; margin: 150px 0 0 150px; }
+
+#introduce .top_elm .txt_wrap h1 { font-size: 74px; font-weight: 400; letter-spacing: -5px; }
+
+#introduce .top_elm .txt_wrap h1 span { color: #6941fa; }
+
+#introduce .top_elm .txt_wrap p { /* font-family: $YoonGothicPro750; */ line-height: 38px; font-size: 19px; letter-spacing: -0.5px; }
+
+#introduce .top_elm .txt_wrap p span { display: block; padding: 30px 0 0; }
+
+#introduce .btm_elm { padding: 300px 0 0; }
+
+#introduce .btm_elm ul.icon_wrap { max-width: 1200px; height: 1000px; position: relative; margin: 0 auto; background-color: red; }
+
+#introduce .btm_elm li.icon_cont { width: 200px; height: 200px; position: absolute; border: 2px solid black; }
+
+#introduce .btm_elm li.icon_cont:nth-of-type(1) { top: 5%; left: 8%; }
+
+#introduce .btm_elm li.icon_cont:nth-of-type(2) { top: 35%; left: 22%; }
+
+#introduce .btm_elm li.icon_cont:nth-of-type(3) { top: 0; right: 0; }
+
+#introduce .btm_elm li.icon_cont:nth-of-type(4) { top: 19%; right: 26%; }
+
+#introduce .btm_elm li.icon_cont:nth-of-type(5) { top: 58%; left: 0%; }
+
+#introduce .btm_elm li.icon_cont:nth-of-type(6) { top: 49%; right: 10%; }
+
+#introduce .btm_elm li.icon_cont:nth-of-type(7) { top: 73%; left: 37%; }
 
 /* (end) section 2 - introduce */
 /* (start) section 3 - project */
