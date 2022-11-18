@@ -42,7 +42,7 @@ function main() {
 				i = 0;
 				$('.deco_box').css('backgroundPosition', '0')
 			}
-			console.log(i)
+			// console.log(i)
 		}
 
 
@@ -71,27 +71,39 @@ function main() {
 			}
 		});
 
+		// 소개글 핀 트리거
+		let corporationTimeline2 = gsap.timeline({
+			scrollTrigger: {
+				markers: { startColor: "blue", endColor: "blue" },
+				// trigger: ".bg_wrap",
+				trigger: "#project .intro_wrap",
+				pin: true,
+				scrub: true,
+				start: "top+=80",
+				end: '+=' + 2500
+			}
+		});
+		corporationTimeline2.to('.bg_wrap', { opacity: 1, duration: 1 })
+		corporationTimeline2.to('#project .intro_wrap .txt_wrap', { opacity: 1, duration: 1 })
+		corporationTimeline2.to('.btm_elm', { opacity: 1, duration: 4 })
+
+		// 이미지 확대 트리거
 		let corporationTimeline = gsap.timeline({
 			scrollTrigger: {
 				markers: { startColor: "green", endColor: "green" },
 				trigger: ".bg_wrap",
 				// pin: true,
 				scrub: true,
-				start: "top-=" + window.innerHeight,
-				end: '+=' + ($('#lg').height() + window.innerHeight * 2)
+				start: "top top",
+				end: '+=' + ($('#project').outerHeight() + window.innerHeight * 2 + 2500)
 			}
 		});
-		// 2350
-		//3195
-		corporationTimeline.to('.lg_img', { scale: 1.3, duration: 1 })
-		corporationTimeline.to('.msfk_img', { scale: 1.3, delay: -0.8, duration: 1 })
-		corporationTimeline.to('.hyosung_img', { scale: 1.3, delay: -0.8, duration: 1 })
+		corporationTimeline.to('.intro_img', { scale: 1.5, duration: 1 })
+		corporationTimeline.to('.lg_img', { scale: 1.5, delay: -0.8, duration: 1 })
+		corporationTimeline.to('.msfk_img', { scale: 1.5, delay: -0.8, duration: 1 })
+		corporationTimeline.to('.hyosung_img', { scale: 1.5, delay: -0.8, duration: 1 })
 
-		// corporationTimeline.to('.lg_img', 10, { scale: 1.2 },"-=20")
-		// corporationTimeline.to('.lg_img',1.5, { opacity: 0 },"-=12")
-		// corporationTimeline.to('.msfk_img',1.5, { opacity: 1 },"-=12")
-		// corporationTimeline.to('.msfk_img', 5, { scale: 1.2 },"-=12")
-
+		// bg_wrap 핀 거는 트리거
 		let corporationTimeline1 = gsap.timeline({
 			scrollTrigger: {
 				markers: { startColor: "red", endColor: "red" },
@@ -99,33 +111,38 @@ function main() {
 				pin: true,
 				scrub: true,
 				start: "top+=80",
-				end: '+=' + ($('#lg').height() - window.innerHeight - 160)
+				end: '+=' + ($('#project').outerHeight() - window.innerHeight - 160 + 2500)
 			}
 		});
 
+
 		$window.scroll(function () {
-			if (winSc < 5000) {
+			if (winSc < 7245) {
+				gsap.to($('.intro_img'), .4, { opacity: 1 })
+				gsap.to($('.lg_img'), .4, { opacity: 0 })
+				gsap.to($('.msfk_img'), .4, { opacity: 0 })
+				gsap.to($('.hyosung_img'), .4, { opacity: 0 })
+			} else if (winSc >= 7245 && winSc < 8500) {
+				gsap.to($('.intro_img'), .4, { opacity: 0 })
 				gsap.to($('.lg_img'), .4, { opacity: 1 })
 				gsap.to($('.msfk_img'), .4, { opacity: 0 })
 				gsap.to($('.hyosung_img'), .4, { opacity: 0 })
-				// gsap.to($('.lg_wrap .txt_wrap'), .4, { color: 'white' })
-			} else if (winSc >= 5000 && winSc < 6100) {
+			} else if (winSc >= 8500 && winSc < 9600) {
+				gsap.to($('.intro_img'), .4, { opacity: 0 })
 				gsap.to($('.msfk_img'), .4, { opacity: 1 })
 				gsap.to($('.lg_img'), .4, { opacity: 0 })
 				gsap.to($('.hyosung_img'), .4, { opacity: 0 })
-				// gsap.to($('.msfk_wrap .txt_wrap'), .4, { color: 'white' })
-
-			} else if (winSc >= 6100) {
+			} else if (winSc >= 9600) {
+				gsap.to($('.intro_img'), .4, { opacity: 0 })
 				gsap.to($('.hyosung_img'), .4, { opacity: 1 })
 				gsap.to($('.msfk_img'), .4, { opacity: 0 })
 				gsap.to($('.lg_img'), .4, { opacity: 0 })
-				// gsap.to($('.hyosung_wrap .txt_wrap'), .4, { color: 'black' })
 			} else {
+				gsap.to($('.intro_img'), .4, { opacity: 0 })
 				gsap.to($('.lg_img'), .4, { opacity: 0 })
 				gsap.to($('.msfk_img'), .4, { opacity: 0 })
 				gsap.to($('.lg_img'), .4, { opacity: 0 })
 			}
-
 		});
 	}
 

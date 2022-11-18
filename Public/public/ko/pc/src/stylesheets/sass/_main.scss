@@ -1,15 +1,16 @@
 @charset "UTF-8";
 
 /* container */
-.container { width: 100%; height: 9000px; background-color: #edece5; }
+.container { width: 100%; background-color: #f9f6e7; padding: 0 0 1000px; }
 
 /* (start) section 1 - intro */
 #intro {
 	width: 100%; height: 980px;/* background-color: pink; */
 	.cont_wrap { max-width: 1680px; position: relative; margin: 0 auto; }
-	.title_cont { position: relative; z-index: 1; top: 470px; }
+	.title_cont { position: relative; z-index: 1; top: 218px; left: 144px; }
 	h1 { 
-		width: 80%; position: relative; font-size: 185px; font-weight: $regular; letter-spacing: -10px; 
+		width: max-content; position: relative; font-size: 230px; font-weight: $regular; letter-spacing: -10px; line-height: 199px;
+		span { position: relative; left: -106px; }
 		em {
 			width: 177px; display: inline-block; position: relative; top: 26px;
 			img { width: 100%; }
@@ -25,12 +26,12 @@
 		@include boxSizing;
 		.circle_svg {
 			width: 239px; height: 240px; position: absolute; bottom: 0; right: 0;
-			ellipse { stroke: rgb(207, 207, 207); stroke-width: 2px; fill: #edece5; stroke-miterlimit: 10; stroke-dasharray: 750; stroke-dashoffset: 750; }
+			ellipse { stroke: rgb(207, 207, 207); stroke-width: 2px; fill: #f9f6e7; stroke-miterlimit: 10; stroke-dasharray: 750; stroke-dashoffset: 750; }
 		}
 		.star_svg {
 			width: 124px; height: 122px; position: absolute; top: 297px; right: 175px;
 			@include scale(0);
-			path { stroke: rgb(207, 207, 207); stroke-width: 2px; fill: #edece5; stroke-miterlimit: 10; stroke-dasharray: 395; stroke-dashoffset: 0; }
+			path { stroke: rgb(207, 207, 207); stroke-width: 2px; fill: #f9f6e7; stroke-miterlimit: 10; stroke-dasharray: 395; stroke-dashoffset: 0; }
 		}
 		.grid_line {
 			width: 100%; height: 100%; position: relative; z-index: -1;
@@ -53,9 +54,7 @@
 			line { stroke: rgb(207, 207, 207); stroke-width: 2px; fill: none; stroke-miterlimit: 10; stroke-dasharray: 420; stroke-dashoffset: 420; }
 		} */
 		.img_wrap {
-			width: 599px; height: 602px; position: absolute; top: 119px; left: -118px;
-			background-color: #eee;
-			overflow: hidden;
+			width: 526px; height: 382px; position: absolute; top: 187px; left: -45px; background-color: #eee; overflow: hidden;
 			.img { width: 100%; height: 100%; position: absolute; top: 0; left: 0; }
 			img { 
 				width: 100%; 
@@ -131,98 +130,118 @@
 			}
 		}
 	}
+	.more_elm {
+		.tit_wrap {
+			width: 100%;
+			strong { display: block; text-align: center; margin: 0 auto; font-weight: $regular; font-size: 151px; letter-spacing: -10px; line-height: 121px; }
+			em { position: relative; top: -7px; left: 9px; font-family: $Faktum; font-size: 126px; }
+			span { width: max-content; display: block; margin: 0 auto; }
+		}
+	}
 }
 /* (end) section 2 - introduce */
 
 /* (start) section 3 - project */
 #project {
-	width: 100%; /* height:2100px; */ position: relative;
-	// 소개글
-	.cont_wrap { max-width: 1680px; position: relative; margin: 0 auto; padding: 300px 0; }
-
-	// 프로젝트 모음
-	.slide_wrap {		
-		position: relative; overflow: hidden;
-		.bg_wrap {
+	width: 100%; position: relative; overflow: hidden;/*  margin: 0 0 2000px; */
+	.hidden_wrap {
+		width: 100%; height: 100vh; position: absolute; top: 0; z-index: -1;
+		.hiden_txt {
+			width: 200px; height: 200px; position: absolute; background-color: red;
+			&:nth-of-type(1) { top: 40%; left: 20%; }
+			&:nth-of-type(2) { top: 0; left: 0; }
+			&:nth-of-type(3) { top: 50%; right: 0; }
+		}
+	}
+	.bg_wrap {
+		width: 100%; height: 100vh; position: absolute; top: 0; left: 0; opacity: 0;
+		.intro_img {
+			position: absolute; top:0;
 			width:100%; height:100vh;
-			position: absolute; top:0; left:0;
-			.lg_img {
-				position: absolute; top:0;
-				width:100%; height:100vh;
-				background:url(./../../images/main/img4.jpg) 50% 50% no-repeat;
-				background-size: cover;
-			}
-			.msfk_img {
-				position: absolute; top:0;
-				width:100%; height:100vh;
-				background:url(./../../images/main/img6.jpg) 50% 50% no-repeat;
-				background-size: cover;
-				opacity: 0;
-			}
-			.hyosung_img {
-				position: absolute; top:0;
-				width:100%; height:100vh;
-				background:url(./../../images/main/img5.jpg) 50% 50% no-repeat;
-				background-size: cover;
-				opacity: 0;
-			}
+			background:url(./../../images/main/intro-2.jpg) 50% 50% no-repeat;
+			background-size: cover;
 		}
-		.box_cont {
-         width: 1600px; margin: 0 auto; position: relative;
-			// display: flex;
-         .cont_elm { 
-				width: 840px; height: 652px; background-color: white; margin: 0 auto; 
-				position: relative;
-				a { width: 100%; height: 100%; display: block; }
-				span { position: absolute; bottom: -40px; display: block; font-size: 30px; color: white; }
-			}
-      }
+		.lg_img {
+			position: absolute; top:0;
+			width:100%; height:100vh;
+			background:url(./../../images/main/img4.jpg) 50% 50% no-repeat;
+			background-size: cover;
+			opacity: 0;
+		}
+		.msfk_img {
+			position: absolute; top:0;
+			width:100%; height:100vh;
+			background:url(./../../images/main/img6.jpg) 50% 50% no-repeat;
+			background-size: cover;
+			opacity: 0;
+		}
+		.hyosung_img {
+			position: absolute; top:0;
+			width:100%; height:100vh;
+			background:url(./../../images/main/img5.jpg) 50% 50% no-repeat;
+			background-size: cover;
+			opacity: 0;
+		}
+	}
+	.box_cont {
+		width: 1600px; margin: 0 auto; position: relative;
+		// display: flex;
+		.cont_elm { 
+			width: 840px; height: 652px; background-color: white; margin: 0 auto; 
+			position: relative;
+			a { width: 100%; height: 100%; display: block; }
+			span { position: absolute; bottom: -40px; display: block; font-size: 30px; color: white; }
+		}
+	}
+	.txt_wrap {
+		width: max-content; position: absolute; margin: 0 auto; color: #fff; 
+		p { font-size: 16px; }
+		strong { font-size: 65px; font-weight: $medium; letter-spacing: -5px; padding: 10px 0 0; display: block; }
+	} 
+	.mySwiper {
+		.swiper-slide { height: 800px; background-color: pink; }
+	}
+	.content_wrap { padding: 0 0 500px; }
+	.cont {
+		padding: 500px 0 0;
+		@extend %clearfix;
+		&:first-of-type { padding: 0; }
+	}
+
+
+
+	// 개별
+	.intro_wrap {
+		height: 800px;
 		.txt_wrap {
-			width: max-content; position: absolute; margin: 0 auto; color: #fff; 
-			p { font-size: 16px; }
-			strong { font-size: 65px; font-weight: $medium; letter-spacing: -5px; padding: 10px 0 0; display: block; }
-		} 
-		.mySwiper {
-			.swiper-slide { height: 800px; background-color: pink; }
+			padding: 300px 0 0; opacity: 0;
 		}
-		.content_wrap { padding: 1000px 0; }
-		.cont {
-			padding: 500px 0 0;
-			@extend %clearfix;
-			&:first-of-type { padding: 0; }
+	}
+	.lg_wrap {
+		position: relative; /* overflow: hidden;  */
+		.txt_wrap { right: 935px; top: 114px; }
+		.cont_elm { 
+			float: right; 
+			span { left: 0; }
 		}
-
-
-
-		// 개별
-		.lg_wrap {
-         position: relative; /* overflow: hidden;  */
-			.txt_wrap { right: 935px; top: 114px; }
-			.cont_elm { 
-				float: right; 
-				span { left: 0; }
-			}
-      }
-      .msfk_wrap {
-         position: relative; /* overflow: hidden; */
-			.txt_wrap { left: 950px; top: 69px; }
-			.cont_elm { 
-				float: left; 
-				span { right: 0; }
-			}
-      }
-      .hyosung_wrap {
-         position: relative;/*  overflow: hidden; */
-			.txt_wrap { right: 935px; top: 114px; }
-			.cont_elm { 
-				float: right; 
-				span { left: 0; }
-			}
-      }
+	}
+	.msfk_wrap {
+		position: relative; /* overflow: hidden; */
+		.txt_wrap { left: 950px; top: 69px; }
+		.cont_elm { 
+			float: left; 
+			span { right: 0; }
+		}
+	}
+	.hyosung_wrap {
+		position: relative;/*  overflow: hidden; */
+		.txt_wrap { right: 935px; top: 114px; }
+		.cont_elm { 
+			float: right; 
+			span { left: 0; }
+		}
    
 	}
-   
-
 }
 /* (end) section 3 - project */
 
