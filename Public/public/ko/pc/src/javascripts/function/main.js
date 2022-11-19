@@ -27,13 +27,12 @@ function main() {
       TweenMax.staggerTo(introLineSVG4, 1, { 'width': '100%', ease: Expo.easeInOut }, .15);
 
 
-      let i = 0;
+      let num = 0; // position 초기값 0
+      let i = 0; // count
       let interval = setInterval(callback, 300);
       function callback() {
          i++
-         // document.querySelectorAll('.deco_box').css('backgroundPosition', '-=192px')
-         console.log('dddid')
-         document.querySelector('.deco_box').style.backgroundPosition = '-=' + 192 + 'px';
+         document.querySelector('.deco_box').style.backgroundPosition = (num -= 192) + 'px';
          if (i > 8) {
             i = 0;
             // document.querySelectorAll('.deco_box').css('backgroundPosition', '0')
@@ -113,15 +112,11 @@ function main() {
 
 
       window.addEventListener('scroll', (e) => {
-         // console.log(document.querySelectorAll('.btm_elm').offsetTop)
-
-         if (windowWidth > document.querySelector('.btm_elm').offsetTop - window.innerHeight / 2) {
-            TweenMax.staggerTo(document.querySelectorAll('.icon_cont'), .5, { opacity: 1 }, .2)
+         if (windowScrollTop > document.querySelector('.btm_elm').offsetTop - window.innerHeight / 2) {
+            // TweenMax.staggerTo(document.querySelectorAll('.icon_cont'), .5, { opacity: 1 }, .2)
          } else {
-            TweenMax.staggerTo(document.querySelectorAll('.icon_cont'), .5, { opacity: 0 }, .2)
+            // TweenMax.to(document.querySelectorAll('.icon_cont'), .5, { opacity: 0 })
          }
-
-         // console.log(document.querySelector('.lg_wrap').offsetTop)
 
          // if (windowWidth < 7245) {
          //    gsap.to($('.intro_img'), .4, { opacity: 1 })

@@ -10,6 +10,9 @@ function reportWindowSize() {
    // winW = _this.width();
    // winH = _this.height();
    // windowScrollTop = _this.scrollTop();
+   windowWidth = window.innerWidth;
+   windowHeight = window.innerHeight;
+   windowScrollTop = window.pageYOffset;
 
    // // _this.trigger("resize");
    window.addEventListener('resize', (e) => {
@@ -17,6 +20,8 @@ function reportWindowSize() {
       // console.log(e.currentTarget)
       // winW = _this.width();
       // winH = _this.height();
+      windowWidth = window.innerWidth;
+      windowHeight = window.innerHeight;
    });
 
    window.addEventListener('scroll', (e) => {
