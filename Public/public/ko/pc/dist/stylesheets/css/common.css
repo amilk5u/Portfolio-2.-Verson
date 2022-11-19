@@ -154,6 +154,8 @@ label, button { cursor: pointer; }
 
 .top { position: fixed; bottom: 0; left: 0; font-size: 50px; color: red; font-weight: 600; z-index: 9999; }
 
+header { display: none; }
+
 /* container */
 .container { width: 100%; background-color: #f9f6e7; padding: 0 0 1000px; }
 
@@ -164,13 +166,13 @@ label, button { cursor: pointer; }
 
 #intro .title_cont { position: relative; z-index: 1; top: 218px; left: 163px; }
 
-#intro h1 { width: max-content; position: relative; font-size: 230px; font-weight: 500; letter-spacing: -24px; line-height: 199px; }
+#intro h2 { width: max-content; position: relative; font-size: 230px; font-weight: 500; letter-spacing: -24px; line-height: 199px; }
 
-#intro h1 span { position: relative; left: -106px; }
+#intro h2 span { position: relative; left: -106px; }
 
-#intro h1 em { width: 177px; display: inline-block; position: relative; top: 26px; }
+#intro h2 em { width: 177px; display: inline-block; position: relative; top: 26px; }
 
-#intro h1 em img { width: 100%; }
+#intro h2 em img { width: 100%; }
 
 #intro .slogan_txt { position: absolute; top: -96px; left: 20%; font-size: 12px; }
 
@@ -228,31 +230,45 @@ label, button { cursor: pointer; }
 /* (start) section 2 - introduce */
 #introduce { width: 100%; }
 
-#introduce .top_elm { padding: 400px 0 0; position: relative; }
+#introduce .intro_elm { width: max-content; height: 1000px; }
 
-#introduce .top_elm .small_img { width: 400px; position: absolute; left: 0; top: 280px; }
+#introduce .intro_elm > div:nth-of-type(2) strong { color: black; }
+
+#introduce .intro_elm .txt_cont { width: max-content; }
+
+#introduce .intro_elm strong { font-size: 161px; display: block; letter-spacing: -8px; color: #f9f6e7; text-decoration: #ccc; text-shadow: 1px 1px 0 #ccc, -1px 1px 0 #ccc, 1px -1px 0 #ccc, -1px -1px 0 #ccc; }
+
+#introduce .intro_elm span { font-size: 19px; }
+
+#introduce .top_elm { position: relative; padding: 371px 0 0; }
+
+#introduce .top_elm .small_img { width: 400px; position: relative; float: left; }
 
 #introduce .top_elm .small_img img { width: 100%; }
 
 #introduce .top_elm .small_img span { position: absolute; top: -29px; right: 0; font-family: "NeueMachina", "YoonGothicPro750", Arial, Apple SD Gothic Neo, sans-serif; }
 
-#introduce .top_elm .img_wrap { width: 800px; float: right; position: relative; }
+#introduce .top_elm .right_wrap { width: 800px; position: relative; float: right; margin: 150px 0 0; }
 
-#introduce .top_elm .img_wrap span { position: absolute; bottom: -29px; left: 0; font-family: "NeueMachina", "YoonGothicPro750", Arial, Apple SD Gothic Neo, sans-serif; }
+#introduce .top_elm .right_wrap span.first_txt { font-size: 70px; margin: 181px; font-weight: 500; letter-spacing: -3px; text-shadow: 1px 1px 0 black, -1px 1px 0 black, 1px -1px 0 black, -1px -1px 0 black; color: #f9f6e7; word-break: break-all; }
 
-#introduce .top_elm .img_wrap img { width: 100%; }
+#introduce .top_elm .right_wrap span.bottom_txt { position: absolute; bottom: -29px; left: 0; font-family: "NeueMachina", "YoonGothicPro750", Arial, Apple SD Gothic Neo, sans-serif; }
 
-#introduce .top_elm .img_wrap em { position: absolute; left: -20px; font-size: 30px; }
+#introduce .top_elm .right_wrap .img_wrap img { width: 100%; }
 
 #introduce .top_elm .txt_wrap { float: left; margin: 150px 0 0 150px; }
 
-#introduce .top_elm .txt_wrap h1 { font-size: 74px; font-weight: 400; letter-spacing: -5px; }
+#introduce .top_elm .txt_wrap h2 { font-size: 74px; font-weight: 400; letter-spacing: -5px; }
 
-#introduce .top_elm .txt_wrap h1 span { color: #6941fa; }
+#introduce .top_elm .txt_wrap h2 span { color: #6941fa; }
 
 #introduce .top_elm .txt_wrap p { /* font-family: $YoonGothicPro750; */ line-height: 38px; font-size: 19px; letter-spacing: -0.5px; }
 
 #introduce .top_elm .txt_wrap p span { display: block; padding: 30px 0 0; }
+
+#introduce .top_elm .painting_deo > .deco_box { position: absolute; background-color: black; }
+
+#introduce .top_elm .painting_deo .box1 { width: 200px; height: 240px; top: 51%; left: 8%; background: url(./../../images/main/img3.png) 0 0 repeat; }
 
 #introduce .btm_elm { padding: 300px 0 0; }
 
@@ -471,6 +487,8 @@ label, button { cursor: pointer; }
 img { vertical-align: top; image-rendering: -webkit-optimize-contrast; }
 
 caption { width: 1px; height: 1px; overflow: hidden; margin: -1px; }
+
+strong { font-weight: 400; }
 
 .hidden-txt, legend { width: 0; height: 0; overflow: hidden; display: inline-block; text-indent: -9999px; line-height: 1px; position: absolute; }
 
