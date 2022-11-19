@@ -103,7 +103,7 @@ function main() {
 				trigger: "#project .intro_wrap",
 				pin: true,
 				scrub: true,
-				start: "top+=80",
+				start: "top top",
 				end: '+=' + 2500
 			}
 		});
@@ -134,8 +134,8 @@ function main() {
 				trigger: ".bg_wrap",
 				pin: true,
 				scrub: true,
-				start: "top+=80",
-				end: '+=' + ($('#project').outerHeight() - window.innerHeight - 160 + 2500)
+				start: "top top",
+				end: '+=' + ($('#project').outerHeight() - window.innerHeight + 2500)
 			}
 		});
 

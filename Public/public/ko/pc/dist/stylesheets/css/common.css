@@ -250,9 +250,13 @@ header { display: none; }
 
 #introduce .top_elm .right_wrap { width: 800px; position: relative; float: right; margin: 150px 0 0; }
 
-#introduce .top_elm .right_wrap span.first_txt { font-size: 70px; margin: 181px; font-weight: 500; letter-spacing: -3px; text-shadow: 1px 1px 0 black, -1px 1px 0 black, 1px -1px 0 black, -1px -1px 0 black; color: #f9f6e7; word-break: break-all; }
+#introduce .top_elm .right_wrap .first_txt { margin: 0 0 0 -179px; }
 
-#introduce .top_elm .right_wrap span.bottom_txt { position: absolute; bottom: -29px; left: 0; font-family: "NeueMachina", "YoonGothicPro750", Arial, Apple SD Gothic Neo, sans-serif; }
+#introduce .top_elm .right_wrap .first_txt span { font-size: 70px; margin: 0 0 0 181px; font-weight: 500; letter-spacing: -3px; text-shadow: 1px 1px 0 black, -1px 1px 0 black, 1px -1px 0 black,  -1px -1px 0 black; color: #f9f6e7; word-break: break-all; }
+
+#introduce .top_elm .right_wrap .first_txt em { display: block; margin: 20px 0 10px 181px; }
+
+#introduce .top_elm .right_wrap .bottom_txt { position: absolute; bottom: -29px; left: 0; font-family: "NeueMachina", "YoonGothicPro750", Arial, Apple SD Gothic Neo, sans-serif; }
 
 #introduce .top_elm .right_wrap .img_wrap img { width: 100%; }
 
