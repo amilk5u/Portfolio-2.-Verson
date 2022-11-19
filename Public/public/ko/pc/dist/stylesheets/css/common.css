@@ -164,7 +164,7 @@ label, button { cursor: pointer; }
 
 #intro .title_cont { position: relative; z-index: 1; top: 218px; left: 163px; }
 
-#intro h1 { width: max-content; position: relative; font-size: 230px; font-weight: 400; letter-spacing: -10px; line-height: 199px; }
+#intro h1 { width: max-content; position: relative; font-size: 230px; font-weight: 500; letter-spacing: -24px; line-height: 199px; }
 
 #intro h1 span { position: relative; left: -106px; }
 
