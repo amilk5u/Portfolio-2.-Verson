@@ -7,7 +7,7 @@
 #intro {
 	width: 100%; height: 980px;/* background-color: pink; */
 	.cont_wrap { max-width: 1680px; position: relative; margin: 0 auto; }
-	.title_cont { position: relative; z-index: 1; top: 218px; left: 144px; }
+	.title_cont { position: relative; z-index: 1; top: 218px; left: 163px; }
 	h1 { 
 		width: max-content; position: relative; font-size: 230px; font-weight: $regular; letter-spacing: -10px; line-height: 199px;
 		span { position: relative; left: -106px; }
@@ -17,7 +17,7 @@
 		}
 	}
 	.slogan_txt { 
-		position: absolute; top: -70%; left: 20%; font-size: 12px; /* font-family: $YoonGothicPro750; */
+		position: absolute; top: -96px; left: 20%; font-size: 12px; 
 		em { color: red; }
 		> span { display: block; padding: 10px 0 0; }
 	}
@@ -29,6 +29,11 @@
 			ellipse { stroke: rgb(207, 207, 207); stroke-width: 2px; fill: #f9f6e7; stroke-miterlimit: 10; stroke-dasharray: 750; stroke-dashoffset: 750; }
 		}
 		.star_svg {
+			width: 124px; height: 122px; position: absolute; top: 297px; right: 175px;
+			@include scale(0);
+			path { stroke: rgb(207, 207, 207); stroke-width: 2px; fill: #f9f6e7; stroke-miterlimit: 10; stroke-dasharray: 395; stroke-dashoffset: 0; }
+		}
+		.star_svg_1 {
 			width: 124px; height: 122px; position: absolute; top: 297px; right: 175px;
 			@include scale(0);
 			path { stroke: rgb(207, 207, 207); stroke-width: 2px; fill: #f9f6e7; stroke-miterlimit: 10; stroke-dasharray: 395; stroke-dashoffset: 0; }
@@ -54,7 +59,7 @@
 			line { stroke: rgb(207, 207, 207); stroke-width: 2px; fill: none; stroke-miterlimit: 10; stroke-dasharray: 420; stroke-dashoffset: 420; }
 		} */
 		.img_wrap {
-			width: 526px; height: 382px; position: absolute; top: 187px; left: -45px; background-color: #eee; overflow: hidden;
+			width: 360px; height: 215px; position: absolute; top: 361px; left: 1px; background-color: #eee; overflow: hidden;
 			.img { width: 100%; height: 100%; position: absolute; top: 0; left: 0; }
 			img { 
 				width: 100%; 
@@ -131,6 +136,7 @@
 		}
 	}
 	.more_elm {
+		margin: 300px 0 0;
 		.tit_wrap {
 			width: 100%;
 			strong { display: block; text-align: center; margin: 0 auto; font-weight: $regular; font-size: 151px; letter-spacing: -10px; line-height: 121px; }
@@ -158,7 +164,7 @@
 		.intro_img {
 			position: absolute; top:0;
 			width:100%; height:100vh;
-			background:url(./../../images/main/intro-2.jpg) 50% 50% no-repeat;
+			background:url(./../../images/main/dfy_main-project-bg.f4c565b2.jpg) 50% 50% no-repeat;
 			background-size: cover;
 		}
 		.lg_img {
@@ -217,30 +223,40 @@
 			padding: 300px 0 0; opacity: 0;
 		}
 	}
-	.lg_wrap {
-		position: relative; /* overflow: hidden;  */
-		.txt_wrap { right: 935px; top: 114px; }
-		.cont_elm { 
-			float: right; 
-			span { left: 0; }
+	.project_elm {
+		.lg_wrap {
+			position: relative; /* overflow: hidden;  */
+			.txt_wrap { right: 935px; top: 114px; }
+			.cont_elm { 
+				float: right; 
+				span { left: 0; }
+			}
+		}
+		.msfk_wrap {
+			position: relative; /* overflow: hidden; */
+			.txt_wrap { left: 950px; top: 69px; }
+			.cont_elm { 
+				float: left; 
+				span { right: 0; }
+			}
+		}
+		.hyosung_wrap {
+			position: relative;/*  overflow: hidden; */
+			.txt_wrap { right: 935px; top: 114px; }
+			.cont_elm { 
+				float: right; 
+				span { left: 0; }
+			}
 		}
 	}
-	.msfk_wrap {
-		position: relative; /* overflow: hidden; */
-		.txt_wrap { left: 950px; top: 69px; }
-		.cont_elm { 
-			float: left; 
-			span { right: 0; }
+	.last_wrap {
+		position: relative; margin: 600px 0 0;
+		.tit_wrap {
+			width: 100%; color: $white;
+			strong { display: block; text-align: center; margin: 0 auto; font-weight: $regular; font-size: 151px; letter-spacing: -10px; line-height: 121px; }
+			em { position: relative; top: -7px; left: 9px; font-family: $Faktum; font-size: 126px; }
+			span { width: max-content; display: block; margin: 0 auto; }
 		}
-	}
-	.hyosung_wrap {
-		position: relative;/*  overflow: hidden; */
-		.txt_wrap { right: 935px; top: 114px; }
-		.cont_elm { 
-			float: right; 
-			span { left: 0; }
-		}
-   
 	}
 }
 /* (end) section 3 - project */

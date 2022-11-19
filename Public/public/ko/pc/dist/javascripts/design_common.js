@@ -140,34 +140,34 @@ function main() {
 		});
 
 
-		$window.scroll(function () {
-			if (winSc < 7245) {
-				gsap.to($('.intro_img'), .4, { opacity: 1 })
-				gsap.to($('.lg_img'), .4, { opacity: 0 })
-				gsap.to($('.msfk_img'), .4, { opacity: 0 })
-				gsap.to($('.hyosung_img'), .4, { opacity: 0 })
-			} else if (winSc >= 7245 && winSc < 8500) {
-				gsap.to($('.intro_img'), .4, { opacity: 0 })
-				gsap.to($('.lg_img'), .4, { opacity: 1 })
-				gsap.to($('.msfk_img'), .4, { opacity: 0 })
-				gsap.to($('.hyosung_img'), .4, { opacity: 0 })
-			} else if (winSc >= 8500 && winSc < 9600) {
-				gsap.to($('.intro_img'), .4, { opacity: 0 })
-				gsap.to($('.msfk_img'), .4, { opacity: 1 })
-				gsap.to($('.lg_img'), .4, { opacity: 0 })
-				gsap.to($('.hyosung_img'), .4, { opacity: 0 })
-			} else if (winSc >= 9600) {
-				gsap.to($('.intro_img'), .4, { opacity: 0 })
-				gsap.to($('.hyosung_img'), .4, { opacity: 1 })
-				gsap.to($('.msfk_img'), .4, { opacity: 0 })
-				gsap.to($('.lg_img'), .4, { opacity: 0 })
-			} else {
-				gsap.to($('.intro_img'), .4, { opacity: 0 })
-				gsap.to($('.lg_img'), .4, { opacity: 0 })
-				gsap.to($('.msfk_img'), .4, { opacity: 0 })
-				gsap.to($('.lg_img'), .4, { opacity: 0 })
-			}
-		});
+		// $window.scroll(function () {
+		// 	if (winSc < 7245) {
+		// 		gsap.to($('.intro_img'), .4, { opacity: 1 })
+		// 		gsap.to($('.lg_img'), .4, { opacity: 0 })
+		// 		gsap.to($('.msfk_img'), .4, { opacity: 0 })
+		// 		gsap.to($('.hyosung_img'), .4, { opacity: 0 })
+		// 	} else if (winSc >= 7245 && winSc < 8500) {
+		// 		gsap.to($('.intro_img'), .4, { opacity: 0 })
+		// 		gsap.to($('.lg_img'), .4, { opacity: 1 })
+		// 		gsap.to($('.msfk_img'), .4, { opacity: 0 })
+		// 		gsap.to($('.hyosung_img'), .4, { opacity: 0 })
+		// 	} else if (winSc >= 8500 && winSc < 9600) {
+		// 		gsap.to($('.intro_img'), .4, { opacity: 0 })
+		// 		gsap.to($('.msfk_img'), .4, { opacity: 1 })
+		// 		gsap.to($('.lg_img'), .4, { opacity: 0 })
+		// 		gsap.to($('.hyosung_img'), .4, { opacity: 0 })
+		// 	} else if (winSc >= 9600) {
+		// 		gsap.to($('.intro_img'), .4, { opacity: 0 })
+		// 		gsap.to($('.hyosung_img'), .4, { opacity: 1 })
+		// 		gsap.to($('.msfk_img'), .4, { opacity: 0 })
+		// 		gsap.to($('.lg_img'), .4, { opacity: 0 })
+		// 	} else {
+		// 		gsap.to($('.intro_img'), .4, { opacity: 0 })
+		// 		gsap.to($('.lg_img'), .4, { opacity: 0 })
+		// 		gsap.to($('.msfk_img'), .4, { opacity: 0 })
+		// 		gsap.to($('.lg_img'), .4, { opacity: 0 })
+		// 	}
+		// });
 	}
 
 
