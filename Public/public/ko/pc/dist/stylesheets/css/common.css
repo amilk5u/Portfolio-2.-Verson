@@ -336,7 +336,7 @@ label, button { cursor: pointer; }
 
 #project .intro_wrap { height: 800px; }
 
-#project .intro_wrap .txt_wrap { padding: 300px 0 0; opacity: 0; display: none; }
+#project .intro_wrap .txt_wrap { padding: 300px 0 0; opacity: 0; }
 
 #project .project_elm .lg_wrap { position: relative; /* overflow: hidden;  */ }
 
