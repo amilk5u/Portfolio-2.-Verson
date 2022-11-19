@@ -164,7 +164,7 @@ header { display: none; }
 
 #intro .cont_wrap { max-width: 1680px; position: relative; margin: 0 auto; }
 
-#intro .title_cont { position: relative; z-index: 1; top: 218px; left: 163px; }
+#intro .title_cont { display: inline-block; position: relative; z-index: 1; top: 218px; left: 163px; }
 
 #intro h2 { width: max-content; position: relative; font-size: 230px; font-weight: 500; letter-spacing: -24px; line-height: 199px; }
 
@@ -324,7 +324,7 @@ header { display: none; }
 
 #project .bg_wrap { width: 100%; height: 100vh; position: absolute; top: 0; left: 0; opacity: 0; }
 
-#project .bg_wrap .intro_img { position: absolute; top: 0; width: 100%; height: 100vh; background: url(./../../images/main/dfy_main-project-bg.f4c565b2.jpg) 50% 50% no-repeat; background-size: cover; }
+#project .bg_wrap .intro_img { position: absolute; top: 0; width: 100%; height: 100vh; background: url(./../../images/main/03_1.09beb2ef.jpg) 50% 50% no-repeat; background-size: cover; }
 
 #project .bg_wrap .lg_img { position: absolute; top: 0; width: 100%; height: 100vh; background: url(./../../images/main/img4.jpg) 50% 50% no-repeat; background-size: cover; opacity: 0; }
 
