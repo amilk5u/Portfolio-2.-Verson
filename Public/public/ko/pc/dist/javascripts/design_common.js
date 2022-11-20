@@ -1,38 +1,31 @@
 "use strict";
-let windowWidth;
-let windowHeight;
-let windowScrollTop;
+let windowWidth; // Window Width
+let windowHeight;  // Window Height
+let windowScrollTop; // Window Scroll Offset
 
-function reportWindowSize() {
-   // let _this = $(this);
-   // console.log(e.currentTarget)
-
-   // winW = _this.width();
-   // winH = _this.height();
-   // windowScrollTop = _this.scrollTop();
-   windowWidth = window.innerWidth;
-   windowHeight = window.innerHeight;
-   windowScrollTop = window.pageYOffset;
-
-   // // _this.trigger("resize");
-   window.addEventListener('resize', (e) => {
-      // console.log(e)
-      // console.log(e.currentTarget)
-      // winW = _this.width();
-      // winH = _this.height();
-      windowWidth = window.innerWidth;
-      windowHeight = window.innerHeight;
-   });
-
-   window.addEventListener('scroll', (e) => {
-      windowScrollTop = window.pageYOffset;
-      document.querySelector('.top').innerHTML = windowScrollTop;
-   });
-
-   layout();
-   main();
+/* Window Size Report */
+let reportWindowSize = () => {
+	windowMeasurement();
+	windowScrollTop = window.pageYOffset;
+	window.addEventListener('resize', windowMeasurement);
+	window.addEventListener('scroll', windowPageYOffset);
+	layout();
+	main();
 }
 
+/* Window Width Height  */
+let windowMeasurement = () => {
+	windowWidth = window.innerWidth;
+	windowHeight = window.innerHeight;
+}
+
+/* Window Scroll Offset  */
+let windowPageYOffset = () => {
+	windowScrollTop = window.pageYOffset;
+	document.querySelector('.top').innerHTML = windowScrollTop;
+}
+
+/* Window Load */
 window.addEventListener('load', reportWindowSize);
 function layout() {
 }
