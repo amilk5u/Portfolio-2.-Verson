@@ -1,29 +1,22 @@
 "use strict";
-let windowWidth; // Window Width
-let windowHeight;  // Window Height
-let windowScrollTop; // Window Scroll Offset
-
-/* Window Size Report */
-let reportWindowSize = () => {
-	windowMeasurement();
-	windowScrollTop = window.pageYOffset;
-	window.addEventListener('resize', windowMeasurement);
-	window.addEventListener('scroll', windowPageYOffset);
-	layout();
-	main();
-}
-
-/* Window Width Height  */
-let windowMeasurement = () => {
-	windowWidth = window.innerWidth;
-	windowHeight = window.innerHeight;
-}
-
-/* Window Scroll Offset  */
-let windowPageYOffset = () => {
-	windowScrollTop = window.pageYOffset;
-	document.querySelector('.top').innerHTML = windowScrollTop;
-}
-
-/* Window Load */
-window.addEventListener('load', reportWindowSize);
+var winW;
+var winH; 
+var $window = $(window);
+var winSc = $(window).scrollTop();
+$window.load(function () {
+   var _this = $(this);
+   winW = _this.width();
+   winH = _this.height();
+   winSc = _this.scrollTop(); 
+   $window.on("resize", function () {
+      winW = _this.width();
+      winH = _this.height();
+   });
+   _this.trigger("resize");
+   $(window).scroll(function () {
+      winSc = _this.scrollTop();
+      $('.top').text(winSc);
+   });
+   layout();
+   main();
+});
