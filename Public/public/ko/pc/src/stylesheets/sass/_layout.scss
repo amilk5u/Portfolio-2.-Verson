@@ -6,25 +6,43 @@ header {
       h1 { font-size: 25px; font-weight: $bold; letter-spacing: -1.5px; }
    }
 }
-#showMenu {
-   width:100%; height:100vh; 
-   position: fixed; z-index: 10;
-   background-color: #ccc;
-   
-   .menu_inner {
-      max-width: 1800px;
-      background-color: blue;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content:space-between;
+#showMenu {  
+   width: 100%; height: 100vh; position: fixed; z-index: 10; background-color: #ccc;
+   .menu_inner { max-width: 1800px; height: 100vh; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+   .menu_contact {
+      ul {
+         li { padding: 5px 0; font-size: 20px; }
+      }
+      li {}
    }
-   .menu_contact {}
    .menu_list {
-      text-align: right;
+      // text-align: right; 
       ul {}
       li {}
-      button { font-size: 130px; font-weight: $medium; letter-spacing: -10px; }
+      button { 
+         display: block; float: right; padding: 10px 0; font-size: 130px; font-weight: $medium; letter-spacing: -10px; 
+         position: relative;
+         width: 500px; height: 100px;
+         button:hover {
+            .back {
+               transform: rotateX(-85deg);
+            }
+         }
+         span {  
+            position: absolute; top: 0; left: 0; 
+            &.font {
+               color: red;
+            }
+            &.back {
+               color: blue;
+               transform-origin: 91% 0 0;
+            }
+         }
+      } 
+   }
+   .theme_mode {
+      position: absolute; bottom:0; left:0;
+      .theme_element { width: 300px; height: 300px; background-color: pink; }
    }
 }
 footer {}
