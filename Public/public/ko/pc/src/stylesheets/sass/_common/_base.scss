@@ -64,6 +64,7 @@ a { text-decoration:none; cursor:pointer; color:$base-font-color;
 }
 select, input, button, textarea {
    @include appearance;@include borderRadius(0);background-color:transparent;border:0 none;font-size:$base-font-size; font-weight:$regular; font-family:$base-font; line-height:1;
+   text-transform: uppercase;
    //	@common placeholder()
    &[type="checkbox"] { -webkit-appearance:checkbox; }
    &[type="radio"] { -webkit-appearance:radio;}
