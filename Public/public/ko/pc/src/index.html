@@ -5,29 +5,33 @@
 <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"></script>
 <!-- //lottie & scrollTrigger JS-->
 <!-- container -->
-<div class="container main1">
-   <section id="intro" class="sec1">
-      <div class="cont_wrap">
-         <div class="title_cont">
+<div class="container">
+   <section id="intro">
+      <div class="covering_wrap">
+         <div class="main_title_txt">
             <h2>
                <span> <i>M</i>AKE </span>
                <br> ONE'S <br> A REALITY
             </h2>
             <span class="slogan_txt"> <em>+++</em> <span> I do my best to make my imagination a reality</span></span>
+            <figure class="thumb_image">
+               <img src="./images/main/05_1.8849d339.jpg" alt="">
+            </figure>
          </div>
          <div class="main_grid_line">
-            <svg class="circle_svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="239px" height="240.833px" viewBox="0 0 239 240.833" enable-background="new 0 0 239 240.833" xml:space="preserve">
+            <svg class="circle_svg_item" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="239px" height="240.833px" viewBox="0 0 239 240.833" enable-background="new 0 0 239 240.833" xml:space="preserve">
                <ellipse fill="none" stroke="#DE1815" stroke-miterlimit="10" cx="119.5" cy="120.417" rx="119" ry="119.916" />
             </svg>
-            <svg class="star_svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="124.283px" height="122.807px" viewBox="637.314 368.01 124.283 122.807" enable-background="new 637.314 368.01 124.283 122.807" xml:space="preserve">
+            <svg class="star_svg_item" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="124.283px" height="122.807px" viewBox="637.314 368.01 124.283 122.807" enable-background="new 637.314 368.01 124.283 122.807" xml:space="preserve">
                <path d="M697.352,368.025c0,0-0.499,61.706,64.234,63.229	c0,0-59.202-0.646-64.234,59.521c0,0-3.666-57.378-60.016-59.521C637.336,431.254,695.384,433.774,697.352,368.025z" />
             </svg>
-            <svg class="star_svg_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="124.283px" height="122.807px" viewBox="637.314 368.01 124.283 122.807" enable-background="new 637.314 368.01 124.283 122.807" xml:space="preserve">
+            <!-- <svg class="star_svg_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="124.283px" height="122.807px" viewBox="637.314 368.01 124.283 122.807" enable-background="new 637.314 368.01 124.283 122.807" xml:space="preserve">
                <path d="M697.352,368.025c0,0-0.499,61.706,64.234,63.229	c0,0-59.202-0.646-64.234,59.521c0,0-3.666-57.378-60.016-59.521C637.336,431.254,695.384,433.774,697.352,368.025z" />
-            </svg>
-            <div class="grid_line">
-               <img src="./images/main/img2.png" alt="">
-               <div class="grid_wrap row_line">
+            </svg> -->
+            <!-- 그려지는 라인 -->
+            <div class="line_element_wrap">
+               <img class="trick_image" src="./images/main/img2.png" alt="">
+               <div class="grid_content row_grid">
                   <div class="row_line_top">
                      <span></span>
                      <span></span>
@@ -41,7 +45,7 @@
                      <span></span>
                   </div>
                </div>
-               <div class="grid_wrap col_line">
+               <div class="grid_content col_grid">
                   <div class="col_line_top">
                      <span></span>
                      <span></span>
@@ -56,32 +60,16 @@
                   </div>
                </div>
             </div>
-            <div class="img_wrap">
-               <div class="img">
-                  <img src="./images/main/05_1.8849d339.jpg" alt="">
-               </div>
-               <!-- <div class="img">
-                  <img src="./images/main/intro-2.jpg" alt="">
-               </div>
-               <div class="img">
-                  <img src="./images/main/intro-3.jpg" alt="">
-               </div>
-               <div class="img">
-                  <img src="./images/main/05_1.8849d339.jpg" alt="">
-               </div> -->
+            <!-- 움직이는 모션 이미지 -->
+            <div class="moving_image">
+               <div class="element_1"></div>
             </div>
-            <div class="painting_deo">
-               <div class="deco_box box1"></div>
-               <!-- <div class="deco_box box2">
-					</div> -->
-               <!-- <div class="deco_box box3"></div> -->
-            </div>
-            <button class="btn" type="button">button</button>
+            <!-- <button class="btn" type="button">button</button> -->
          </div>
       </div>
    </section>
-   <section id="introduce" class="sec2">
-      <div class="cont_wrap">
+   <section id="introduce">
+      <div class="covering_wrap">
          <!-- <div class="content_elm intro_elm">
             <div>
                <div class="txt_cont">
@@ -104,8 +92,10 @@
                <div class="deco_box box1"></div>
             </div>
             <div class="small_img">
-               <span>Let me introduce myself.</span>
-               <img src="./images/main/13.1332e080.jpg" alt="">
+               <figure>
+                  <img src="./images/main/13.1332e080.jpg" alt="">
+                  <figcaption>Let me introduce myself.</figcaption>
+               </figure>
             </div>
             <div class="right_wrap">
                <div class="first_txt">
@@ -118,7 +108,7 @@
                <span class="bottom_txt">2019 @ ONE DAY I SEE MY PICTURES</span>
             </div>
             <div class="txt_wrap">
-               <h2> IT'S ALL MY OWN <span>'LIKE'</span> :D ENJOYING WHAT I LIKE <br> AND DOING WELL IS WHAT I DREAM OF </h2>
+               <h2> IT'S ALL MY OWN <mark>'LIKE'</mark> :D ENJOYING WHAT I LIKE <br> AND DOING WELL IS WHAT I DREAM OF </h2>
                <p>
                   <span> 저는 4년차 웹 퍼블리셔 신민주입니다. 쉽고, 재밌고, 남다르게 표현하는 걸 좋아합니다. <br> 탄탄한 코드 위에 감각적인 UI를 그려냅니다. <br> CSS와 JavaScript를 활용한 동적 모션을 좋아하고, 컴포넌트 단위의 유지보수에 최적화된 마크업에 관심이 많습니다. <br> 사용자 입장에서 생각하는 걸 좋아해서 계속 고민하며 더 나은 방향에 대해 사람들과 얘기 나누곤 합니다.<br>
                   </span>

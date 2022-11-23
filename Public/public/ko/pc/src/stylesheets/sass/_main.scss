@@ -6,48 +6,54 @@
 /* (start) section 1 - intro */
 #intro {
 	width: 100%; height: 980px;/* background-color: pink; */
-	.cont_wrap { max-width: 1680px; position: relative; margin: 0 auto; }
-	.title_cont { display: inline-block; position: relative; z-index: 1; top: 218px; left: 163px; }
-	h2 { 
-      width: max-content; position: relative; font-size: 230px; font-weight: $medium; letter-spacing: -24px; line-height: 199px;
-		span { position: relative; left: -106px; }
-		em {
-			width: 177px; display: inline-block; position: relative; top: 26px;
+	.covering_wrap { max-width: 1680px; position: relative; margin: 0 auto; }
+	.main_title_txt { 
+		display: inline-block; position: relative; z-index: 1; top: 218px; left: 163px; 
+		h2 { 
+			width: max-content; position: relative; font-size: 230px; font-weight: $medium; letter-spacing: -24px; line-height: 199px;
+			span { position: relative; left: -106px; }
+			em {
+				width: 177px; display: inline-block; position: relative; top: 26px;
+				img { width: 100%; }
+			}
+		}
+		.slogan_txt { 
+			position: absolute; top: -96px; left: 20%; font-size: 12px; 
+			em { color: red; }
+			> span { display: block; padding: 10px 0 0; }
+		}
+		.thumb_image {
+			width: 360px; height: 215px; position: absolute; top: 193px; left: 679px;  overflow: hidden;
 			img { width: 100%; }
 		}
-	}
-	.slogan_txt { 
-		position: absolute; top: -96px; left: 20%; font-size: 12px; 
-		em { color: red; }
-		> span { display: block; padding: 10px 0 0; }
 	}
 	.main_grid_line {
 		max-width: 840px; max-height: 840px; position: absolute; right: 0; top: 50px; /* border: 1px solid black; *//* opacity: .2; */
 		@include boxSizing;
-		.circle_svg {
+		.circle_svg_item {
 			width: 239px; height: 240px; position: absolute; bottom: 0; right: 0;
 			ellipse { stroke: rgb(207, 207, 207); stroke-width: 2px; fill: #f9f6e7; stroke-miterlimit: 10; stroke-dasharray: 750; stroke-dashoffset: 750; }
 		}
-		.star_svg {
+		.star_svg_item {
 			width: 124px; height: 122px; position: absolute; top: 297px; right: 175px;
 			@include scale(0);
 			path { stroke: rgb(207, 207, 207); stroke-width: 2px; fill: #f9f6e7; stroke-miterlimit: 10; stroke-dasharray: 395; stroke-dashoffset: 0; }
 		}
-		.star_svg_1 {
-			width: 124px; height: 122px; position: absolute; top: 297px; right: 175px;
-			@include scale(0);
-			path { stroke: rgb(207, 207, 207); stroke-width: 2px; fill: #f9f6e7; stroke-miterlimit: 10; stroke-dasharray: 395; stroke-dashoffset: 0; }
-		}
-		.grid_line {
+		// .star_svg_1 {
+		// 	width: 124px; height: 122px; position: absolute; top: 297px; right: 175px;
+		// 	@include scale(0);
+		// 	path { stroke: rgb(207, 207, 207); stroke-width: 2px; fill: #f9f6e7; stroke-miterlimit: 10; stroke-dasharray: 395; stroke-dashoffset: 0; }
+		// }
+		.line_element_wrap {
 			width: 100%; height: 100%; position: relative; z-index: -1;
-			> img { width: 100%; opacity: 0; }
-			.grid_wrap { width: 100%; height: 100%; position: absolute; top: 0; left: 0; }
-			.row_line {
+			.trick_image { width: 100%; opacity: 0; }
+			.grid_content { width: 100%; height: 100%; position: absolute; top: 0; left: 0; }
+			.row_grid {
 				width: 100%; height: 100%;
 				> div { width: 100%; height: auto; }
 				span { display: block; width: 0; height: 2px; background-color:  rgb(207, 207, 207); margin: 0 auto 14%; }
 			}
-			.col_line {
+			.col_grid {
 				width: 100%; height: 100%;
 				@include rotate(90);
 				> div { width: 100%; height: auto; }
@@ -58,27 +64,11 @@
 			width: 850px; height: 850px;
 			line { stroke: rgb(207, 207, 207); stroke-width: 2px; fill: none; stroke-miterlimit: 10; stroke-dasharray: 420; stroke-dashoffset: 420; }
 		} */
-		.img_wrap {
-			width: 360px; height: 215px; position: absolute; top: 361px; left: 1px; background-color: #eee; overflow: hidden;
-			.img { width: 100%; height: 100%; position: absolute; top: 0; left: 0; }
-			img { 
-				width: 100%; 
-				@include scale(3);
-			}
-		}
 	}
-	.painting_deo {
-		> .deco_box { position: absolute; background-color: black; }
-		.box1 { 
+	.moving_image {
+		> div { position: absolute; background-color: black; }
+		.element_1 { 
 			width: 200px; height: 240px; top: -4%; right: 28%; 
-			background:url(./../../images/main/img3.png) 0 0 repeat;
-		}
-		.box2 {  
-         width: 200px; height: 240px; top: 41%; left: 70%; 
-         background:url(./../../images/main/img3.png) 0 0 repeat;
-      }
-		.box3 { 
-			width: 200px; height: 240px; bottom: -2%; left: 7%; 
 			background:url(./../../images/main/img3.png) 0 0 repeat;
 		}
 	}
@@ -88,8 +78,6 @@
 /* (start) section 2 - introduce */
 #introduce {
 	width: 100%;	
-	// 공통
-	.content_elm {}
    .intro_elm {
       width: max-content; height: 1000px;
       > div {
@@ -97,17 +85,8 @@
             strong { color: black; }
          }
       }
-      .txt_cont {
-         width: max-content;
-      }
-      strong { 
-         font-size: 161px;
-         display: block;
-         letter-spacing: -8px;
-         color: #f9f6e7;
-         text-decoration: #ccc;
-         text-shadow: 1px 1px 0 #ccc, -1px 1px 0 #ccc, 1px -1px 0 #ccc, -1px -1px 0 #ccc;
-      }
+      .txt_cont { width: max-content; }
+      strong { font-size: 161px; display: block; letter-spacing: -8px; color: #f9f6e7; text-decoration: #ccc; text-shadow: 1px 1px 0 #ccc, -1px 1px 0 #ccc, 1px -1px 0 #ccc, -1px -1px 0 #ccc; }
       span { font-size: 19px; }
    }
 	.top_elm {
