@@ -8,9 +8,15 @@
 	width: 100%; height: 980px;/* background-color: pink; */
 	.covering_wrap { max-width: 1680px; position: relative; margin: 0 auto; }
 	.main_title_txt { 
-		display: inline-block; position: relative; z-index: 1; top: 218px; left: 163px; 
+      
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    top: 388px;
+    left: 293px;
 		h2 { 
-			width: max-content; position: relative; font-size: 230px; font-weight: $medium; letter-spacing: -24px; line-height: 199px;
+         width: max-content; position: relative; font-size: 230px; font-weight: $medium; letter-spacing: -24px; line-height: 195px; mix-blend-mode: overlay;
+         color: #181712;
 			span { position: relative; left: -106px; }
 			em {
 				width: 177px; display: inline-block; position: relative; top: 26px;
@@ -18,34 +24,57 @@
 			}
 		}
 		.slogan_txt { 
-			position: absolute; top: -96px; left: 20%; font-size: 12px; 
+			position: absolute; top: -157px; left: 9%; font-size: 12px;
 			em { color: red; }
 			> span { display: block; padding: 10px 0 0; }
 		}
 		.thumb_image {
-			width: 360px; height: 215px; position: absolute; top: 193px; left: 679px;  overflow: hidden;
+         width: 615px;
+         height: 402px;
+         position: absolute;
+         top: -172px;
+         left: 527px;
+         overflow: hidden;
+         z-index: -1;
+     
+     
 			img { width: 100%; }
 		}
 	}
 	.main_grid_line {
 		max-width: 840px; max-height: 840px; position: absolute; right: 0; top: 50px; /* border: 1px solid black; *//* opacity: .2; */
+      mix-blend-mode: multiply;
+
 		@include boxSizing;
 		.circle_svg_item {
-			width: 239px; height: 240px; position: absolute; bottom: 0; right: 0;
+         width: 239px;
+         height: 240px;
+         position: absolute;
+         bottom: 100px;
+         right: 0;
+     
 			ellipse { stroke: rgb(207, 207, 207); stroke-width: 2px; fill: #f9f6e7; stroke-miterlimit: 10; stroke-dasharray: 750; stroke-dashoffset: 750; }
 		}
 		.star_svg_item {
-			width: 124px; height: 122px; position: absolute; top: 297px; right: 175px;
+         width: 124px;
+         height: 122px;
+         position: absolute;
+         top: 62px;
+         right: 352px;
+     
 			@include scale(0);
 			path { stroke: rgb(207, 207, 207); stroke-width: 2px; fill: #f9f6e7; stroke-miterlimit: 10; stroke-dasharray: 395; stroke-dashoffset: 0; }
 		}
-		// .star_svg_1 {
-		// 	width: 124px; height: 122px; position: absolute; top: 297px; right: 175px;
-		// 	@include scale(0);
-		// 	path { stroke: rgb(207, 207, 207); stroke-width: 2px; fill: #f9f6e7; stroke-miterlimit: 10; stroke-dasharray: 395; stroke-dashoffset: 0; }
-		// }
+		.rhombus_svg_item {
+         width: 360px;
+         height: 240px;
+         position: absolute;
+         bottom: 55px; 
+         left: -900px;
+			polygon { stroke: rgb(207, 207, 207); stroke-width: 2px; fill: #f9f6e7; stroke-miterlimit: 10; stroke-dasharray: 880; stroke-dashoffset: 880; }
+		}
 		.line_element_wrap {
-			width: 100%; height: 100%; position: relative; z-index: -1;
+			width: 100%; height: 100%; position: relative; z-index: -1; opacity: 0;
 			.trick_image { width: 100%; opacity: 0; }
 			.grid_content { width: 100%; height: 100%; position: absolute; top: 0; left: 0; }
 			.row_grid {
@@ -101,15 +130,8 @@
          width: 800px; position: relative; float: right; margin: 150px 0 0;
          .first_txt { 
             margin: 0 0 0 -179px;
-            span {
-               font-size: 70px; margin: 0 0 0 181px; font-weight: 500; letter-spacing: -3px; 
-               text-shadow: 1px 1px 0 black, -1px 1px 0 black, 1px -1px 0 black, 
-               -1px -1px 0 black; color: #f9f6e7; word-break: break-all; 
-            }
-            em {
-               display: block;
-               margin: 20px 0 10px 181px;
-            }
+            span { font-size: 70px; margin: 0 0 0 181px; font-weight: 500; letter-spacing: -3px; text-shadow: 1px 1px 0 black, -1px 1px 0 black, 1px -1px 0 black, -1px -1px 0 black; color: #f9f6e7; word-break: break-all; }
+            em { display: block; margin: 20px 0 10px 181px; }
          }
 			.bottom_txt { position: absolute; bottom: -29px; left: 0; font-family: $NeueMachina; }
          .img_wrap {
@@ -127,12 +149,9 @@
 				span { display: block; padding: 30px 0 0; }
 			}
 		}
-   	.painting_deo {
-         > .deco_box { position: absolute; background-color: black; }
-         .box1 { 
-            width: 200px; height: 240px; top: 51%; left: 8%; 
-            background:url(./../../images/main/img3.png) 0 0 repeat;
-         }
+   	.moving_image {
+         > div { position: absolute; background-color: black; }
+         .element_1 { width: 200px; height: 240px; top: 51%; left: 8%; background: url(./../../images/main/img3.png) 0 0 repeat; }
       }
 	}
 	.btm_elm {
@@ -179,7 +198,7 @@
 		}
 	}
 	.bg_wrap {
-		width: 100%; height: 100vh; position: absolute; top: 0; left: 0; 
+		width: 100%; height: 100vh; position: absolute; top: 0; left: 0; opacity: 0;      
       // > div { margin: 80px 0 0; }
 		.intro_img {
 			position: absolute; top:0;
@@ -233,6 +252,8 @@
 		@extend %clearfix;
 		&:first-of-type { padding: 0; }
 	}
+
+
 
 	// 개별
 	.intro_wrap {

@@ -154,6 +154,10 @@ label, button { cursor: pointer; }
 
 .top { position: fixed; bottom: 0; left: 0; font-size: 50px; color: red; font-weight: 600; z-index: 9999; }
 
+header #logo { position: fixed; left: 30px; top: 30px; z-index: 1; }
+
+header #logo h1 { font-size: 25px; font-weight: 600; letter-spacing: -1.5px; }
+
 /* container */
 .container { width: 100%; background-color: #f9f6e7; padding: 0 0 1000px; }
 
@@ -162,9 +166,9 @@ label, button { cursor: pointer; }
 
 #intro .covering_wrap { max-width: 1680px; position: relative; margin: 0 auto; }
 
-#intro .main_title_txt { display: inline-block; position: relative; z-index: 1; top: 218px; left: 163px; }
+#intro .main_title_txt { display: inline-block; position: relative; z-index: 1; top: 388px; left: 293px; }
 
-#intro .main_title_txt h2 { width: max-content; position: relative; font-size: 230px; font-weight: 500; letter-spacing: -24px; line-height: 199px; }
+#intro .main_title_txt h2 { width: max-content; position: relative; font-size: 230px; font-weight: 500; letter-spacing: -24px; line-height: 195px; mix-blend-mode: overlay; color: #181712; }
 
 #intro .main_title_txt h2 span { position: relative; left: -106px; }
 
@@ -172,27 +176,31 @@ label, button { cursor: pointer; }
 
 #intro .main_title_txt h2 em img { width: 100%; }
 
-#intro .main_title_txt .slogan_txt { position: absolute; top: -96px; left: 20%; font-size: 12px; }
+#intro .main_title_txt .slogan_txt { position: absolute; top: -157px; left: 9%; font-size: 12px; }
 
 #intro .main_title_txt .slogan_txt em { color: red; }
 
 #intro .main_title_txt .slogan_txt > span { display: block; padding: 10px 0 0; }
 
-#intro .main_title_txt .thumb_image { width: 360px; height: 215px; position: absolute; top: 193px; left: 679px; overflow: hidden; }
+#intro .main_title_txt .thumb_image { width: 615px; height: 402px; position: absolute; top: -172px; left: 527px; overflow: hidden; z-index: -1; }
 
 #intro .main_title_txt .thumb_image img { width: 100%; }
 
-#intro .main_grid_line { max-width: 840px; max-height: 840px; position: absolute; right: 0; top: 50px; /* border: 1px solid black; */ /* opacity: .2; */ -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; /* 	.grid_line_svg { width: 850px; height: 850px; line { stroke: rgb(207, 207, 207); stroke-width: 2px; fill: none; stroke-miterlimit: 10; stroke-dasharray: 420; stroke-dashoffset: 420; } } */ }
+#intro .main_grid_line { max-width: 840px; max-height: 840px; position: absolute; right: 0; top: 50px; /* border: 1px solid black; */ /* opacity: .2; */ mix-blend-mode: multiply; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; /* 	.grid_line_svg { width: 850px; height: 850px; line { stroke: rgb(207, 207, 207); stroke-width: 2px; fill: none; stroke-miterlimit: 10; stroke-dasharray: 420; stroke-dashoffset: 420; } } */ }
 
-#intro .main_grid_line .circle_svg_item { width: 239px; height: 240px; position: absolute; bottom: 0; right: 0; }
+#intro .main_grid_line .circle_svg_item { width: 239px; height: 240px; position: absolute; bottom: 100px; right: 0; }
 
 #intro .main_grid_line .circle_svg_item ellipse { stroke: #cfcfcf; stroke-width: 2px; fill: #f9f6e7; stroke-miterlimit: 10; stroke-dasharray: 750; stroke-dashoffset: 750; }
 
-#intro .main_grid_line .star_svg_item { width: 124px; height: 122px; position: absolute; top: 297px; right: 175px; -webkit-transform: scale(0); -moz-transform: scale(0); -ms-transform: scale(0); -o-transform: scale(0); transform: scale(0); }
+#intro .main_grid_line .star_svg_item { width: 124px; height: 122px; position: absolute; top: 62px; right: 352px; -webkit-transform: scale(0); -moz-transform: scale(0); -ms-transform: scale(0); -o-transform: scale(0); transform: scale(0); }
 
 #intro .main_grid_line .star_svg_item path { stroke: #cfcfcf; stroke-width: 2px; fill: #f9f6e7; stroke-miterlimit: 10; stroke-dasharray: 395; stroke-dashoffset: 0; }
 
-#intro .main_grid_line .line_element_wrap { width: 100%; height: 100%; position: relative; z-index: -1; }
+#intro .main_grid_line .rhombus_svg_item { width: 360px; height: 240px; position: absolute; bottom: 55px; left: -900px; }
+
+#intro .main_grid_line .rhombus_svg_item polygon { stroke: #cfcfcf; stroke-width: 2px; fill: #f9f6e7; stroke-miterlimit: 10; stroke-dasharray: 880; stroke-dashoffset: 880; }
+
+#intro .main_grid_line .line_element_wrap { width: 100%; height: 100%; position: relative; z-index: -1; opacity: 0; }
 
 #intro .main_grid_line .line_element_wrap .trick_image { width: 100%; opacity: 0; }
 
@@ -240,7 +248,7 @@ label, button { cursor: pointer; }
 
 #introduce .top_elm .right_wrap .first_txt { margin: 0 0 0 -179px; }
 
-#introduce .top_elm .right_wrap .first_txt span { font-size: 70px; margin: 0 0 0 181px; font-weight: 500; letter-spacing: -3px; text-shadow: 1px 1px 0 black, -1px 1px 0 black, 1px -1px 0 black,  -1px -1px 0 black; color: #f9f6e7; word-break: break-all; }
+#introduce .top_elm .right_wrap .first_txt span { font-size: 70px; margin: 0 0 0 181px; font-weight: 500; letter-spacing: -3px; text-shadow: 1px 1px 0 black, -1px 1px 0 black, 1px -1px 0 black, -1px -1px 0 black; color: #f9f6e7; word-break: break-all; }
 
 #introduce .top_elm .right_wrap .first_txt em { display: block; margin: 20px 0 10px 181px; }
 
@@ -258,9 +266,9 @@ label, button { cursor: pointer; }
 
 #introduce .top_elm .txt_wrap p span { display: block; padding: 30px 0 0; }
 
-#introduce .top_elm .painting_deo > .deco_box { position: absolute; background-color: black; }
+#introduce .top_elm .moving_image > div { position: absolute; background-color: black; }
 
-#introduce .top_elm .painting_deo .box1 { width: 200px; height: 240px; top: 51%; left: 8%; background: url(./../../images/main/img3.png) 0 0 repeat; }
+#introduce .top_elm .moving_image .element_1 { width: 200px; height: 240px; top: 51%; left: 8%; background: url(./../../images/main/img3.png) 0 0 repeat; }
 
 #introduce .btm_elm { padding: 300px 0 0; }
 
@@ -310,7 +318,7 @@ label, button { cursor: pointer; }
 
 #project .hidden_wrap .hiden_txt:nth-of-type(3) { top: 50%; right: 0; }
 
-#project .bg_wrap { width: 100%; height: 100vh; position: absolute; top: 0; left: 0; }
+#project .bg_wrap { width: 100%; height: 100vh; position: absolute; top: 0; left: 0; opacity: 0; }
 
 #project .bg_wrap .intro_img { position: absolute; top: 0; width: 100%; height: 100vh; background: url(./../../images/main/03_1.09beb2ef.jpg) 50% 50% no-repeat; background-size: cover; }
 

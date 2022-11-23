@@ -1,22 +1,29 @@
 "use strict";
-var winW;
-var winH; 
-var $window = $(window);
-var winSc = $(window).scrollTop();
-$window.load(function () {
-   var _this = $(this);
-   winW = _this.width();
-   winH = _this.height();
-   winSc = _this.scrollTop(); 
-   $window.on("resize", function () {
-      winW = _this.width();
-      winH = _this.height();
-   });
-   _this.trigger("resize");
-   $(window).scroll(function () {
-      winSc = _this.scrollTop();
-      $('.top').text(winSc);
-   });
+let windowWidth; // Window Width
+let windowHeight; // Window Height
+let windowScrollTop; // Window Scroll Page YOffset
+
+/* Window Width Height  */
+let windowMeasurement = () => {
+   windowWidth = window.innerWidth;
+   windowHeight = window.innerHeight;
+}
+
+/* Window Scroll Offset  */
+let windowPageYOffset = () => {
+   windowScrollTop = window.pageYOffset;
+   document.querySelector('.top').innerHTML = windowScrollTop;
+}
+
+/* Window Size Report */
+let reportWindowSize = () => {
+   windowScrollTop = window.pageYOffset;
+   window.addEventListener('resize', windowMeasurement);
+   window.addEventListener('scroll', windowPageYOffset);
+   windowMeasurement();
    layout();
    main();
-});
+}
+
+/* Window Load */
+window.addEventListener('load', reportWindowSize);

@@ -1,54 +1,76 @@
 "use strict";
-var winW;
-var winH; 
-var $window = $(window);
-var winSc = $(window).scrollTop();
-$window.load(function () {
-   var _this = $(this);
-   winW = _this.width();
-   winH = _this.height();
-   winSc = _this.scrollTop(); 
-   $window.on("resize", function () {
-      winW = _this.width();
-      winH = _this.height();
-   });
-   _this.trigger("resize");
-   $(window).scroll(function () {
-      winSc = _this.scrollTop();
-      $('.top').text(winSc);
-   });
+let windowWidth; // Window Width
+let windowHeight; // Window Height
+let windowScrollTop; // Window Scroll Page YOffset
+
+/* Window Width Height  */
+let windowMeasurement = () => {
+   windowWidth = window.innerWidth;
+   windowHeight = window.innerHeight;
+}
+
+/* Window Scroll Offset  */
+let windowPageYOffset = () => {
+   windowScrollTop = window.pageYOffset;
+   document.querySelector('.top').innerHTML = windowScrollTop;
+}
+
+/* Window Size Report */
+let reportWindowSize = () => {
+   windowScrollTop = window.pageYOffset;
+   window.addEventListener('resize', windowMeasurement);
+   window.addEventListener('scroll', windowPageYOffset);
+   windowMeasurement();
    layout();
    main();
-});
+}
+
+/* Window Load */
+window.addEventListener('load', reportWindowSize);
 function layout() {
 }
 function main() {
-   gsap.to($('.star_svg_item'), 1, { 'scale': 1, ease: Expo.easeInOut }, .2);
-   gsap.to($('.circle_svg_item ellipse'), 1.5, { 'stroke-dashoffset': 0, ease: Expo.easeInOut });
+   gsap.to(document.querySelector('.star_svg_item'), 1, { 'scale': 1, ease: Expo.easeInOut }, .2);
+   gsap.to(document.querySelector('.circle_svg_item ellipse'), 1.5, { 'stroke-dashoffset': 0, ease: Expo.easeInOut });
+   gsap.to(document.querySelector('.rhombus_svg_item polygon'), 1.5, { 'stroke-dashoffset': 0, ease: Expo.easeInOut });
 
 
    let introLineSVG1 = [];
-   $('.row_line_top span').each(function () {
-      introLineSVG1.unshift($(this))
-   })
+   document.querySelectorAll('.row_line_top span').forEach(element => {
+      introLineSVG1.unshift(element)
+   });
    let introLineSVG2 = [];
-   $('.row_line_bottom span').each(function () {
-      introLineSVG2.push($(this))
-   })
+   document.querySelectorAll('.row_line_bottom span').forEach(element => {
+      introLineSVG2.push(element)
+   });
    let introLineSVG3 = [];
-   $('.col_line_top span').each(function () {
-      introLineSVG3.unshift($(this))
-   })
+   document.querySelectorAll('.col_line_top span').forEach(element => {
+      introLineSVG3.unshift(element)
+   });
    let introLineSVG4 = [];
-   $('.col_line_bottom span').each(function () {
-      introLineSVG4.push($(this))
-   })
-
+   document.querySelectorAll('.col_line_bottom span').forEach(element => {
+      introLineSVG4.push(element)
+   });
    TweenMax.staggerTo(introLineSVG1, 1, { 'width': '100%', ease: Expo.easeInOut }, .15);
    TweenMax.staggerTo(introLineSVG2, 1, { 'width': '100%', ease: Expo.easeInOut }, .15);
    TweenMax.staggerTo(introLineSVG3, 1, { 'width': '100%', ease: Expo.easeInOut }, .15);
    TweenMax.staggerTo(introLineSVG4, 1, { 'width': '100%', ease: Expo.easeInOut }, .15);
 
+   let num = 0; // position 초기값 0
+   let i = 0; // count
+   function callback() {
+      i++
+      document.querySelectorAll('.moving_image > div').forEach((element) => {
+         element.style.backgroundPosition = (num -= 192) + 'px';
+      })
+      if (i > 8) {
+         i = 0;
+         document.querySelectorAll('.moving_image > div').forEach((element) => {
+            element.style.backgroundPosition = '0';
+         })
+      }
+   }
+   setInterval(callback, 300);
 
    // var swiper = new Swiper(".mySwiper", {
    // 	slidesPerView: 2.3,
@@ -85,7 +107,6 @@ function main() {
          end: '+=' + 2500
       }
    });
-
    corporationTimeline2.to(document.querySelector('.bg_wrap'), { opacity: 1, duration: 1 })
    corporationTimeline2.to(document.querySelector('#project .intro_wrap .txt_wrap'), { opacity: 1, duration: 1 })
    corporationTimeline2.to(document.querySelector('.btm_elm'), { opacity: 1, duration: 4 })
@@ -102,8 +123,6 @@ function main() {
          end: '+=' + (document.querySelector('#project').offsetHeight + window.innerHeight * 2 + 2500)
       }
    });
-   // 2350
-   //3195
    corporationTimeline.to('.intro_img', { scale: 1.5, duration: 1 })
    corporationTimeline.to('.lg_img', { scale: 1.5, delay: -0.8, duration: 1 })
    corporationTimeline.to('.msfk_img', { scale: 1.5, delay: -0.8, duration: 1 })
@@ -121,30 +140,40 @@ function main() {
       }
    });
 
-   // $window.scroll(function () {
-   // 	if (winSc < 5000) {
-   // 		gsap.to($('.lg_img'), .4, { opacity: 1 })
-   // 		gsap.to($('.msfk_img'), .4, { opacity: 0 })
-   // 		gsap.to($('.hyosung_img'), .4, { opacity: 0 })
-   // 		// gsap.to($('.lg_wrap .txt_wrap'), .4, { color: 'white' })
-   // 	} else if (winSc >= 5000 && winSc < 6100) {
-   // 		gsap.to($('.msfk_img'), .4, { opacity: 1 })
-   // 		gsap.to($('.lg_img'), .4, { opacity: 0 })
-   // 		gsap.to($('.hyosung_img'), .4, { opacity: 0 })
-   // 		// gsap.to($('.msfk_wrap .txt_wrap'), .4, { color: 'white' })
+   window.addEventListener('scroll', (e) => {
+      // if (windowScrollTop > document.querySelector('.btm_elm').offsetTop - window.innerHeight / 2) {
+      //    TweenMax.staggerTo(document.querySelectorAll('.icon_cont'), .5, { opacity: 1 }, .2)
+      // } else {
+      //    TweenMax.to(document.querySelectorAll('.icon_cont'), .5, { opacity: 0 })
+      // }
 
-   // 	} else if (winSc >= 6100) {
-   // 		gsap.to($('.hyosung_img'), .4, { opacity: 1 })
-   // 		gsap.to($('.msfk_img'), .4, { opacity: 0 })
-   // 		gsap.to($('.lg_img'), .4, { opacity: 0 })
-   // 		// gsap.to($('.hyosung_wrap .txt_wrap'), .4, { color: 'black' })
-   // 	} else {
-   // 		gsap.to($('.lg_img'), .4, { opacity: 0 })
-   // 		gsap.to($('.msfk_img'), .4, { opacity: 0 })
-   // 		gsap.to($('.lg_img'), .4, { opacity: 0 })
-   // 	}
-
-   // });
+      // if (windowScrollTop < 7245) {
+      //    gsap.to($('.intro_img'), .4, { opacity: 1 })
+      //    gsap.to($('.lg_img'), .1, { opacity: 0 })
+      //    gsap.to($('.msfk_img'), .1, { opacity: 0 })
+      //    gsap.to($('.hyosung_img'), .1, { opacity: 0 })
+      // } else if (windowScrollTop >= 7245 && windowScrollTop < 8500) {
+      //    gsap.to($('.intro_img'), .1, { opacity: 0 })
+      //    gsap.to($('.lg_img'), .4, { opacity: 1 })
+      //    gsap.to($('.msfk_img'), .1, { opacity: 0 })
+      //    gsap.to($('.hyosung_img'), .1, { opacity: 0 })
+      // } else if (windowScrollTop >= 8500 && windowScrollTop < 9600) {
+      //    gsap.to($('.intro_img'), .1, { opacity: 0 })
+      //    gsap.to($('.msfk_img'), .4, { opacity: 1 })
+      //    gsap.to($('.lg_img'), .4, { opacity: 0 })
+      //    gsap.to($('.hyosung_img'), .4, { opacity: 0 })
+      // } else if (windowScrollTop >= 9600) {
+      //    gsap.to($('.intro_img'), .4, { opacity: 0 })
+      //    gsap.to($('.hyosung_img'), .4, { opacity: 1 })
+      //    gsap.to($('.msfk_img'), .4, { opacity: 0 })
+      //    gsap.to($('.lg_img'), .4, { opacity: 0 })
+      // } else {
+      //    gsap.to($('.intro_img'), .4, { opacity: 0 })
+      //    gsap.to($('.lg_img'), .4, { opacity: 0 })
+      //    gsap.to($('.msfk_img'), .4, { opacity: 0 })
+      //    gsap.to($('.lg_img'), .4, { opacity: 0 })
+      // }
+   });
 }
 
 
