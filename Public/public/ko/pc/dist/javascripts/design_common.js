@@ -30,6 +30,36 @@ window.addEventListener('load', reportWindowSize);
 function layout() {
 }
 function main() {
+   let menuButton = document.querySelector('#menu > button');
+   let dotsItem = document.querySelectorAll('.dots_item');
+   let lineItem = document.querySelectorAll('.line_item');
+
+   // Menu Click Event
+   function toggleMenu() {
+      let menuOpenTimeLine = gsap.timeline();
+      let menuCloseTimeLine = gsap.timeline();
+
+      if (menuButton.classList.contains('active')) {
+         dotsItem[0].style.left = '-10px';
+         dotsItem[2].style.left = '10px';
+         menuCloseTimeLine.to(lineItem, .5, { width: 0 });
+         menuCloseTimeLine.to(dotsItem[0], 1, { display: 'block', opacity: 1, ease: Back.easeOut.config(1.7) });
+         menuCloseTimeLine.to(dotsItem[1], 1, { display: 'block', opacity: 1, delay: -.9, ease: Back.easeOut.config(1.7) });
+         menuCloseTimeLine.to(dotsItem[2], 1, { display: 'block', opacity: 1, delay: -.9, ease: Back.easeOut.config(1.7) });
+         menuButton.classList.remove('active');
+      } else {
+         menuOpenTimeLine.to(dotsItem, .3, { left: 0 });
+         menuOpenTimeLine.to(dotsItem, .3, { display: 'none', opacity: 0, delay: -.1 });
+         menuOpenTimeLine.to(lineItem, .3, { width: 15, delay: -.1 });
+         menuButton.classList.add('active');
+      }
+   }
+   menuButton.addEventListener('click', toggleMenu);
+
+
+
+
+
    gsap.to(document.querySelector('.star_svg_item'), 1, { 'scale': 1, ease: Expo.easeInOut }, .2);
    gsap.to(document.querySelector('.circle_svg_item ellipse'), 1.5, { 'stroke-dashoffset': 0, ease: Expo.easeInOut });
    gsap.to(document.querySelector('.rhombus_svg_item polygon'), 1.5, { 'stroke-dashoffset': 0, ease: Expo.easeInOut });
