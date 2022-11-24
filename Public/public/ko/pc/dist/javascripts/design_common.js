@@ -30,31 +30,41 @@ window.addEventListener('load', reportWindowSize);
 function layout() {
 }
 function main() {
-   let menuButton = document.querySelector('#menu > button');
-   let dotsItem = document.querySelectorAll('.dots_item');
-   let lineItem = document.querySelectorAll('.line_item');
+   const menuButton = document.querySelector('#menu > button');
+   const menuDotsItems = document.querySelectorAll('.dots_item');
+   const menuLineItems = document.querySelectorAll('.line_item');
 
-   // Menu Click Event
-   function toggleMenu() {
+   // Menu Click Event (메뉴 클릭 함수)
+   const menuClickToggle = () => {
       let menuOpenTimeLine = gsap.timeline();
       let menuCloseTimeLine = gsap.timeline();
+      let menuButtonActiveTrue = menuButton.classList.contains('active');
 
-      if (menuButton.classList.contains('active')) {
-         dotsItem[0].style.left = '-10px';
-         dotsItem[2].style.left = '10px';
-         menuCloseTimeLine.to(lineItem, .5, { width: 0 });
-         menuCloseTimeLine.to(dotsItem[0], 1, { display: 'block', opacity: 1, ease: Back.easeOut.config(1.7) });
-         menuCloseTimeLine.to(dotsItem[1], 1, { display: 'block', opacity: 1, delay: -.9, ease: Back.easeOut.config(1.7) });
-         menuCloseTimeLine.to(dotsItem[2], 1, { display: 'block', opacity: 1, delay: -.9, ease: Back.easeOut.config(1.7) });
+      if (menuButtonActiveTrue) {
+         menuDotsItems[0].style.left = '-10px';
+         menuDotsItems[2].style.left = '10px';
+         menuCloseTimeLine.to(menuLineItems, .5, { width: 0 });
+         menuCloseTimeLine.to(menuDotsItems[0], 1, { display: 'block', opacity: 1, ease: Back.easeOut.config(1.7) });
+         menuCloseTimeLine.to(menuDotsItems[1], 1, { display: 'block', opacity: 1, delay: -.9, ease: Back.easeOut.config(1.7) });
+         menuCloseTimeLine.to(menuDotsItems[2], 1, { display: 'block', opacity: 1, delay: -.9, ease: Back.easeOut.config(1.7) });
+
+         gsap.to(document.querySelector('.sub_bg_wrap'), 1.5, { 'clip-path': 'circle(0% at 100% 1%)' })
+         gsap.to(document.querySelector('.menu_bg_wrap'), 1.5, { 'clip-path': 'circle(0% at 100% 1%)', delay: .1 })
+         // clip-path: circle(3% at 96% 8%);
          menuButton.classList.remove('active');
       } else {
-         menuOpenTimeLine.to(dotsItem, .3, { left: 0 });
-         menuOpenTimeLine.to(dotsItem, .3, { display: 'none', opacity: 0, delay: -.1 });
-         menuOpenTimeLine.to(lineItem, .3, { width: 15, delay: -.1 });
+         menuOpenTimeLine.to(menuDotsItems, .3, { left: 0 });
+         menuOpenTimeLine.to(menuDotsItems, .3, { display: 'none', opacity: 0, delay: -.1 });
+         menuOpenTimeLine.to(menuLineItems, .3, { width: 15, delay: -.1 });
+         gsap.to(document.querySelector('.menu_bg_wrap'), 1.5, { 'clip-path': 'circle(150% at 100% 100%)' })
+         gsap.to(document.querySelector('.sub_bg_wrap'), 1.5, { 'clip-path': 'circle(150% at 100% 100%)', delay: .3 })
          menuButton.classList.add('active');
       }
+
+
+
    }
-   menuButton.addEventListener('click', toggleMenu);
+   menuButton.addEventListener('click', menuClickToggle);
 
 
 
