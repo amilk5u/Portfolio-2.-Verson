@@ -164,15 +164,15 @@ header #logo h1 { font-size: 25px; font-weight: 600; letter-spacing: -1.5px; }
 
 #showMenu .menu_contact ul li { padding: 5px 0; font-size: 20px; }
 
-#showMenu .menu_list button { display: block; float: right; padding: 10px 0; font-size: 130px; font-weight: 500; letter-spacing: -10px; position: relative; width: 500px; height: 100px; }
+#showMenu .menu_list button { width: 500px; height: 100px; display: block; float: right; padding: 10px 0; font-size: 130px; font-weight: 500; letter-spacing: -10px; position: relative; transform: rotateX(360deg); transform-style: preserve-3d; }
 
-#showMenu .menu_list button button:hover .back { transform: rotateX(-85deg); }
+#showMenu .menu_list button:hover .back { transform: rotateX(0); }
 
-#showMenu .menu_list button span { position: absolute; top: 0; left: 0; }
+#showMenu .menu_list button span { height: 125px; display: block; -webkit-transition: all 0.2s ease; -moz-transition: all 0.2s ease; -o-transition: all 0.2s ease; -ms-transition: all 0.2s ease; }
 
-#showMenu .menu_list button span.font { color: red; }
+#showMenu .menu_list button span.font { background: black; background: pink; display: block; color: red; transform: translateZ(65px); background: black; }
 
-#showMenu .menu_list button span .back { color: blue; transform-origin: 91% 0 0; }
+#showMenu .menu_list button span.back { color: blue; transform-origin: 0 95%; transform: rotateX(-90deg) translateZ(-62px); }
 
 #showMenu .theme_mode { position: absolute; bottom: 0; left: 0; }
 
