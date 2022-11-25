@@ -62,17 +62,13 @@ function main() {
       menuCloseTimeLine.to(menuDotsItems[0], 1, { display: 'block', opacity: 1, ease: Back.easeOut.config(1.7) });
       menuCloseTimeLine.to(menuDotsItems[1], 1, { display: 'block', opacity: 1, delay: -.9, ease: Back.easeOut.config(1.7) });
       menuCloseTimeLine.to(menuDotsItems[2], 1, { display: 'block', opacity: 1, delay: -.9, ease: Back.easeOut.config(1.7) });
-      gsap.to(document.querySelector('#showMenu'), 1.2, {
+      gsap.to(document.querySelector('.menu_bg_mask'), 1, { 'clip-path': 'circle(0% at calc(100% - 80px) 70px)', ease: "power2.inOut", });
+      gsap.to(document.querySelector('#showMenu'), 1, {
          'clip-path': 'circle(0% at calc(100% - 80px) 70px)', ease: "power2.inOut",
          onCompleteParams: [type],
-         onComplete: menuClickCallBack
+         onComplete: menuClickCallBack,
+         delay: .3
       });
-      // gsap.to(document.querySelector('.sub_bg'), 1.7, { scale: 0, width: 0, height: 0, ease: "power2.out", });
-      // gsap.to(document.querySelector('.main_bg'), 1.7, {
-      //    scale: 0, width: 0, height: 0, ease: "power2.out", delay: .1,
-      //    onCompleteParams: [type],
-      //    onComplete: menuClickCallBack
-      // });
    }
 
    /* Menu Open Motion (메뉴 오픈 모션) */
@@ -84,12 +80,13 @@ function main() {
       menuOpenTimeLine.to(menuDotsItems, .3, { display: 'none', opacity: 0, delay: -.1 });
       menuOpenTimeLine.to(menuLineItems, .3, { width: 13, delay: -.1 });
       TweenMax.staggerTo(document.querySelectorAll('.menu_list_wrap'), .5, { top: 0,/*  ease: "power2.inOut", */delay: 1 }, .2);
-      gsap.to(document.querySelector('#showMenu'), 1.2, {
+      gsap.to(document.querySelector('#showMenu'), 1, {
          'clip-path': 'circle(150% at calc(100% - 80px) 70px)', ease: "power2.inOut",
          onCompleteParams: [type],
          onComplete: menuClickCallBack
       });
-      gsap.to(document.querySelector('.main_bg'), 2, { scale: 170, width: 100, height: 100, ease: "power2.inOut", });
+      gsap.to(document.querySelector('.menu_bg_mask'), 1, { 'clip-path': 'circle(150% at calc(100% - 80px) 70px)', ease: "power2.inOut", delay: .3 });
+      // gsap.to(document.querySelector('.main_bg'), 2, { scale: 170, width: 100, height: 100, ease: "power2.inOut", });
       /*  gsap.to(document.querySelector('.sub_bg'), 1.9, {
           scale: 170, width: 100, height: 100, ease: "power2.inOut", delay: .3,
           onCompleteParams: [type],
@@ -230,6 +227,7 @@ function main() {
    });
 
    window.addEventListener('scroll', (e) => {
+      console.log(windowScrollTop)
       // if (windowScrollTop > document.querySelector('.btm_elm').offsetTop - window.innerHeight / 2) {
       //    TweenMax.staggerTo(document.querySelectorAll('.icon_cont'), .5, { opacity: 1 }, .2)
       // } else {
