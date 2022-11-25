@@ -34,37 +34,86 @@ function main() {
    const menuDotsItems = document.querySelectorAll('.dots_item');
    const menuLineItems = document.querySelectorAll('.line_item');
 
-   // Menu Click Event (메뉴 클릭 함수)
+   let motionBreakBoolean = true;
+
+   /* Menu Click Event (메뉴 클릭 함수) */
    const menuClickToggle = () => {
-      let menuOpenTimeLine = gsap.timeline();
-      let menuCloseTimeLine = gsap.timeline();
-      let menuButtonActiveTrue = menuButton.classList.contains('active');
-
-      if (menuButtonActiveTrue) {
-         menuDotsItems[0].style.left = '-10px';
-         menuDotsItems[2].style.left = '10px';
-         menuCloseTimeLine.to(menuLineItems, .5, { width: 0 });
-         menuCloseTimeLine.to(menuDotsItems[0], 1, { display: 'block', opacity: 1, ease: Back.easeOut.config(1.7) });
-         menuCloseTimeLine.to(menuDotsItems[1], 1, { display: 'block', opacity: 1, delay: -.9, ease: Back.easeOut.config(1.7) });
-         menuCloseTimeLine.to(menuDotsItems[2], 1, { display: 'block', opacity: 1, delay: -.9, ease: Back.easeOut.config(1.7) });
-
-         gsap.to(document.querySelector('.sub_bg_wrap'), 1.5, { 'clip-path': 'circle(0% at 100% 1%)' })
-         gsap.to(document.querySelector('.menu_bg_wrap'), 1.5, { 'clip-path': 'circle(0% at 100% 1%)', delay: .1 })
-         // clip-path: circle(3% at 96% 8%);
-         menuButton.classList.remove('active');
-      } else {
-         menuOpenTimeLine.to(menuDotsItems, .3, { left: 0 });
-         menuOpenTimeLine.to(menuDotsItems, .3, { display: 'none', opacity: 0, delay: -.1 });
-         menuOpenTimeLine.to(menuLineItems, .3, { width: 15, delay: -.1 });
-         gsap.to(document.querySelector('.menu_bg_wrap'), 1.5, { 'clip-path': 'circle(150% at 100% 100%)' })
-         gsap.to(document.querySelector('.sub_bg_wrap'), 1.5, { 'clip-path': 'circle(150% at 100% 100%)', delay: .3 })
-         menuButton.classList.add('active');
+      let menuActiveTrue = document.querySelector('header').classList.contains('is-opened');
+      if (menuActiveTrue && motionBreakBoolean) {
+         motionBreakBoolean = false;
+         menuCloseMotion();
+      } else if (!menuActiveTrue && motionBreakBoolean) {
+         motionBreakBoolean = false;
+         menuOpenMotion();
       }
-
-
-
    }
+
+   /* 메뉴 클릭 이벤트 */
    menuButton.addEventListener('click', menuClickToggle);
+
+   /* Menu Close Motion (메뉴 닫기 모션) */
+   const menuCloseMotion = () => {
+      let type = false;
+      let menuCloseTimeLine = gsap.timeline();
+
+      menuDotsItems[0].style.left = '-10px';
+      menuDotsItems[2].style.left = '10px';
+      menuCloseTimeLine.to(menuLineItems, .5, { width: 0 });
+      menuCloseTimeLine.to(menuDotsItems[0], 1, { display: 'block', opacity: 1, ease: Back.easeOut.config(1.7) });
+      menuCloseTimeLine.to(menuDotsItems[1], 1, { display: 'block', opacity: 1, delay: -.9, ease: Back.easeOut.config(1.7) });
+      menuCloseTimeLine.to(menuDotsItems[2], 1, { display: 'block', opacity: 1, delay: -.9, ease: Back.easeOut.config(1.7) });
+      gsap.to(document.querySelector('#showMenu'), 1.2, {
+         'clip-path': 'circle(0% at calc(100% - 80px) 70px)', ease: "power2.inOut",
+         onCompleteParams: [type],
+         onComplete: menuClickCallBack
+      });
+      // gsap.to(document.querySelector('.sub_bg'), 1.7, { scale: 0, width: 0, height: 0, ease: "power2.out", });
+      // gsap.to(document.querySelector('.main_bg'), 1.7, {
+      //    scale: 0, width: 0, height: 0, ease: "power2.out", delay: .1,
+      //    onCompleteParams: [type],
+      //    onComplete: menuClickCallBack
+      // });
+   }
+
+   /* Menu Open Motion (메뉴 오픈 모션) */
+   const menuOpenMotion = () => {
+      let type = true;
+      let menuOpenTimeLine = gsap.timeline();
+
+      menuOpenTimeLine.to(menuDotsItems, .3, { left: 0 });
+      menuOpenTimeLine.to(menuDotsItems, .3, { display: 'none', opacity: 0, delay: -.1 });
+      menuOpenTimeLine.to(menuLineItems, .3, { width: 13, delay: -.1 });
+      TweenMax.staggerTo(document.querySelectorAll('.menu_list_wrap'), .5, { top: 0,/*  ease: "power2.inOut", */delay: 1 }, .2);
+      gsap.to(document.querySelector('#showMenu'), 1.2, {
+         'clip-path': 'circle(150% at calc(100% - 80px) 70px)', ease: "power2.inOut",
+         onCompleteParams: [type],
+         onComplete: menuClickCallBack
+      });
+      gsap.to(document.querySelector('.main_bg'), 2, { scale: 170, width: 100, height: 100, ease: "power2.inOut", });
+      /*  gsap.to(document.querySelector('.sub_bg'), 1.9, {
+          scale: 170, width: 100, height: 100, ease: "power2.inOut", delay: .3,
+          onCompleteParams: [type],
+          onComplete: menuClickCallBack
+       }); */
+   }
+
+   /* 메뉴 콜백 함수 */
+   const menuClickCallBack = (obj) => {
+      if (obj) {
+         document.querySelector('header').classList.add('is-opened');
+         motionBreakBoolean = true;
+      } else {
+         document.querySelector('header').classList.remove('is-opened');
+         motionBreakBoolean = true;
+      }
+   }
+
+
+
+
+
+
+
 
 
 
@@ -136,7 +185,7 @@ function main() {
 
 
    // 소개글 핀 트리거
-   let corporationTimeline2 = gsap.timeline({
+   let introduceTimeLine = gsap.timeline({
       scrollTrigger: {
          markers: { startColor: "blue", endColor: "blue" },
          // trigger: ".bg_wrap",
@@ -147,13 +196,13 @@ function main() {
          end: '+=' + 2500
       }
    });
-   corporationTimeline2.to(document.querySelector('.bg_wrap'), { opacity: 1, duration: 1 })
-   corporationTimeline2.to(document.querySelector('#project .intro_wrap .txt_wrap'), { opacity: 1, duration: 1 })
-   corporationTimeline2.to(document.querySelector('.btm_elm'), { opacity: 1, duration: 4 })
+   introduceTimeLine.to(document.querySelector('.bg_wrap'), { opacity: 1, duration: 1 })
+   introduceTimeLine.to(document.querySelector('#project .intro_wrap .txt_wrap'), { opacity: 1, duration: 1 })
+   introduceTimeLine.to(document.querySelector('.btm_elm'), { opacity: 1, duration: 4 })
 
 
    // 이미지 확대 트리거
-   let corporationTimeline = gsap.timeline({
+   let projectImgScaleTimeLine = gsap.timeline({
       scrollTrigger: {
          markers: { startColor: "green", endColor: "green" },
          trigger: ".bg_wrap",
@@ -163,13 +212,13 @@ function main() {
          end: '+=' + (document.querySelector('#project').offsetHeight + window.innerHeight * 2 + 2500)
       }
    });
-   corporationTimeline.to('.intro_img', { scale: 1.5, duration: 1 })
-   corporationTimeline.to('.lg_img', { scale: 1.5, delay: -0.8, duration: 1 })
-   corporationTimeline.to('.msfk_img', { scale: 1.5, delay: -0.8, duration: 1 })
-   corporationTimeline.to('.hyosung_img', { scale: 1.5, delay: -0.8, duration: 1 })
+   projectImgScaleTimeLine.to('.intro_img', { scale: 1.5, duration: 1 })
+   projectImgScaleTimeLine.to('.lg_img', { scale: 1.5, delay: -0.8, duration: 1 })
+   projectImgScaleTimeLine.to('.msfk_img', { scale: 1.5, delay: -0.8, duration: 1 })
+   projectImgScaleTimeLine.to('.hyosung_img', { scale: 1.5, delay: -0.8, duration: 1 })
 
    // bg_wrap 핀 거는 트리거
-   let corporationTimeline1 = gsap.timeline({
+   let bgFixTimeLine = gsap.timeline({
       scrollTrigger: {
          markers: { startColor: "red", endColor: "red" },
          trigger: ".bg_wrap",
