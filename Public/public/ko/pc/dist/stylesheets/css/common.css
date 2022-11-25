@@ -201,7 +201,7 @@ header #menu > button .circle_bg { width: 30px; height: 30px; position: absolute
 
 #showMenu .menu_list button:hover + .list_number span, #showMenu .menu_list button:focus + .list_number span { opacity: 1; }
 
-#showMenu .menu_list button span { line-height: 100px; display: block; color: #181712; -webkit-text-stroke: 5px #181712; }
+#showMenu .menu_list button span { line-height: 100px; display: block; color: #181712; -webkit-text-stroke: 5px #181712; text-shadow: 1px 1px 0 red, -1px 1px 0 red, 1px -1px 0 red, -1px -1px 0 red; }
 
 #showMenu .menu_list button span.font { transform: translateZ(50px); }
 

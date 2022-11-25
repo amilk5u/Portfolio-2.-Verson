@@ -75,6 +75,7 @@ header {
          span {    
             line-height: 100px; display: block; color: #181712;
             -webkit-text-stroke: 5px #181712;  
+            text-shadow: 1px 1px 0 red, -1px 1px 0 red, 1px -1px 0 red, -1px -1px 0 red;
             &.font { transform: translateZ(50px); }
             &.back { transform: rotateX(-90deg) translateZ(-50px); color: $mainColor; -webkit-text-stroke: 5px #ff5252; }
          }
