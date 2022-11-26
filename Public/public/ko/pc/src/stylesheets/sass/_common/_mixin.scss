@@ -247,8 +247,8 @@ $desktop-s-width	: 1650px;
 $tablet-width		: 1320px;
 $mob-width		: 750px;
 
-// PC large
-@mixin pc-small {
+// Desktop (데스크탑)
+@mixin desktop {
 	@media screen and (max-width: #{$desktop-s-width}) {
 		@content;
 	}
@@ -256,8 +256,8 @@ $mob-width		: 750px;
 
 // --------------------------------------------------
 
-// 태블릿
-@mixin tab {
+// Tablet (태블릿)
+@mixin tablet {
 	@media screen and (max-width: #{$tablet-width}) {
 		@content;
 	}
@@ -265,16 +265,16 @@ $mob-width		: 750px;
 
 // --------------------------------------------------
 
-// 모바일
-@mixin mob {
+// Mobile (모바일)
+@mixin mobile {
 	@media screen and (max-width: #{$mob-width}) {
 		@content;
 	}
 }
 
-@function em($size) {
-	$remSize: $size / 20;
-	@return #{$remSize}rem;
+@function vw($size) {
+	$vwSize: $size / 20;
+	@return #{$vwSize}vw;
 }
 
 @media only screen and (max-width:768px) {
