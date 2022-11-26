@@ -176,7 +176,7 @@
          width: 100%; height: 100vh; content: ""; display: block; position: absolute; top: 0; left: 0; border: 5px solid red; background-color: black; opacity: .7;
          @include boxSizing;
       }
-		.intro_img { width: 100%; height: 100vh; position: absolute; top: 0; background: url(./../../images/main/06_1_2.ddd5415c.jpg) 50% 50% no-repeat; background-size: cover; }
+		.intro_img { width: 100%; height: 100vh; position: absolute; top: 0; background: url(./../../images/main/03_6.b710a221.jpg) 50% 50% no-repeat; background-size: cover; }
 		.lg_img { position: absolute; top: 0; width: 100%; height: 100vh; background: url(./../../images/main/img4.jpg) 50% 50% no-repeat; background-size: cover; opacity: 0; }
 		.msfk_img { position: absolute; top: 0; width: 100%; height: 100vh; background: url(./../../images/main/img6.jpg) 50% 50% no-repeat; background-size: cover; opacity: 0; }
 		.hyosung_img { position: absolute; top: 0; width: 100%; height: 100vh; background: url(./../../images/main/img5.jpg) 50% 50% no-repeat; background-size: cover; opacity: 0; }
@@ -196,18 +196,27 @@
    .elm_cont {
       width: 100%;/* height: 980px; */padding: 300px 0; /* background-color: rgba(83, 56, 56, 0.473); */
       .encase {
-         width: 1600px; margin: 0 auto; position: relative;
+         width: 100%; max-width: 1600px; position: relative; margin: 0 auto;
          @extend %clearfix;
          .desc_wrap {
-            width: max-content; position: absolute; margin: 0 auto; color: #fff; 
-            h2 { font-family: $NeueMachina; font-size: 300px; }
-            p { font-size: 16px; }
-            strong { font-size: 65px; font-weight: $medium; letter-spacing: -5px; padding: 10px 0 0; display: block; }
+            width: max-content; position: absolute; margin: 0 auto; color: #fff;             
+            h2 { font-family: $NeueMachina; font-size: 192px; }
+            strong { 
+               max-width: 1200px;
+               font-size: 40px;
+               font-weight:  $medium;;
+               letter-spacing: -2px;
+               padding: 4px 0 105px;
+               display: block;
+               line-height: 50px;
+            }
+            p { width: 559px; margin: 0 0 0 64px; font-size: 18px; font-weight: 400; line-height: 35px; }
          } 
          .link_wrap { 
-            width: 840px; height: 652px; background-color: white; margin: 0 auto; position: relative;
+            width: 530px; height: 608px; margin: 0 auto; position: absolute; right: 100px; top: 401px;
+            img { width: 100%; height: 100%; }
             a { width: 100%; height: 100%; display: block; }
-            span { position: absolute; bottom: -40px; display: block; font-size: 30px; color: white; }
+            span { position: absolute; bottom: -40px; display: block; font-size: 22px; color: white; }
          }
       }
    }
@@ -216,7 +225,7 @@
       // padding: 300px 0 300px;
 		.lg_contents {
 			position: relative; /* overflow: hidden;  */
-			.desc_wrap { right: 935px; top: 114px; }
+			.desc_wrap { left: 950px; top: 69px; }
 			.link_wrap { 
 				float: right; 
 				span { left: 0; }
