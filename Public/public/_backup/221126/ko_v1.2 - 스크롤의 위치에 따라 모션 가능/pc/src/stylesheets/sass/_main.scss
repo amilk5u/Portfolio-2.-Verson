@@ -1,0 +1,487 @@
+@charset "UTF-8";
+.top { position: fixed; bottom: 0; left: 0; font-size: 50px; color: red; font-weight: $bold; z-index: 9999; }
+
+/* Header (헤더) */
+header {
+   width: 100%; height: auto; position: fixed; z-index: 5;
+   /* Logo (로고) */
+   #logo { 
+      position: absolute; left: 50px; top: 50px; z-index: 2;
+      h1 { font-size: 25px; font-weight: $bold; letter-spacing: -1.5px; }
+   }
+   /* Menu */
+   #menu {
+      position: absolute; right: 30px; top: 20px; z-index: 2; display: flex; justify-content: center; align-items: center;
+      // display: none;
+      // background-color: red;
+      > button {
+         width: 100px; height: 100px;  
+         &:hover {
+            .circle_bg { width: 40px; height: 40px; }
+         }
+         .dots_wrap {
+            width: 30px; height: 30px; position: absolute; display: block;
+            left: 0; top: 0; right: 0; bottom: 0 ; margin: auto;            
+            @include borderRadius(100%);         
+            .dots_item {     
+               width: 3px; height: 3px; display: block; position: absolute;  background-color: white;
+               top: 0; bottom: 0; right: 0; left: 0; margin: auto;
+               @include borderRadius(100%);
+               &:nth-of-type(1) { left: -10px; }
+               &:nth-of-type(3) { left: 10px; }
+            }
+            .line_item {
+               width: 0; height: 2px; position: absolute; left: 0; top: 0; right: 0; bottom: 0 ; margin: auto;
+               background-color: white;
+               // opacity: 0;
+               @include borderRadius(10px);
+               &:nth-of-type(1) { @include rotate(-45); }
+               &:nth-of-type(2) { @include rotate(45); }
+            }
+         }
+         .circle_bg {
+            width: 30px; height: 30px; position: absolute; top: 0; bottom: 0; right: 0; left: 0; margin: auto; z-index: -1;
+            background-color: $mainColor;
+            @include transition(all, .3s);
+            @include borderRadius(100%);
+         }
+      }
+   }
+
+   /* Show Menu (펼쳐진 메뉴) */
+   #showMenu {     
+      width: 100%; height: 100vh; position: fixed; z-index: 1; clip-path: circle(0% at calc(100% - 80px) 70px); background-color: $mainColor;
+      .menu_inner { 
+         height: 100vh; margin: 0 auto; display: flex; align-items: center; justify-content: space-between;
+         padding: 0 50px; position: relative; 
+      }
+      /* 주소, 깃허브, 블로그 */
+      .menu_contact {
+         padding: 0 0 0 7%;
+         > span { font-size: 14px; color: $mainColor; }
+         ul { 
+            li { margin: 15px 0; font-size: 16px; } 
+         }
+      }
+      /* Menu List (메뉴 리스트) */
+      .menu_list_wrap { display: flex; align-items: center; justify-content: end;/*  position: relative; top: 110px; */ }
+      .menu_list {
+         li { margin: 40px 0; position: relative; overflow: hidden; }
+         button {          
+            height: 100px; display: block; transform-style: preserve-3d;
+            @include transition(all, .3s);
+            &:hover, &:focus {
+               transform: rotateX(90deg); 
+               & + .list_number { 
+                  span { opacity: 1; }
+               }
+            }   
+            span {    
+               font-size: 110px; font-weight: $medium; letter-spacing: 0; line-height: 100px; display: block; color: #181712;
+               -webkit-text-stroke: 4px #181712;  
+               &.font { transform: translateZ(50px); }
+               &.back { transform: rotateX(-90deg) translateZ(-50px); color: $mainColor; -webkit-text-stroke: 4px #ff5252; }
+            }
+         }   
+         .list_number {
+            min-width: 100px; width: 100%; max-width: 100px; font-family: $NeueMachina; text-align: center;
+            @include boxSizing;
+            span { 
+               color: #ccc; opacity: 0; 
+               @include transition(all , .5s);
+            }
+         }
+      }
+      .theme_mode {
+         position: absolute; bottom: 50px; left: 50px;
+         .theme_element { 
+            width: 100px; height: 100px; position: relative;
+            span {
+               width: 20px; height: 20px; display: block; position: absolute; overflow: hidden; border: 1px solid #c5c1ae; top: 50%; left: 50%;
+               @include transform(translate(-50%,-50%));
+               @include borderRadius(100%);
+               @include boxSizing;
+               &:after { width: 50%; height: 100%; content: ""; display: block; position: absolute; left: 50%; background-color: #c5c1ae; }
+            }
+         }
+      }
+      .menu_bg_mask {
+         clip-path: circle(0% at calc(100% - 80px) 70px);
+         width: 100%; height: 100vh; position: absolute; z-index: -1; top: 0; left: 0;
+         background-color: $subColor 
+      }
+   }
+} 
+
+/* Footer (푸터) */
+footer {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* container */
+.container { width: 100%; background-color: $subColor; padding: 0 0 1000px; }
+
+/* (start) section 1 - intro */
+#intro {
+	width: 100%; height: 980px;/* background-color: pink; */
+	.covering_wrap { max-width: 1680px; position: relative; margin: 0 auto; }
+	.main_title_txt { 
+      display: inline-block; position: relative; z-index: 1; top: 388px; left: 293px;
+		h2 { 
+         width: max-content; position: relative; font-size: 230px; font-weight: $medium; letter-spacing: -24px; line-height: 195px; mix-blend-mode: overlay; color: #181712;
+			span { position: relative; left: -100px; }
+			em {
+				width: 177px; display: inline-block; position: relative; top: 26px;
+				img { width: 100%; }
+			}
+		} 
+		.slogan_txt {  
+			position: absolute; top: -157px; left: 9%; font-size: 12px;
+			em { color: $mainColor; }
+			> span { display: block; padding: 10px 0 0; }
+		}
+		.thumb_image {
+         width: 553px; height: 357px; position: absolute; top: -155px; left: 589px; overflow: hidden; z-index: -1;
+			img { width: 100%; }
+		}
+	}
+	.main_grid_line {
+		max-width: 840px; max-height: 840px; position: absolute; right: 0; top: 50px; /* border: 1px solid black; *//* opacity: .2; */
+      mix-blend-mode: multiply; z-index: 1;
+		@include boxSizing;
+		.circle_svg_item {
+         width: 239px; height: 240px; position: absolute; bottom: 100px; right: 0;
+			ellipse { stroke: rgb(207, 207, 207); stroke-width: 2px; fill: $subColor; stroke-miterlimit: 10; stroke-dasharray: 750; stroke-dashoffset: 750; }
+		}
+		.star_svg_item {
+         width: 124px; height: 122px; position: absolute; top: 92px; right: 352px;
+			@include scale(0);
+			path { stroke: rgb(207, 207, 207); stroke-width: 2px; fill: $subColor; stroke-miterlimit: 10; stroke-dasharray: 395; stroke-dashoffset: 0; }
+		}
+		.rhombus_svg_item {
+         width: 360px; height: 240px; position: absolute; bottom: 55px; left: -802px;
+			polygon { stroke: rgb(207, 207, 207); stroke-width: 2px; fill: $subColor; stroke-miterlimit: 10; stroke-dasharray: 880; stroke-dashoffset: 880; }
+		}
+		.line_element_wrap {
+			width: 100%; height: 100%; position: relative; opacity: 0; 
+			.trick_image { width: 100%; opacity: 0; }
+			.grid_content { width: 100%; height: 100%; position: absolute; top: 0; left: 0; }
+			.row_grid {
+				width: 100%; height: 100%;
+				> div { width: 100%; height: auto; }
+				span { display: block; width: 0; height: 2px; background-color:  rgb(207, 207, 207); margin: 0 auto 14%; }
+			}
+			.col_grid {
+				width: 100%; height: 100%;
+				@include rotate(90);
+				> div { width: 100%; height: auto; }
+				span { display: block; width: 0; height: 2px; background-color:  rgb(207, 207, 207); margin: 0 auto 14%; }
+			}
+		}
+	/* 	.grid_line_svg {
+			width: 850px; height: 850px;
+			line { stroke: rgb(207, 207, 207); stroke-width: 2px; fill: none; stroke-miterlimit: 10; stroke-dasharray: 420; stroke-dashoffset: 420; }
+		} */
+	}
+	.moving_image {
+		> div { position: absolute; background-color: black; }
+		.element_1 { 
+			width: 200px; height: 240px; top: -4%; right: 28%; 
+			background:url(./../../images/main/img3.png) 0 0 repeat;
+		}
+	}
+}
+/* (end) section 1 - intro */
+
+/* (start) section 2 - introduce */
+#introduce {
+	max-width: 1920px; margin: 0 auto;
+   .intro_elm {
+      width: max-content; height: 1000px;
+      > div {
+         &:nth-of-type(2) { 
+            strong { color: black; }
+         }
+      }
+      .txt_cont { width: max-content; }
+      strong { font-size: 161px; display: block; letter-spacing: -8px; color: $subColor; text-decoration: #ccc; text-shadow: 1px 1px 0 #ccc, -1px 1px 0 #ccc, 1px -1px 0 #ccc, -1px -1px 0 #ccc; }
+      span { font-size: 19px; }
+   }
+	.top_elm {
+      position: relative; padding: 371px 0 0;
+		@extend %clearfix;
+		.small_img {
+         width: 400px; position: relative; float: left;
+			img { width: 100%; }
+			span { position: absolute; top: -29px; right: 0; font-family: $NeueMachina; }
+		}
+		.right_wrap {
+         width: 800px; position: relative; float: right; margin: 150px 0 0;
+         .first_txt { 
+            margin: 0 0 0 -179px;
+            span { font-size: 70px; margin: 0 0 0 181px; font-weight: 500; letter-spacing: -3px; text-shadow: 1px 1px 0 black, -1px 1px 0 black, 1px -1px 0 black, -1px -1px 0 black; color: $subColor; word-break: break-all; }
+            em { display: block; margin: 20px 0 10px 181px; }
+         }
+			.bottom_txt { position: absolute; bottom: -29px; left: 0; font-family: $NeueMachina; }
+         .img_wrap {
+            img { width:100%; } 
+         }
+		}
+		.txt_wrap {
+			float: left; margin: 150px 0 0 150px;
+			h2 { 
+				font-size: 74px; font-weight: $regular; letter-spacing: -5px; 
+				mark { color: rgb(105, 65, 250); background-color: transparent; }
+			}
+			p { 
+				/* font-family: $YoonGothicPro750; */ line-height: 38px; font-size: 19px; letter-spacing: -0.5px;
+				span { display: block; padding: 30px 0 0; }
+			}
+		}
+   	.moving_image {
+         > div { position: absolute; background-color: black; }
+         .element_1 { width: 200px; height: 240px; top: 51%; left: 8%; background: url(./../../images/main/img3.png) 0 0 repeat; }
+      }
+	}
+	.btm_elm {
+		padding: 300px 0 0;
+		ul.icon_wrap { max-width: 1200px; height: 1000px; position: relative; margin: 0 auto; }
+		li.icon_cont {
+			width: 200px; height: 200px; position: absolute; border: 2px solid rgb(207, 207, 207);
+			&:nth-of-type(1) { top: 5%; left: 8%; }
+			&:nth-of-type(2) { top: 35%; left: 22%; }
+			&:nth-of-type(3) { top: 0; right: 0; }
+			&:nth-of-type(4) { top: 19%; right: 26%; }
+			&:nth-of-type(5) { top: 58%; left: 0%; }
+			&:nth-of-type(6) { top: 60%; right: 10%; }
+			&:nth-of-type(7) { top: 73%; left: 37%; }
+			span {
+				width: 100%; height: 100%; display: block; background-color: blue; overflow: hidden;
+				@include borderRadius(100%);
+				img { width: 100%; }
+			}
+		}
+	}
+	.more_elm {
+		margin: 300px 0 0;
+		.tit_wrap {
+			width: 100%;
+			strong { display: block; text-align: center; margin: 0 auto; font-weight: $regular; font-size: 151px; letter-spacing: -10px; line-height: 121px; }
+			em { position: relative; top: -7px; left: 9px; font-family: $Faktum; font-size: 126px; }
+			span { width: max-content; display: block; margin: 0 auto; }
+		}
+	}
+}
+/* (end) section 2 - introduce */
+
+/* (start) section 3 - project */
+#project {
+	width: 100%; position: relative; overflow: hidden;/*  margin: 0 0 2000px; */
+   border-top:1px solid black;
+	.hidden_wrap {
+		width: 100%; height: 100vh; position: absolute; top: 0; z-index: -1;
+		.hiden_txt {
+			width: 200px; height: 200px; position: absolute; background-color: red;
+			&:nth-of-type(1) { top: 40%; left: 20%; }
+			&:nth-of-type(2) { top: 0; left: 0; }
+			&:nth-of-type(3) { top: 50%; right: 0; }
+		}
+	}
+	.bg_wrap {
+		width: 100%; height: 100vh; position: absolute; top: 0; left: 0; opacity: 0;      
+      // > div { margin: 80px 0 0; }
+		.intro_img {
+			position: absolute; top:0;
+			width:100%; height:100vh;
+			background:url(./../../images/main/03_1.09beb2ef.jpg) 50% 50% no-repeat;
+			background-size: cover;
+		}
+		.lg_img {
+			position: absolute; top:0;
+			width:100%; height:100vh;
+			background:url(./../../images/main/img4.jpg) 50% 50% no-repeat;
+			background-size: cover;
+			opacity: 0;
+		}
+		.msfk_img {
+			position: absolute; top:0;
+			width:100%; height:100vh;
+			background:url(./../../images/main/img6.jpg) 50% 50% no-repeat;
+			background-size: cover;
+			opacity: 0;
+		}
+		.hyosung_img {
+			position: absolute; top:0;
+			width:100%; height:100vh;
+			background:url(./../../images/main/img5.jpg) 50% 50% no-repeat;
+			background-size: cover;
+			opacity: 0;
+		}
+	}
+	.box_cont {
+		width: 1600px; margin: 0 auto; position: relative;
+		// display: flex;
+		.cont_elm { 
+			width: 840px; height: 652px; background-color: white; margin: 0 auto; 
+			position: relative;
+			a { width: 100%; height: 100%; display: block; }
+			span { position: absolute; bottom: -40px; display: block; font-size: 30px; color: white; }
+		}
+	}
+	.txt_wrap {
+		width: max-content; position: absolute; margin: 0 auto; color: #fff; 
+		p { font-size: 16px; }
+		strong { font-size: 65px; font-weight: $medium; letter-spacing: -5px; padding: 10px 0 0; display: block; }
+	} 
+	.mySwiper {
+		.swiper-slide { height: 800px; background-color: pink; }
+	}
+	.content_wrap { padding: 0 0 500px; }
+	.cont {
+		padding: 500px 0 0;
+		@extend %clearfix;
+		&:first-of-type { padding: 0; }
+	}
+
+
+
+	// 개별
+	.intro_wrap {
+		height: 800px;
+		.txt_wrap {
+			padding: 300px 0 0; opacity: 0;			
+		}
+	}
+	.project_elm {
+		.lg_wrap {
+			position: relative; /* overflow: hidden;  */
+			.txt_wrap { right: 935px; top: 114px; }
+			.cont_elm { 
+				float: right; 
+				span { left: 0; }
+			}
+		}
+		.msfk_wrap {
+			position: relative; /* overflow: hidden; */
+			.txt_wrap { left: 950px; top: 69px; }
+			.cont_elm { 
+				float: left; 
+				span { right: 0; }
+			}
+		}
+		.hyosung_wrap {
+			position: relative;/*  overflow: hidden; */
+			.txt_wrap { right: 935px; top: 114px; }
+			.cont_elm { 
+				float: right; 
+				span { left: 0; }
+			}
+		}
+	}
+	.last_wrap {
+		position: relative; margin: 600px 0 0;
+		.tit_wrap {
+			width: 100%; color: $white;
+			strong { display: block; text-align: center; margin: 0 auto; font-weight: $regular; font-size: 151px; letter-spacing: -10px; line-height: 121px; }
+			em { position: relative; top: -7px; left: 9px; font-family: $Faktum; font-size: 126px; }
+			span { width: max-content; display: block; margin: 0 auto; }
+		}
+	}
+}
+/* (end) section 3 - project */
+
+
+$total: 24;
+.ddd {
+   display: block;
+   width: 100%;
+   height: 100%;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: 0 0;
+   animation: minime_animation_pc #{$total + 1s} steps(1) backwards;
+   animation-play-state: paused;
+   animation-iteration-count: initial;
+   animation-duration: #{$total + 1s};
+}
+
+@keyframes minime_animation_pc {
+   // @for $i from 0 to $total + 1 {
+   //    $current-frame: ($i * $per);
+   //    #{$current-frame} {
+   //       background-position: -#{$pc-width * $i} 0;
+   //       width: $pc-width;
+   //       height: $pc-height;
+   //    }
+   // }
+}
+
+// @keyframes minime_animation_mo {
+//    @for $i from 0 to $total + 1 {
+//       $current-frame: ($i * $per);
+//       #{$current-frame} {
+//          background-position: -#{$mo-width * $i} 0;
+//          width: $mo-width;
+//          height: $mo-height;
+//       }
+//    }
+// }
+
+// 연습 페이지
+.sub1 {
+	section { height: 3000px; }
+	.sec2 {
+		height: 3000px; position: relative; background-color: pink;
+		overflow: hidden;
+		.box1 {
+			width:100%; height:100vh;
+			background-color: red; 
+			position: absolute; top:0; left:0;
+			// > img { width:100%; }
+			// > video { width: 100%; height:100%; position: absolute; top: 0; left: 0; }
+			background:url(./../../images/main/img4.jpg) 50% 50% no-repeat;
+			background-size: cover;
+		}
+		.box2 {
+			width:100px; height:100px;
+			background-color: black;
+			position: absolute; top: 20%; left:50%; z-index: 2;
+		}
+		.box3 {
+			width:100px; height:100px;
+			background-color: black;
+			position: absolute; top: 50%; left:50%; z-index: 2;
+		}
+		.box4 {
+			width:100px; height:100px;
+			background-color: black;
+			position: absolute; top: 70%; left:50%; z-index: 2;
+		}
+	}
+}
