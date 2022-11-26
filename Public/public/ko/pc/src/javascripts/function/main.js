@@ -45,7 +45,7 @@ function main() {
       let scrollYOffset = Math.floor(t.scroll.y);
       document.querySelector('.top').innerHTML = scrollYOffset;
       if (scrollYOffset > document.querySelector('#project').offsetTop) {
-         console.log('안녕??')
+         // console.log('안녕??')
       }
 
       // if (t.scroll.y < 7245) {
@@ -190,7 +190,6 @@ function main() {
 
 
 
-
    /* Introduce Time Line (섹션 고정) */
    let introduceTimeLine = gsap.timeline({
       scrollTrigger: {
@@ -217,7 +216,7 @@ function main() {
          // pin: true,
          scrub: true,
          start: "top top",
-         end: '+=' + (document.querySelector('#project').offsetHeight + window.innerHeight * 2 + 2500)
+         end: '+=' + (document.querySelector('#project').offsetHeight + window.innerHeight * 2 + 4000)
       }
    });
    projectImgScaleTimeLine.to('.intro_img', { scale: 1.5, duration: 1 })
@@ -234,7 +233,7 @@ function main() {
          pin: true,
          scrub: true,
          start: "top top",
-         end: '+=' + (document.querySelector('#project').offsetHeight - window.innerHeight + 2500)
+         end: '+=' + (document.querySelector('#project').offsetHeight - window.innerHeight + 4000)
       }
    });
 

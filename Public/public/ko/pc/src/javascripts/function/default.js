@@ -8,10 +8,7 @@ let encase_txt;
 let windowMeasurement = () => {
    windowWidth = window.innerWidth;
    windowHeight = window.innerHeight;
-
    encase_txt = document.querySelector('#project .project_intro .encase_txt p').offsetHeight
-
-   console.log(encase_txt)
 }
 
 /* Window Scroll Offset  */

@@ -78,9 +78,10 @@ header {
             }   
             span {    
                font-size: 110px; font-weight: $medium; letter-spacing: 0; line-height: 100px; display: block; color: #181712;
-               -webkit-text-stroke: 4px #181712;  
+               // font-family: $NeueMachina;
+               -webkit-text-stroke: 6px #181712;  
                &.font { transform: translateZ(50px); }
-               &.back { transform: rotateX(-90deg) translateZ(-50px); color: $mainColor; -webkit-text-stroke: 4px #ff5252; }
+               &.back { transform: rotateX(-90deg) translateZ(-50px); color: $mainColor; -webkit-text-stroke: 4px $mainColor; }
             }
          }   
          .list_number {
