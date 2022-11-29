@@ -210,13 +210,12 @@ function main() {
    /* Project Images Scale Time Line (이미지 확대 트리거) */
    let projectImgScaleTimeLine = gsap.timeline({
       scrollTrigger: {
-         // markers: { startColor: "green", endColor: "green" },
          trigger: ".project_fix_img",
          scroller: ".container",
          // pin: true,
          scrub: true,
          start: "top top",
-         end: '+=' + (document.querySelector('#project').offsetHeight + window.innerHeight * 2 + 4000)
+         end: '+=' + (document.querySelector('#project').offsetHeight * 1.5)
       }
    });
    projectImgScaleTimeLine.to('.intro_img', { scale: 1.5, duration: 1 })
@@ -229,11 +228,11 @@ function main() {
       scrollTrigger: {
          markers: { startColor: "red", endColor: "red" },
          trigger: ".project_fix_img",
-         scroller: ".container",
+         scroller: ".container", 
          pin: true,
          scrub: true,
          start: "top top",
-         end: '+=' + (document.querySelector('#project').offsetHeight - window.innerHeight + 4000)
+         end: '+=' + (document.querySelector('#project').offsetHeight * 1.5)
       }
    });
 

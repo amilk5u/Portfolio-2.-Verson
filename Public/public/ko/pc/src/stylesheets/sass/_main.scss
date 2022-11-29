@@ -44,7 +44,7 @@
 			polygon { stroke: rgb(207, 207, 207); stroke-width: 2px; fill: $subColor; stroke-miterlimit: 10; stroke-dasharray: 880; stroke-dashoffset: 880; }
 		}
 		.line_element_wrap {
-			width: 100%; height: 100%; position: relative; opacity: 0; 
+			width: 100%; height: 100%; position: relative; /* opacity: 0;  */
 			.trick_img { width: 100%; opacity: 0; }
 			.grid_content { width: 100%; height: 100%; position: absolute; top: 0; left: 0; }
 			.row_grid {
@@ -201,25 +201,25 @@
       width: 100%;/* height: 980px; */padding: 250px 0; /* background-color: rgba(83, 56, 56, 0.473); */
       .encase {
          width: 100%; max-width: 1300px; position: relative; margin: 0 auto;
-         p { width: 559px; margin: 0 0 0 50px; font-size: 18px; font-weight: 400; line-height: 35px; color: #fff; }
+         p { width: 559px; /* margin: 0 0 0 50px; */ font-size: 18px; font-weight: 400; line-height: 35px; color: #fff; }
          .desc_wrap {
             margin: 0 auto;          
             h2 { 
-               /* font-family: $NeueMachina;  */font-size: 154px; color: #fff; 
+               /* font-family: $NeueMachina;  */font-size: 115px; color: #fff; 
                // -webkit-text-stroke: 6px $white; font-weight: $medium;
-               em { font-size: 80px; display: block; }
+               em { position: relative; top: -9px; left: 18px; font-size: 60px; }
             }
             p { font-size: 13px; }
          } 
          .link_wrap { 
-            width: 100%; margin: 0 auto; position: relative; padding: 88px 0 0;
+            width: 100%; margin: 0 auto; position: relative; 
             @extend %clearfix;
             .sub_desc {
-               float: left;
+               padding: 88px 0 0; float: left;
                strong { max-width: 1200px; font-size: 40px; font-weight: $medium; letter-spacing: -2px; padding: 0 0 20px; display: block; line-height: 50px; color: #fff; }
-            }
+            } 
             .link_btn {
-               width: 659px; height: 555px; display: block; float: right; position: relative; left: 75px; top: -35px;
+               width: 659px; height: 555px; display: block; float: right; position: relative; left: 75px; top: -142px;
                img { width: 100%; height: 100%; }
                span { position: absolute; bottom: -40px; display: block; font-size: 22px; color: white; left: 0; }
             }
@@ -235,7 +235,7 @@
                h2 { text-align: right; }
             }
             .link_wrap {
-               .sub_desc { float: right; }
+               .sub_desc { float: right; text-align: right; }
                .link_btn { 
                   float: left; right: 75px; left: auto; 
                   span { right: 0; left: auto; }
@@ -246,11 +246,12 @@
 		.msf_contents {}
 		.hyo_contents {
          .encase {
+            // p { margin: 0 50px 0 0; }
             .desc_wrap {
                h2 { text-align: right; }
             }
             .link_wrap {
-               .sub_desc { float: right; }
+               .sub_desc { float: right; text-align: right; }
                .link_btn {  
                   float: left; right: 75px; left: auto; 
                   span { right: 0; left: auto; }

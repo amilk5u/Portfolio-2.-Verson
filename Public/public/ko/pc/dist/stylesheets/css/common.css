@@ -182,15 +182,15 @@ header #menu > button .dots_wrap .line_item:nth-of-type(1) { -webkit-transform: 
 
 header #menu > button .dots_wrap .line_item:nth-of-type(2) { -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg); }
 
-header #menu > button .circle_bg { width: 30px; height: 30px; position: absolute; top: 0; bottom: 0; right: 0; left: 0; margin: auto; z-index: -1; background-color: #6941fa; -webkit-transition: all 0.3s ease; -moz-transition: all 0.3s ease; -o-transition: all 0.3s ease; -ms-transition: all 0.3s ease; -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%; }
+header #menu > button .circle_bg { width: 30px; height: 30px; position: absolute; top: 0; bottom: 0; right: 0; left: 0; margin: auto; z-index: -1; background-color: #ff5252; -webkit-transition: all 0.3s ease; -moz-transition: all 0.3s ease; -o-transition: all 0.3s ease; -ms-transition: all 0.3s ease; -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%; }
 
-header #showMenu { width: 100%; height: 100vh; position: fixed; z-index: 1; clip-path: circle(0% at calc(100% - 80px) 70px); background-color: #6941fa; /* 주소, 깃허브, 블로그 */ /* Menu List (메뉴 리스트) */ }
+header #showMenu { width: 100%; height: 100vh; position: fixed; z-index: 1; clip-path: circle(0% at calc(100% - 80px) 70px); background-color: #ff5252; /* 주소, 깃허브, 블로그 */ /* Menu List (메뉴 리스트) */ }
 
 header #showMenu .menu_inner { height: 100vh; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 50px; position: relative; }
 
 header #showMenu .menu_contact { padding: 0 0 0 7%; }
 
-header #showMenu .menu_contact > span { font-size: 14px; color: #6941fa; }
+header #showMenu .menu_contact > span { font-size: 14px; color: #ff5252; }
 
 header #showMenu .menu_contact ul li { margin: 15px 0; font-size: 16px; }
 
@@ -208,7 +208,7 @@ header #showMenu .menu_list button span { font-size: 110px; font-weight: 500; le
 
 header #showMenu .menu_list button span.font { transform: translateZ(50px); }
 
-header #showMenu .menu_list button span.back { transform: rotateX(-90deg) translateZ(-50px); color: #6941fa; -webkit-text-stroke: 4px #6941fa; }
+header #showMenu .menu_list button span.back { transform: rotateX(-90deg) translateZ(-50px); color: #ff5252; -webkit-text-stroke: 4px #ff5252; }
 
 header #showMenu .menu_list .list_number { min-width: 100px; width: 100%; max-width: 100px; font-family: "NeueMachina", "YoonGothicPro750", Arial, Apple SD Gothic Neo, sans-serif; text-align: center; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
@@ -245,7 +245,7 @@ header #showMenu .menu_bg_mask { width: 100%; height: 100vh; position: absolute;
 
 #intro .main_title_txt .slogan_txt { position: absolute; top: -157px; left: 9%; font-size: 12px; }
 
-#intro .main_title_txt .slogan_txt em { color: #6941fa; }
+#intro .main_title_txt .slogan_txt em { color: #ff5252; }
 
 #intro .main_title_txt .slogan_txt > span { display: block; padding: 10px 0 0; }
 
@@ -267,7 +267,7 @@ header #showMenu .menu_bg_mask { width: 100%; height: 100vh; position: absolute;
 
 #intro .main_grid_line .rhombus_svg_item polygon { stroke: #cfcfcf; stroke-width: 2px; fill: #f9f6e7; stroke-miterlimit: 10; stroke-dasharray: 880; stroke-dashoffset: 880; }
 
-#intro .main_grid_line .line_element_wrap { width: 100%; height: 100%; position: relative; opacity: 0; }
+#intro .main_grid_line .line_element_wrap { width: 100%; height: 100%; position: relative; /* opacity: 0;  */ }
 
 #intro .main_grid_line .line_element_wrap .trick_img { width: 100%; opacity: 0; }
 
@@ -413,23 +413,23 @@ header #showMenu .menu_bg_mask { width: 100%; height: 100vh; position: absolute;
 
 #project .elm_cont .encase { width: 100%; max-width: 1300px; position: relative; margin: 0 auto; }
 
-#project .elm_cont .encase p { width: 559px; margin: 0 0 0 50px; font-size: 18px; font-weight: 400; line-height: 35px; color: #fff; }
+#project .elm_cont .encase p { width: 559px; /* margin: 0 0 0 50px; */ font-size: 18px; font-weight: 400; line-height: 35px; color: #fff; }
 
 #project .elm_cont .encase .desc_wrap { margin: 0 auto; }
 
-#project .elm_cont .encase .desc_wrap h2 { /* font-family: $NeueMachina;  */ font-size: 154px; color: #fff; }
+#project .elm_cont .encase .desc_wrap h2 { /* font-family: $NeueMachina;  */ font-size: 115px; color: #fff; }
 
-#project .elm_cont .encase .desc_wrap h2 em { font-size: 80px; display: block; }
+#project .elm_cont .encase .desc_wrap h2 em { position: relative; top: -9px; left: 18px; font-size: 60px; }
 
 #project .elm_cont .encase .desc_wrap p { font-size: 13px; }
 
-#project .elm_cont .encase .link_wrap { width: 100%; margin: 0 auto; position: relative; padding: 88px 0 0; }
+#project .elm_cont .encase .link_wrap { width: 100%; margin: 0 auto; position: relative; }
 
-#project .elm_cont .encase .link_wrap .sub_desc { float: left; }
+#project .elm_cont .encase .link_wrap .sub_desc { padding: 88px 0 0; float: left; }
 
 #project .elm_cont .encase .link_wrap .sub_desc strong { max-width: 1200px; font-size: 40px; font-weight: 500; letter-spacing: -2px; padding: 0 0 20px; display: block; line-height: 50px; color: #fff; }
 
-#project .elm_cont .encase .link_wrap .link_btn { width: 659px; height: 555px; display: block; float: right; position: relative; left: 75px; top: -35px; }
+#project .elm_cont .encase .link_wrap .link_btn { width: 659px; height: 555px; display: block; float: right; position: relative; left: 75px; top: -142px; }
 
 #project .elm_cont .encase .link_wrap .link_btn img { width: 100%; height: 100%; }
 
@@ -437,7 +437,7 @@ header #showMenu .menu_bg_mask { width: 100%; height: 100vh; position: absolute;
 
 #project .project_main .lg_contents .encase .desc_wrap h2 { text-align: right; }
 
-#project .project_main .lg_contents .encase .link_wrap .sub_desc { float: right; }
+#project .project_main .lg_contents .encase .link_wrap .sub_desc { float: right; text-align: right; }
 
 #project .project_main .lg_contents .encase .link_wrap .link_btn { float: left; right: 75px; left: auto; }
 
@@ -445,7 +445,7 @@ header #showMenu .menu_bg_mask { width: 100%; height: 100vh; position: absolute;
 
 #project .project_main .hyo_contents .encase .desc_wrap h2 { text-align: right; }
 
-#project .project_main .hyo_contents .encase .link_wrap .sub_desc { float: right; }
+#project .project_main .hyo_contents .encase .link_wrap .sub_desc { float: right; text-align: right; }
 
 #project .project_main .hyo_contents .encase .link_wrap .link_btn { float: left; right: 75px; left: auto; }
 
