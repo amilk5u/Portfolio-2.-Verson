@@ -196,17 +196,18 @@
          p { font-size: 30px; line-height: 35px; }
       }
    }
+
    /* common (공통) */
    .elm_cont {
       width: 100%;/* height: 980px; */padding: 250px 0; /* background-color: rgba(83, 56, 56, 0.473); */
       .encase {
-         width: 100%; max-width: 1300px; position: relative; margin: 0 auto;
+         width: 100%;/*  max-width: 1300px; */ position: relative; margin: 0 auto;
          p { width: 559px; /* margin: 0 0 0 50px; */ font-size: 18px; font-weight: 400; line-height: 35px; color: #fff; }
          .desc_wrap {
             margin: 0 auto;          
             h2 { 
                /* font-family: $NeueMachina;  */font-size: 115px; color: #fff; 
-               // -webkit-text-stroke: 6px $white; font-weight: $medium;
+               -webkit-text-stroke: 6px $white; font-weight: $medium;
                em { position: relative; top: -9px; left: 18px; font-size: 60px; }
             }
             p { font-size: 13px; }
