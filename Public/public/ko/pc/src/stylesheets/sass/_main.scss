@@ -10,6 +10,7 @@
       display: inline-block; position: relative; z-index: 1; top: 388px; left: 293px;
 		h2 { 
          width: max-content; position: relative; font-size: 230px; font-weight: $medium; letter-spacing: -24px; line-height: 195px; mix-blend-mode: overlay; color: #181712;
+         font-family: $NeueMachina;
 			span { position: relative; left: -100px; }
 			em {
 				width: 177px; display: inline-block; position: relative; top: 26px;
@@ -103,6 +104,8 @@
             margin: 0 0 0 -179px;
             span { 
                font-size: 70px; margin: 0 0 0 181px; font-weight: 500; letter-spacing: -3px; color: $subColor; word-break: break-all; 
+               font-family: $NeueMachina; 
+               
                // text-shadow: 1px 1px 0 black, -1px 1px 0 black, 1px -1px 0 black, -1px -1px 0 black;
                -webkit-text-stroke: 1px black;
             }
@@ -117,6 +120,7 @@
 			float: left; margin: 150px 0 0 150px;
 			h2 { 
 				font-size: 74px; font-weight: $regular; letter-spacing: -5px; 
+            font-family: $NeueMachina; 
 				mark { color: rgb(105, 65, 250); background-color: transparent; }
 			}
 			p { 
@@ -152,7 +156,7 @@
 		margin: 300px 0;
 		.tit_wrap {
 			width: 100%;
-			strong { display: block; text-align: center; margin: 0 auto; font-weight: $regular; font-size: 151px; letter-spacing: -10px; line-height: 121px; }
+			strong { display: block; text-align: center; margin: 0 auto; font-weight: $regular; font-size: 151px; letter-spacing: -10px; line-height: 121px; font-family: $NeueMachina;  }
 			em { position: relative; top: -7px; left: 9px; font-family: $Faktum; font-size: 126px; }
 			span { width: max-content; display: block; margin: 0 auto; }
 		}
@@ -199,28 +203,45 @@
 
    /* common (공통) */
    .elm_cont {
-      width: 100%;/* height: 980px; */padding: 250px 0; /* background-color: rgba(83, 56, 56, 0.473); */
+      width: 100%; height: 100vh;/* height: 980px; */padding: 250px 0;/* background-color: rgba(83, 56, 56, 0.473); */
       .encase {
-         width: 100%;/*  max-width: 1300px; */ position: relative; margin: 0 auto;
-         p { width: 559px; /* margin: 0 0 0 50px; */ font-size: 18px; font-weight: 400; line-height: 35px; color: #fff; }
+         width: 100%; height:100%;/*  max-width: 1300px; */ position: relative; margin: 0 auto;
          .desc_wrap {
-            margin: 0 auto;          
+            margin: 0 0 0 -6%; text-align: center;
+            > span {    display: block;
+               font-size: 24px;
+               color: #fff;}
             h2 { 
-               /* font-family: $NeueMachina;  */font-size: 115px; color: #fff; 
+               padding:50px 0 0;
+               font-family: $NeueMachina; font-size: 152px; color: #fff; 
+               text-align: center;
+               display: inline-block;
+               margin:0 0 0 -233px;
+               text-transform:none;
                -webkit-text-stroke: 6px $white; font-weight: $medium;
                em { position: relative; top: -9px; left: 18px; font-size: 60px; }
             }
-            p { font-size: 13px; }
+            .sub_desc {
+               max-width: 800px;
+                margin: 0 auto;
+               padding: 88px 0 0; text-align: left;
+               strong { 
+                  margin: 0 auto;
+                  font-size: 39px;
+                  font-weight: 400;
+                  letter-spacing: 0;
+                  padding: 0 0 20px;
+                  display: inline-block;
+                  line-height: 38px;
+                  color: #fff;
+                }
+               p {  width: 705px;/* margin: 0 0 0 50px; */ font-size: 18px; font-weight: 400; line-height: 35px; color: #fff; margin: 0 auto; }
+            } 
          } 
          .link_wrap { 
-            width: 100%; margin: 0 auto; position: relative; 
-            @extend %clearfix;
-            .sub_desc {
-               padding: 88px 0 0; float: left;
-               strong { max-width: 1200px; font-size: 40px; font-weight: $medium; letter-spacing: -2px; padding: 0 0 20px; display: block; line-height: 50px; color: #fff; }
-            } 
+            position: absolute; right: 2%; top: 20%;
             .link_btn {
-               width: 659px; height: 555px; display: block; float: right; position: relative; left: 75px; top: -142px;
+               width: 530px; height: 650px; display: block; position: relative;
                img { width: 100%; height: 100%; }
                span { position: absolute; bottom: -40px; display: block; font-size: 22px; color: white; left: 0; }
             }
@@ -233,13 +254,13 @@
 		.lg_contents {
          .encase {
             .desc_wrap {
-               h2 { text-align: right; }
+               // h2 { text-align: right; }
             }
             .link_wrap {
-               .sub_desc { float: right; text-align: right; }
+               // .sub_desc { float: right; text-align: right; }
                .link_btn { 
-                  float: left; right: 75px; left: auto; 
-                  span { right: 0; left: auto; }
+                  // float: left; right: 75px; left: auto; 
+                  // span { right: 0; left: auto; }
                }
             }
          }
@@ -249,13 +270,13 @@
          .encase {
             // p { margin: 0 50px 0 0; }
             .desc_wrap {
-               h2 { text-align: right; }
+               // h2 { text-align: right; }
             }
             .link_wrap {
-               .sub_desc { float: right; text-align: right; }
+               // .sub_desc { float: right; text-align: right; }
                .link_btn {  
-                  float: left; right: 75px; left: auto; 
-                  span { right: 0; left: auto; }
+                  // float: left; right: 75px; left: auto; 
+                  // span { right: 0; left: auto; }
                }
             }
          }
