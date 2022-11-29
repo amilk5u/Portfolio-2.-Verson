@@ -204,11 +204,11 @@ header #showMenu .menu_list button:hover, header #showMenu .menu_list button:foc
 
 header #showMenu .menu_list button:hover + .list_number span, header #showMenu .menu_list button:focus + .list_number span { opacity: 1; }
 
-header #showMenu .menu_list button span { font-size: 110px; font-weight: 500; letter-spacing: 0; line-height: 100px; display: block; color: #181712; font-family: "NeueMachina", "YoonGothicPro750", Arial, Apple SD Gothic Neo, sans-serif; }
+header #showMenu .menu_list button span { font-size: 110px; font-weight: 600; letter-spacing: 0; line-height: 100px; display: block; color: #181712; font-family: "NeueMachina", "YoonGothicPro750", Arial, Apple SD Gothic Neo, sans-serif; }
 
 header #showMenu .menu_list button span.font { transform: translateZ(50px); }
 
-header #showMenu .menu_list button span.back { transform: rotateX(-90deg) translateZ(-50px); color: #ff5252; -webkit-text-stroke: 4px #ff5252; }
+header #showMenu .menu_list button span.back { transform: rotateX(-90deg) translateZ(-50px); color: #ff5252; /* -webkit-text-stroke: 4px $mainColor; */ }
 
 header #showMenu .menu_list .list_number { min-width: 100px; width: 100%; max-width: 100px; font-family: "NeueMachina", "YoonGothicPro750", Arial, Apple SD Gothic Neo, sans-serif; text-align: center; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
@@ -391,7 +391,7 @@ header #showMenu .menu_bg_mask { width: 100%; height: 100vh; position: absolute;
 
 #project .project_fix_img:after { width: 100%; height: 100vh; content: ""; display: block; position: absolute; top: 0; left: 0; border: 5px solid red; background-color: black; opacity: .7; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
-#project .project_fix_img .intro_img { width: 100%; height: 100vh; position: absolute; top: 0; background: url(./../../images/main/03_6.b710a221.jpg) 50% 50% no-repeat; background-size: cover; }
+#project .project_fix_img .intro_img { width: 100%; height: 100vh; position: absolute; top: 0; background: url(./../../images/main/02_1.395187c6.jpg) 50% 50% no-repeat; background-size: cover; }
 
 #project .project_fix_img .lg_img { position: absolute; top: 0; width: 100%; height: 100vh; background: url(./../../images/main/img4.jpg) 50% 50% no-repeat; background-size: cover; opacity: 0; }
 
@@ -411,13 +411,13 @@ header #showMenu .menu_bg_mask { width: 100%; height: 100vh; position: absolute;
 
 #project .elm_cont { width: 100%; height: 100vh; /* height: 980px; */ padding: 250px 0; /* background-color: rgba(83, 56, 56, 0.473); */ }
 
-#project .elm_cont .encase { width: 100%; height: 100%; /*  max-width: 1300px; */ position: relative; margin: 0 auto; }
+#project .elm_cont .encase { max-width: 1920px; height: 100%; /*  max-width: 1300px; */ position: relative; margin: 0 auto; }
 
-#project .elm_cont .encase .desc_wrap { margin: 0 0 0 -6%; text-align: center; }
+#project .elm_cont .encase .desc_wrap { text-align: center; }
 
 #project .elm_cont .encase .desc_wrap > span { display: block; font-size: 24px; color: #fff; }
 
-#project .elm_cont .encase .desc_wrap h2 { padding: 50px 0 0; font-family: "NeueMachina", "YoonGothicPro750", Arial, Apple SD Gothic Neo, sans-serif; font-size: 152px; color: #fff; text-align: center; display: inline-block; margin: 0 0 0 -233px; text-transform: none; -webkit-text-stroke: 6px #fff; font-weight: 500; }
+#project .elm_cont .encase .desc_wrap h2 { padding: 50px 0 0; font-family: "NeueMachina", "YoonGothicPro750", Arial, Apple SD Gothic Neo, sans-serif; font-size: 152px; color: #fff; text-align: center; display: inline-block; text-transform: none; /* -webkit-text-stroke: 6px $white; */ font-weight: 600; }
 
 #project .elm_cont .encase .desc_wrap h2 em { position: relative; top: -9px; left: 18px; font-size: 60px; }
 
@@ -427,13 +427,39 @@ header #showMenu .menu_bg_mask { width: 100%; height: 100vh; position: absolute;
 
 #project .elm_cont .encase .desc_wrap .sub_desc p { width: 705px; /* margin: 0 0 0 50px; */ font-size: 18px; font-weight: 400; line-height: 35px; color: #fff; margin: 0 auto; }
 
-#project .elm_cont .encase .link_wrap { position: absolute; right: 2%; top: 20%; }
+#project .elm_cont .encase .desc_wrap .sub_desc p > span { margin: 0 0 0 82px; }
 
-#project .elm_cont .encase .link_wrap .link_btn { width: 530px; height: 650px; display: block; position: relative; }
+#project .elm_cont .encase .link_wrap { width: 38%; max-width: 550px; height: 650px; position: absolute; }
+
+#project .elm_cont .encase .link_wrap .link_btn { width: 100%; height: 100%; display: block; }
 
 #project .elm_cont .encase .link_wrap .link_btn img { width: 100%; height: 100%; }
 
 #project .elm_cont .encase .link_wrap .link_btn span { position: absolute; bottom: -40px; display: block; font-size: 22px; color: white; left: 0; }
+
+#project .project_main .lg_contents .encase .desc_wrap { margin: 0 0 0 -6%; }
+
+#project .project_main .lg_contents .encase .desc_wrap h2 { margin: 0 0 0 -233px; }
+
+#project .project_main .lg_contents .encase .link_wrap { right: 2%; top: 11%; }
+
+#project .project_main .lg_contents .encase .link_wrap .link_btn span { left: 0; }
+
+#project .project_main .msf_contents .encase .desc_wrap { width: 50%; float: right; margin: 0 6% 0 0; }
+
+#project .project_main .msf_contents .encase .desc_wrap h2 { margin: 0 0 0 -233px; }
+
+#project .project_main .msf_contents .encase .link_wrap { left: 2%; top: 11%; }
+
+#project .project_main .msf_contents .encase .link_wrap .link_btn span { left: 0; }
+
+#project .project_main .hyo_contents .encase .desc_wrap { margin: 0 0 0 -6%; }
+
+#project .project_main .hyo_contents .encase .desc_wrap h2 { margin: 0 0 0 -233px; }
+
+#project .project_main .hyo_contents .encase .link_wrap { right: 2%; top: 11%; }
+
+#project .project_main .hyo_contents .encase .link_wrap .link_btn span { left: 0; }
 
 #project .last_wrap { position: relative; margin: 600px 0 0; }
 

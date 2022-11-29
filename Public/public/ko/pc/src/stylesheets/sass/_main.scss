@@ -184,11 +184,11 @@
          width: 100%; height: 100vh; content: ""; display: block; position: absolute; top: 0; left: 0; border: 5px solid red; background-color: black; opacity: .7;
          @include boxSizing;
       }
-		.intro_img { width: 100%; height: 100vh; position: absolute; top: 0; background: url(./../../images/main/03_6.b710a221.jpg) 50% 50% no-repeat; background-size: cover; }
+		.intro_img { width: 100%; height: 100vh; position: absolute; top: 0; background: url(./../../images/main/02_1.395187c6.jpg) 50% 50% no-repeat; background-size: cover; }
 		.lg_img { position: absolute; top: 0; width: 100%; height: 100vh; background: url(./../../images/main/img4.jpg) 50% 50% no-repeat; background-size: cover; opacity: 0; }
 		.msfk_img { position: absolute; top: 0; width: 100%; height: 100vh; background: url(./../../images/main/img6.jpg) 50% 50% no-repeat; background-size: cover; opacity: 0; }
 		.hyosung_img { position: absolute; top: 0; width: 100%; height: 100vh; background: url(./../../images/main/img5.jpg) 50% 50% no-repeat; background-size: cover; opacity: 0; }
-	}
+	} 
 
    /* Project Intro Text (프로젝트 소개) */
    .content_wrap { padding: 0 0 500px; }
@@ -205,43 +205,27 @@
    .elm_cont {
       width: 100%; height: 100vh;/* height: 980px; */padding: 250px 0;/* background-color: rgba(83, 56, 56, 0.473); */
       .encase {
-         width: 100%; height:100%;/*  max-width: 1300px; */ position: relative; margin: 0 auto;
-         .desc_wrap {
-            margin: 0 0 0 -6%; text-align: center;
-            > span {    display: block;
-               font-size: 24px;
-               color: #fff;}
+         max-width: 1920px; height:100%;/*  max-width: 1300px; */ position: relative; margin: 0 auto;
+         .desc_wrap { 
+            text-align: center;
+            >span { display: block; font-size: 24px; color: #fff; }
             h2 { 
-               padding:50px 0 0;
-               font-family: $NeueMachina; font-size: 152px; color: #fff; 
-               text-align: center;
-               display: inline-block;
-               margin:0 0 0 -233px;
-               text-transform:none;
-               -webkit-text-stroke: 6px $white; font-weight: $medium;
+               padding: 50px 0 0; font-family: $NeueMachina; font-size: 152px; color: #fff; text-align: center; display: inline-block; text-transform: none;/* -webkit-text-stroke: 6px $white; */font-weight: $bold;
                em { position: relative; top: -9px; left: 18px; font-size: 60px; }
             }
             .sub_desc {
-               max-width: 800px;
-                margin: 0 auto;
-               padding: 88px 0 0; text-align: left;
-               strong { 
-                  margin: 0 auto;
-                  font-size: 39px;
-                  font-weight: 400;
-                  letter-spacing: 0;
-                  padding: 0 0 20px;
-                  display: inline-block;
-                  line-height: 38px;
-                  color: #fff;
-                }
-               p {  width: 705px;/* margin: 0 0 0 50px; */ font-size: 18px; font-weight: 400; line-height: 35px; color: #fff; margin: 0 auto; }
+               max-width: 800px; margin: 0 auto; padding: 88px 0 0; text-align: left;
+               strong { margin: 0 auto; font-size: 39px; font-weight: 400; letter-spacing: 0; padding: 0 0 20px; display: inline-block; line-height: 38px; color: #fff; }
+               p {  
+                  width: 705px;/* margin: 0 0 0 50px; */ font-size: 18px; font-weight: 400; line-height: 35px; color: #fff; margin: 0 auto; 
+                  > span { margin: 0 0 0 82px; }
+               }
             } 
          } 
          .link_wrap { 
-            position: absolute; right: 2%; top: 20%;
+            width: 38%; max-width: 550px; height: 650px; position: absolute;
             .link_btn {
-               width: 530px; height: 650px; display: block; position: relative;
+               width: 100%; height: 100%; display: block;
                img { width: 100%; height: 100%; }
                span { position: absolute; bottom: -40px; display: block; font-size: 22px; color: white; left: 0; }
             }
@@ -253,30 +237,42 @@
 	.project_main {
 		.lg_contents {
          .encase {
-            .desc_wrap {
-               // h2 { text-align: right; }
-            }
-            .link_wrap {
-               // .sub_desc { float: right; text-align: right; }
-               .link_btn { 
-                  // float: left; right: 75px; left: auto; 
-                  // span { right: 0; left: auto; }
+            .desc_wrap { 
+               margin: 0 0 0 -6%;
+               h2 { margin: 0 0 0 -233px; }
+            } 
+            .link_wrap { 
+               right: 2%; top: 11%;
+               .link_btn {
+                  span {  left: 0; }
                }
             }
          }
 		}
-		.msf_contents {}
+		.msf_contents {
+         .encase {
+            .desc_wrap { 
+               width: 50%; float: right; margin: 0 6% 0 0;
+               h2 { margin: 0 0 0 -233px; }
+            } 
+            .link_wrap { 
+               left: 2%; top: 11%;
+               .link_btn {
+                  span {  left: 0; }
+               }
+            }
+         }
+      }
 		.hyo_contents {
          .encase {
-            // p { margin: 0 50px 0 0; }
-            .desc_wrap {
-               // h2 { text-align: right; }
-            }
-            .link_wrap {
-               // .sub_desc { float: right; text-align: right; }
-               .link_btn {  
-                  // float: left; right: 75px; left: auto; 
-                  // span { right: 0; left: auto; }
+            .desc_wrap { 
+               margin: 0 0 0 -6%;
+               h2 { margin: 0 0 0 -233px; }
+            } 
+            .link_wrap { 
+               right: 2%; top: 11%;
+               .link_btn {
+                  span {  left: 0; }
                }
             }
          }
