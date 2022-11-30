@@ -5,44 +5,69 @@
 /* (start) section 1 - intro */
 #intro {
 	width: 100%; height: 980px;/* background-color: pink; */
-	.covering_wrap { max-width: 1680px; position: relative; margin: 0 auto; }
+	.covering_wrap { max-width: 1680px; height: 100%; position: relative; margin: 0 auto; display: flex; align-items: center; justify-content: center; }
 	.main_title_txt { 
-      display: inline-block; position: relative; z-index: 1; top: 388px; left: 293px;
+      display: inline-block; position: relative;/*  top: 388px; left: 293px; */ z-index: 1;
 		h2 { 
-         width: max-content; position: relative; font-size: 230px; font-weight: $medium; letter-spacing: -24px; line-height: 195px; mix-blend-mode: overlay; color: #181712;
-         font-family: $NeueMachina;
+         width: max-content; position: relative; font-size: 230px; font-weight: $medium; letter-spacing: -15px; line-height: 195px; /* mix-blend-mode: overlay; */ color: #181712;
+         font-family: $NeueMachina; text-align:center; position: relative; z-index: 1;
+         -webkit-text-stroke:2px #181712;
+         // color:white;
+         // background-color: #e6e0cb; 
+         // background-color: #836c3b; 
+         // background-color: rgb(155, 155, 155);
+         video { width: 250px; }
 			span { position: relative; left: -100px; }
 			em {
 				width: 177px; display: inline-block; position: relative; top: 26px;
 				img { width: 100%; }
 			}
 		} 
+      .sticker_bg {
+         position: absolute; top:0; left:0;
+         width: 100%;
+         height: 100%;
+         // background-color: $mainColor; 
+         // background-color: #836c3b; 
+         background-color: #a89242; 
+         z-index: -1;
+         @include rotate(-2);
+      }
 		.slogan_txt {  
 			position: absolute; top: -157px; left: 9%; font-size: 12px;
 			em { color: $mainColor; }
 			> span { display: block; padding: 10px 0 0; }
 		}
 		.thumb_image {
-         width: 553px; height: 357px; position: absolute; top: -155px; left: 589px; overflow: hidden; z-index: -1;
+         width: 300px;
+         height: 160px;
+         position: absolute;
+         top: 15px;
+         left: 492px;
+         overflow: hidden;
+         z-index: -1;
 			img { width: 100%; }
 		}
 	}
 	.main_grid_line {
-		max-width: 840px; max-height: 840px; position: absolute; right: 0; top: 50px; /* border: 1px solid black; *//* opacity: .2; */
-      mix-blend-mode: multiply; z-index: 1;
+		max-width: 840px; max-height: 840px; position: absolute; right: 0; top: 50px; /* border: 1px solid black; */   /*  opacity: .2; */
+      /* mix-blend-mode: multiply; */ z-index: -1;
 		@include boxSizing;
 		.circle_svg_item {
-         width: 239px; height: 240px; position: absolute; bottom: 100px; right: 0;
-			ellipse { stroke: rgb(207, 207, 207); stroke-width: 2px; fill: $subColor; stroke-miterlimit: 10; stroke-dasharray: 750; stroke-dashoffset: 750; }
+         width: 239px; height: 240px; position: absolute; bottom: 0; right: 0; z-index: 1;
+			ellipse { stroke: #dcd9cc; stroke-width: 2px; fill: $subColor; stroke-miterlimit: 10; stroke-dasharray: 750; stroke-dashoffset: 750; }
 		}
 		.star_svg_item {
-         width: 124px; height: 122px; position: absolute; top: 92px; right: 352px;
+         width: 124px; height: 122px; position: absolute; /* top: 92px; right: 352px; */
+         top: 57px;
+         left: 301px;
+          z-index: 1;
 			@include scale(0);
-			path { stroke: rgb(207, 207, 207); stroke-width: 2px; fill: $subColor; stroke-miterlimit: 10; stroke-dasharray: 395; stroke-dashoffset: 0; }
+			path { stroke: #dcd9cc; stroke-width: 2px; fill: $subColor; stroke-miterlimit: 10; stroke-dasharray: 395; stroke-dashoffset: 0; }
 		}
 		.rhombus_svg_item {
-         width: 360px; height: 240px; position: absolute; bottom: 55px; left: -802px;
-			polygon { stroke: rgb(207, 207, 207); stroke-width: 2px; fill: $subColor; stroke-miterlimit: 10; stroke-dasharray: 880; stroke-dashoffset: 880; }
+         width: 360px; height: 240px; position: absolute; top: 0; left: 0; z-index: 1;
+			polygon { stroke: #dcd9cc; stroke-width: 2px; fill: $subColor; stroke-miterlimit: 10; stroke-dasharray: 880; stroke-dashoffset: 880; }
 		}
 		.line_element_wrap {
 			width: 100%; height: 100%; position: relative; /* opacity: 0;  */
@@ -51,18 +76,18 @@
 			.row_grid {
 				width: 100%; height: 100%;
 				> div { width: 100%; height: auto; }
-				span { display: block; width: 0; height: 2px; background-color:  rgb(207, 207, 207); margin: 0 auto 14%; }
+				span { display: block; width: 0; height: 2px; background-color:  #dcd9cc; margin: 0 auto 14%; }
 			}
 			.col_grid {
 				width: 100%; height: 100%;
 				@include rotate(90);
 				> div { width: 100%; height: auto; }
-				span { display: block; width: 0; height: 2px; background-color:  rgb(207, 207, 207); margin: 0 auto 14%; }
+				span { display: block; width: 0; height: 2px; background-color:  #dcd9cc; margin: 0 auto 14%; }
 			}
 		}
 	/* 	.grid_line_svg {
 			width: 850px; height: 850px;
-			line { stroke: rgb(207, 207, 207); stroke-width: 2px; fill: none; stroke-miterlimit: 10; stroke-dasharray: 420; stroke-dashoffset: 420; }
+			line { stroke: #e1e1e1; stroke-width: 2px; fill: none; stroke-miterlimit: 10; stroke-dasharray: 420; stroke-dashoffset: 420; }
 		} */
 	}
 	.moving_image {
@@ -72,6 +97,17 @@
 			background:url(./../../images/main/img3.png) 0 0 repeat;
 		}
 	}
+   .path_img_wrap {
+      position: absolute;
+      svg {
+         width:300px;
+         background-color: red;
+         polygon, polyline, path {
+            width:100%; height: 100%;
+
+         }
+      }
+   }
 }
 /* (end) section 1 - intro */
 
@@ -137,7 +173,7 @@
 		padding: 300px 0 0;
 		ul.icon_wrap { max-width: 1200px; height: 1000px; position: relative; margin: 0 auto; }
 		li.icon_cont {
-			width: 200px; height: 200px; position: absolute; border: 2px solid rgb(207, 207, 207);
+			width: 200px; height: 200px; position: absolute; border: 2px solid #e1e1e1;
 			&:nth-of-type(1) { top: 5%; left: 8%; }
 			&:nth-of-type(2) { top: 35%; left: 22%; }
 			&:nth-of-type(3) { top: 0; right: 0; }
@@ -172,7 +208,7 @@
 	.hidden_wrap {
 		width: 100%; height: 100vh; position: absolute; top: 0; z-index: -1;
 		.hiden_txt {
-			width: 200px; height: 200px; position: absolute; background-color: red;
+			// width: 200px; height: 200px; position: absolute; background-color: red;
 			&:nth-of-type(1) { top: 40%; left: 20%; }
 			&:nth-of-type(2) { top: 0; left: 0; }
 			&:nth-of-type(3) { top: 50%; right: 0; }
@@ -203,21 +239,21 @@
 
    /* common (공통) */
    .elm_cont {
-      width: 100%; height: 100vh;/* height: 980px; */padding: 250px 0;/* background-color: rgba(83, 56, 56, 0.473); */
+      width: 100%; height: 100vh;/* height: 980px; */padding: 190px 0;/* background-color: rgba(83, 56, 56, 0.473); */
       .encase {
          max-width: 1920px; height:100%;/*  max-width: 1300px; */ position: relative; margin: 0 auto;
          .desc_wrap { 
             text-align: center;
             >span { display: block; font-size: 24px; color: #fff; }
             h2 { 
-               padding: 50px 0 0; font-family: $NeueMachina; font-size: 152px; color: #fff; text-align: center; display: inline-block; text-transform: none;/* -webkit-text-stroke: 6px $white; */font-weight: $bold;
+               padding: 50px 0 0; font-family: $NeueMachina; font-size: 145px; color: #fff; text-align: center; display: inline-block; text-transform: none;/* -webkit-text-stroke: 6px $white; */font-weight: $bold;
                em { position: relative; top: -9px; left: 18px; font-size: 60px; }
             }
             .sub_desc {
                max-width: 800px; margin: 0 auto; padding: 88px 0 0; text-align: left;
                strong { margin: 0 auto; font-size: 39px; font-weight: 400; letter-spacing: 0; padding: 0 0 20px; display: inline-block; line-height: 38px; color: #fff; }
                p {  
-                  width: 705px;/* margin: 0 0 0 50px; */ font-size: 18px; font-weight: 400; line-height: 35px; color: #fff; margin: 0 auto; 
+                  width: 705px;/* margin: 0 0 0 50px; */ font-size: 18px; font-weight: 400; line-height: 28px; color: #fff; margin: 0 auto; 
                   > span { margin: 0 0 0 82px; }
                }
             } 
@@ -238,7 +274,7 @@
 		.lg_contents {
          .encase {
             .desc_wrap { 
-               margin: 0 0 0 -6%;
+               margin: 0 0 0 -18%;
                h2 { margin: 0 0 0 -233px; }
             } 
             .link_wrap { 
@@ -252,7 +288,7 @@
 		.msf_contents {
          .encase {
             .desc_wrap { 
-               width: 50%; float: right; margin: 0 6% 0 0;
+               width: 50%; float: right; margin: 0 11% 0 0;
                h2 { margin: 0 0 0 -233px; }
             } 
             .link_wrap { 
@@ -266,7 +302,7 @@
 		.hyo_contents {
          .encase {
             .desc_wrap { 
-               margin: 0 0 0 -6%;
+               margin: 0 0 0 -16%;
                h2 { margin: 0 0 0 -233px; }
             } 
             .link_wrap { 
@@ -282,7 +318,7 @@
 		position: relative; margin: 600px 0 0;
 		.tit_wrap {
 			width: 100%; color: $white;
-			strong { display: block; text-align: center; margin: 0 auto; font-weight: $regular; font-size: 151px; letter-spacing: -10px; line-height: 121px; }
+			strong { display: block; text-align: center; margin: 0 auto; font-weight: $regular; font-size: 151px; letter-spacing: -10px; line-height: 121px; font-family: $NeueMachina; }
 			em { position: relative; top: -7px; left: 9px; font-family: $Faktum; font-size: 126px; }
 			span { width: max-content; display: block; margin: 0 auto; }
 		}
