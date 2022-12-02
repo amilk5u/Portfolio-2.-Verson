@@ -89,7 +89,7 @@ template { display: none; }
 
 [hidden] { display: none; }
 
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; text-transform: uppercase; cursor: none; }
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; text-transform: uppercase; /* cursor: none; */ }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
 
@@ -159,14 +159,14 @@ label, button { cursor: pointer; }
 
 .mouse .page { display: block; }
 
-.cursor { width: 20px; height: 20px; background-color: #ff5252; position: fixed; left: 0; top: 0; z-index: 9999; -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%; }
+.cursor { width: 20px; height: 20px; background-color: #ff5252; position: fixed; left: 0; top: 0; z-index: 10; -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%; }
 
 /* Header (헤더) */
 header { width: 100%; height: auto; position: fixed; z-index: 5; /* Logo (로고) */ /* Menu */ /* Show Menu (펼쳐진 메뉴) */ }
 
 header #logo { position: absolute; left: 50px; top: 50px; z-index: 2; }
 
-header #logo h1 { font-size: 25px; font-weight: 600; letter-spacing: -1.5px; }
+header #logo span { font-size: 25px; font-weight: 600; letter-spacing: -1.5px; }
 
 header #menu { position: absolute; right: 30px; top: 20px; z-index: 2; display: flex; justify-content: center; align-items: center; }
 
@@ -234,6 +234,8 @@ header #showMenu .menu_bg_mask { width: 100%; height: 100vh; position: absolute;
 /* container */
 .container { width: 100%; background-color: #f9f6e7; padding: 0 0 1000px; }
 
+.sub1 section { height: 1000px; }
+
 /* (start) section 1 - intro */
 #intro { width: 100%; height: 980px; /* background-color: pink; */ }
 
@@ -241,13 +243,13 @@ header #showMenu .menu_bg_mask { width: 100%; height: 100vh; position: absolute;
 
 #intro .main_title_txt { display: inline-block; position: relative; z-index: 1; top: 3%; }
 
-#intro .main_title_txt h2 { width: max-content; position: relative; font-size: 230px; font-weight: 500; letter-spacing: -15px; line-height: 216px; /* mix-blend-mode: overlay; */ color: #181712; font-family: "NeueMachina", "YoonGothicPro750", Arial, Apple SD Gothic Neo, sans-serif; text-align: center; position: relative; z-index: 1; -webkit-text-stroke: 2px #181712; }
+#intro .main_title_txt h1 { width: max-content; position: relative; font-size: 230px; font-weight: 500; letter-spacing: -15px; line-height: 216px; /* mix-blend-mode: overlay; */ color: #181712; font-family: "NeueMachina", "YoonGothicPro750", Arial, Apple SD Gothic Neo, sans-serif; text-align: center; position: relative; z-index: 1; -webkit-text-stroke: 2px #181712; }
 
-#intro .main_title_txt h2 img { width: 250px; height: 180px; position: relative; top: 17px; }
+#intro .main_title_txt h1 img { width: 250px; height: 180px; position: relative; top: 17px; }
 
-#intro .main_title_txt h2 span { position: relative; top: 15px; }
+#intro .main_title_txt h1 span { position: relative; top: 15px; }
 
-#intro .main_title_txt h2 em { display: inline-block; }
+#intro .main_title_txt h1 em { display: inline-block; }
 
 #intro .main_title_txt .sticker_bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #a89242; z-index: -1; -webkit-transform: rotate(-2deg); -moz-transform: rotate(-2deg); -ms-transform: rotate(-2deg); -o-transform: rotate(-2deg); transform: rotate(-2deg); }
 

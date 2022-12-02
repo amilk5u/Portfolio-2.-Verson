@@ -8,13 +8,12 @@ let encase_txt;
 let windowMeasurement = () => {
    windowWidth = window.innerWidth;
    windowHeight = window.innerHeight;
-   encase_txt = document.querySelector('#project .project_intro .encase_txt p').offsetHeight
+   // encase_txt = document.querySelector('#project .project_intro .encase_txt p').offsetHeight;
 }
 
 /* Window Scroll Offset  */
 let windowPageYOffset = () => {
-   windowScrollTop = window.pageYOffset;
-   // document.querySelector('.top').innerHTML = windowScrollTop;
+   windowScrollTop = window.pageYOffset;   
 }
 
 /* Window Size Report */
@@ -24,7 +23,8 @@ let reportWindowSize = () => {
    window.addEventListener('scroll', windowPageYOffset);
    windowMeasurement();
    layout();
-   main();
+   // main();
+   sub1();
 }
 
 /* Window Load */
