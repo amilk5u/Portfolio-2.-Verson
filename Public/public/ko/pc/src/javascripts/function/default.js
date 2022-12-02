@@ -25,6 +25,7 @@ let reportWindowSize = () => {
    layout();
    // main();
    sub1();
+   // sub2();
 }
 
 /* Window Load */

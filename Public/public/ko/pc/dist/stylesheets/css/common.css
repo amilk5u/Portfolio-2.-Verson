@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /* NeueMachina */
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap");
 @font-face { font-family: "NeueMachina"; font-style: normal; font-weight: 400; src: url(../../fonts/NeueMachina-Regular.woff) format("woff"); }
 
 @font-face { font-family: "NeueMachina"; font-style: normal; font-weight: 600; src: url(../../fonts/NeueMachina-bold.woff2) format("woff2"); }
@@ -109,7 +110,7 @@ table { width: 100%; text-align: left; border-collapse: collapse; border-spacing
 /* Input - color setting */
 /* Button - color setting */
 /** BASE SETTING */
-#introduce .top_elm:after { content: " "; display: block; clear: both; }
+.main #introduce .top_elm:after { content: " "; display: block; clear: both; }
 
 @media only screen and (max-width: 768px) { html { font-size: 18px !important; } }
 
@@ -232,265 +233,315 @@ header #showMenu .menu_bg_mask { width: 100%; height: 100vh; position: absolute;
 
 /* Footer (푸터) */
 /* container */
-.container { width: 100%; background-color: #f9f6e7; padding: 0 0 1000px; }
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: "Cormorant Garamond"; }
 
-.sub1 section { height: 1000px; }
+.container { background: #dfdfdf; }
 
-/* (start) section 1 - intro */
-#intro { width: 100%; height: 980px; /* background-color: pink; */ }
+.container .hero { display: grid; grid-template-columns: 60% 40%; height: 100vh; }
 
-#intro .covering_wrap { max-width: 1680px; height: 100%; position: relative; margin: 0 auto; display: flex; align-items: center; justify-content: center; }
+.container .hero .copy { display: grid; align-content: center; padding: 0 1rem; height: 100%; }
 
-#intro .main_title_txt { display: inline-block; position: relative; z-index: 1; top: 3%; }
+.container .hero .copy blockquote { font-size: 6vmin; font-weight: 300; }
 
-#intro .main_title_txt h1 { width: max-content; position: relative; font-size: 230px; font-weight: 500; letter-spacing: -15px; line-height: 216px; /* mix-blend-mode: overlay; */ color: #181712; font-family: "NeueMachina", "YoonGothicPro750", Arial, Apple SD Gothic Neo, sans-serif; text-align: center; position: relative; z-index: 1; -webkit-text-stroke: 2px #181712; }
+.container .hero .copy blockquote span { font-style: italic; font-weight: 400; }
 
-#intro .main_title_txt h1 img { width: 250px; height: 180px; position: relative; top: 17px; }
+.container .hero .copy blockquote cite { font-weight: 300; font-style: italic; font-size: 4.5vmin; display: block; padding: 8px 0; }
 
-#intro .main_title_txt h1 span { position: relative; top: 15px; }
+.container .hero .image-wrapper { height: 100vh; width: 100%; }
 
-#intro .main_title_txt h1 em { display: inline-block; }
+.container .hero .image-wrapper img { height: 100%; width: 100%; object-fit: cover; }
 
-#intro .main_title_txt .sticker_bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #a89242; z-index: -1; -webkit-transform: rotate(-2deg); -moz-transform: rotate(-2deg); -ms-transform: rotate(-2deg); -o-transform: rotate(-2deg); transform: rotate(-2deg); }
+.container .section-0 { margin-top: 20vh; text-align: center; }
 
-#intro .main_title_txt .slogan_txt { position: absolute; top: -157px; left: 9%; font-size: 12px; }
+.container .section-0 p { font-size: 5vw; }
 
-#intro .main_title_txt .slogan_txt em { color: #ff5252; }
+.container .section-0 cite { font-size: 3vw; }
 
-#intro .main_title_txt .slogan_txt > span { display: block; padding: 10px 0 0; }
+.container .section-1 { height: 100vh; display: grid; place-content: center; padding: 0 1rem; }
 
-#intro .main_title_txt .thumb_image { width: 300px; height: 160px; position: absolute; top: 15px; left: 492px; overflow: hidden; z-index: -1; }
+.container .section-1 .image-mask { width: 80vw; height: 80vh; background: url("https://firebasestorage.googleapis.com/v0/b/hashnode-tutorials.appspot.com/o/bwimages%2Ftumblr_n92tblyC8d1s3sziio1_1280.jpg?alt=media&token=c5d75884-4bc3-46bb-815d-414d2ec68e4b"); background-size: cover; background-position-x: 50%; background-position-y: 90%; background-size: 100%; }
 
-#intro .main_title_txt .thumb_image img { width: 100%; }
+.container .section-1 .image-mask img { height: 100%; width: 100%; object-fit: cover; }
 
-#intro .main_grid_line { max-width: 840px; max-height: 840px; position: absolute; right: 0; top: 50px; /* border: 1px solid black; */ /*  opacity: .2; */ /* mix-blend-mode: multiply; */ z-index: -1; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; /* 	.grid_line_svg { width: 850px; height: 850px; line { stroke: #e1e1e1; stroke-width: 2px; fill: none; stroke-miterlimit: 10; stroke-dasharray: 420; stroke-dashoffset: 420; } } */ }
+.container .section-1 blockquote { font-size: 9vmin; font-weight: 300; }
 
-#intro .main_grid_line .circle_svg_item { width: 239px; height: 240px; position: absolute; bottom: 0; right: 0; z-index: 1; }
+.container .section-1 blockquote span { font-style: italic; font-weight: 400; }
 
-#intro .main_grid_line .circle_svg_item ellipse { stroke: #dcd9cc; stroke-width: 2px; fill: #f9f6e7; stroke-miterlimit: 10; stroke-dasharray: 750; stroke-dashoffset: 750; }
+.container .section-1 blockquote cite { font-weight: 300; font-style: italic; font-size: 7.5vmin; display: block; padding: 8px 0; }
 
-#intro .main_grid_line .star_svg_item { width: 124px; height: 122px; position: absolute; /* top: 92px; right: 352px; */ top: 177px; right: 176px; z-index: 1; -webkit-transform: scale(0); -moz-transform: scale(0); -ms-transform: scale(0); -o-transform: scale(0); transform: scale(0); }
+.container .section-2 { height: calc(300vh + 32px + 16px); display: grid; grid-template-columns: 1fr 2fr; grid-template-columns: 40% 60%; }
 
-#intro .main_grid_line .star_svg_item path { stroke: #dcd9cc; stroke-width: 2px; fill: #f9f6e7; stroke-miterlimit: 10; stroke-dasharray: 395; stroke-dashoffset: 0; }
+.container .section-2 blockquote { font-size: 5vmin; padding: 16px 16px 0 16px; }
 
-#intro .main_grid_line .rhombus_svg_item { width: 360px; height: 240px; position: absolute; top: 0; left: 0; z-index: 1; }
+.container .section-2 blockquote cite { display: block; }
 
-#intro .main_grid_line .rhombus_svg_item polygon { stroke: #dcd9cc; stroke-width: 2px; fill: #f9f6e7; stroke-miterlimit: 10; stroke-dasharray: 880; stroke-dashoffset: 880; }
+.container .section-2 .images-container { display: grid; grid-template-columns: repeat(2, 1fr); padding: 0 8px; gap: 8px; margin-top: 16px; }
 
-#intro .main_grid_line .line_element_wrap { width: 100%; height: 100%; position: relative; /* opacity: 0;  */ }
+.container .section-2 .images-container img { width: 100%; max-height: 75vh; height: 100%; align-self: stretch; object-fit: cover; }
 
-#intro .main_grid_line .line_element_wrap .trick_img { width: 100%; opacity: 0; }
+.container .section-3 { height: 100vh; display: grid; grid-template-columns: 40% 60%; position: relative; }
 
-#intro .main_grid_line .line_element_wrap .grid_content { width: 100%; height: 100%; position: absolute; top: 0; left: 0; }
+.container .section-3 .image-wrapper { height: 100%; width: 100%; }
 
-#intro .main_grid_line .line_element_wrap .row_grid { width: 100%; height: 100%; }
+.container .section-3 .image-wrapper img { height: 100%; width: 100%; object-fit: cover; }
 
-#intro .main_grid_line .line_element_wrap .row_grid > div { width: 100%; height: auto; }
+.container .section-3 .copy { font-size: 8vmin; height: 100vh; width: 100%; display: grid; align-content: center; }
 
-#intro .main_grid_line .line_element_wrap .row_grid span { display: block; width: 0; height: 2px; background-color: #dcd9cc; margin: 0 auto 14%; }
+.container .section-3 .copy blockquote { margin: 0 32px; }
 
-#intro .main_grid_line .line_element_wrap .col_grid { width: 100%; height: 100%; -webkit-transform: rotate(90deg); -moz-transform: rotate(90deg); -ms-transform: rotate(90deg); -o-transform: rotate(90deg); transform: rotate(90deg); }
+.container .section-3 .copyright { position: absolute; bottom: 5%; left: 50%; font-size: 4vmin !important; }
 
-#intro .main_grid_line .line_element_wrap .col_grid > div { width: 100%; height: auto; }
+.main { /* (start) section 1 - intro */ /* (end) section 1 - intro */ /* (start) section 2 - introduce */ /* (end) section 2 - introduce */ /* (start) section 3 - project */ /* (end) section 3 - project */ }
 
-#intro .main_grid_line .line_element_wrap .col_grid span { display: block; width: 0; height: 2px; background-color: #dcd9cc; margin: 0 auto 14%; }
+.main #intro { width: 100%; height: 980px; /* background-color: pink; */ }
 
-#intro .moving_image > div { position: absolute; background-color: black; }
+.main #intro .covering_wrap { max-width: 1680px; height: 100%; position: relative; margin: 0 auto; display: flex; align-items: center; justify-content: center; }
 
-#intro .moving_image .element_1 { width: 200px; height: 240px; top: -4%; right: 28%; background: url(./../../images/main/img3.png) 0 0 repeat; }
+.main #intro .main_title_txt { display: inline-block; position: relative; z-index: 1; top: 3%; }
 
-#intro .path_img_wrap { width: 100%; height: 100%; position: absolute; opacity: 0; }
+.main #intro .main_title_txt h1 { width: max-content; position: relative; font-size: 230px; font-weight: 500; letter-spacing: -15px; line-height: 216px; /* mix-blend-mode: overlay; */ color: #181712; font-family: "NeueMachina", "YoonGothicPro750", Arial, Apple SD Gothic Neo, sans-serif; text-align: center; position: relative; z-index: 1; -webkit-text-stroke: 2px #181712; }
 
-#intro .path_img_wrap svg polygon, #intro .path_img_wrap svg polyline, #intro .path_img_wrap svg path, #intro .path_img_wrap svg circle, #intro .path_img_wrap svg line, #intro .path_img_wrap svg ellipse { width: 100%; height: 100%; stroke: red; stroke-width: .5px; fill: transparent; stroke-miterlimit: 10; }
+.main #intro .main_title_txt h1 img { width: 250px; height: 180px; position: relative; top: 17px; }
 
-#intro .path_img_wrap svg#Layer_1 { width: 300px; position: absolute; left: 0; bottom: 130px; }
+.main #intro .main_title_txt h1 span { position: relative; top: 15px; }
 
-#intro .path_img_wrap svg#Layer_2 { max-width: 150px; position: absolute; right: 33%; top: 8%; }
+.main #intro .main_title_txt h1 em { display: inline-block; }
 
-#intro .path_img_wrap svg#Layer_3 { max-width: 150px; position: absolute; right: -5%; bottom: 44%; }
+.main #intro .main_title_txt .sticker_bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #a89242; z-index: -1; -webkit-transform: rotate(-2deg); -moz-transform: rotate(-2deg); -ms-transform: rotate(-2deg); -o-transform: rotate(-2deg); transform: rotate(-2deg); }
 
-/* (end) section 1 - intro */
-/* (start) section 2 - introduce */
-#introduce { width: 100%; }
+.main #intro .main_title_txt .slogan_txt { position: absolute; top: -157px; left: 9%; font-size: 12px; }
 
-#introduce .covering_wrap { max-width: 1920px; margin: 0 auto; }
+.main #intro .main_title_txt .slogan_txt em { color: #ff5252; }
 
-#introduce .intro_elm { width: max-content; height: 1000px; }
+.main #intro .main_title_txt .slogan_txt > span { display: block; padding: 10px 0 0; }
 
-#introduce .intro_elm > div:nth-of-type(2) strong { color: black; }
+.main #intro .main_title_txt .thumb_image { width: 300px; height: 160px; position: absolute; top: 15px; left: 492px; overflow: hidden; z-index: -1; }
 
-#introduce .intro_elm .txt_cont { width: max-content; }
+.main #intro .main_title_txt .thumb_image img { width: 100%; }
 
-#introduce .intro_elm strong { font-size: 161px; display: block; letter-spacing: -8px; color: #f9f6e7; text-decoration: #ccc; text-shadow: 1px 1px 0 #ccc, -1px 1px 0 #ccc, 1px -1px 0 #ccc, -1px -1px 0 #ccc; }
+.main #intro .main_grid_line { max-width: 840px; max-height: 840px; position: absolute; right: 0; top: 50px; /* border: 1px solid black; */ /*  opacity: .2; */ /* mix-blend-mode: multiply; */ z-index: -1; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; /* 	.grid_line_svg { width: 850px; height: 850px; line { stroke: #e1e1e1; stroke-width: 2px; fill: none; stroke-miterlimit: 10; stroke-dasharray: 420; stroke-dashoffset: 420; } } */ }
 
-#introduce .intro_elm span { font-size: 19px; }
+.main #intro .main_grid_line .circle_svg_item { width: 239px; height: 240px; position: absolute; bottom: 0; right: 0; z-index: 1; }
 
-#introduce .top_elm { position: relative; padding: 371px 0 0; }
+.main #intro .main_grid_line .circle_svg_item ellipse { stroke: #dcd9cc; stroke-width: 2px; fill: #f9f6e7; stroke-miterlimit: 10; stroke-dasharray: 750; stroke-dashoffset: 750; }
 
-#introduce .top_elm .small_img { width: 400px; position: relative; float: left; }
+.main #intro .main_grid_line .star_svg_item { width: 124px; height: 122px; position: absolute; /* top: 92px; right: 352px; */ top: 177px; right: 176px; z-index: 1; -webkit-transform: scale(0); -moz-transform: scale(0); -ms-transform: scale(0); -o-transform: scale(0); transform: scale(0); }
 
-#introduce .top_elm .small_img img { width: 100%; }
+.main #intro .main_grid_line .star_svg_item path { stroke: #dcd9cc; stroke-width: 2px; fill: #f9f6e7; stroke-miterlimit: 10; stroke-dasharray: 395; stroke-dashoffset: 0; }
 
-#introduce .top_elm .small_img span { position: absolute; top: -29px; right: 0; font-family: "NeueMachina", "YoonGothicPro750", Arial, Apple SD Gothic Neo, sans-serif; }
+.main #intro .main_grid_line .rhombus_svg_item { width: 360px; height: 240px; position: absolute; top: 0; left: 0; z-index: 1; }
 
-#introduce .top_elm .right_wrap { width: 800px; position: relative; float: right; margin: 150px 0 0; }
+.main #intro .main_grid_line .rhombus_svg_item polygon { stroke: #dcd9cc; stroke-width: 2px; fill: #f9f6e7; stroke-miterlimit: 10; stroke-dasharray: 880; stroke-dashoffset: 880; }
 
-#introduce .top_elm .right_wrap .first_txt { margin: 0 0 0 -179px; }
+.main #intro .main_grid_line .line_element_wrap { width: 100%; height: 100%; position: relative; /* opacity: 0;  */ }
 
-#introduce .top_elm .right_wrap .first_txt span { font-size: 70px; margin: 0 0 0 181px; font-weight: 500; letter-spacing: -3px; color: #f9f6e7; word-break: break-all; font-family: "NeueMachina", "YoonGothicPro750", Arial, Apple SD Gothic Neo, sans-serif; -webkit-text-stroke: 1px black; }
+.main #intro .main_grid_line .line_element_wrap .trick_img { width: 100%; opacity: 0; }
 
-#introduce .top_elm .right_wrap .first_txt em { display: block; margin: 20px 0 10px 181px; }
+.main #intro .main_grid_line .line_element_wrap .grid_content { width: 100%; height: 100%; position: absolute; top: 0; left: 0; }
 
-#introduce .top_elm .right_wrap .bottom_txt { position: absolute; bottom: -29px; left: 0; font-family: "NeueMachina", "YoonGothicPro750", Arial, Apple SD Gothic Neo, sans-serif; }
+.main #intro .main_grid_line .line_element_wrap .row_grid { width: 100%; height: 100%; }
 
-#introduce .top_elm .right_wrap .img_wrap img { width: 100%; }
+.main #intro .main_grid_line .line_element_wrap .row_grid > div { width: 100%; height: auto; }
 
-#introduce .top_elm .txt_wrap { float: left; margin: 150px 0 0 150px; }
+.main #intro .main_grid_line .line_element_wrap .row_grid span { display: block; width: 0; height: 2px; background-color: #dcd9cc; margin: 0 auto 14%; }
 
-#introduce .top_elm .txt_wrap h2 { font-size: 74px; font-weight: 400; letter-spacing: -5px; font-family: "NeueMachina", "YoonGothicPro750", Arial, Apple SD Gothic Neo, sans-serif; }
+.main #intro .main_grid_line .line_element_wrap .col_grid { width: 100%; height: 100%; -webkit-transform: rotate(90deg); -moz-transform: rotate(90deg); -ms-transform: rotate(90deg); -o-transform: rotate(90deg); transform: rotate(90deg); }
 
-#introduce .top_elm .txt_wrap h2 mark { color: #6941fa; background-color: transparent; }
+.main #intro .main_grid_line .line_element_wrap .col_grid > div { width: 100%; height: auto; }
 
-#introduce .top_elm .txt_wrap p { /* font-family: $YoonGothicPro750; */ line-height: 38px; font-size: 19px; letter-spacing: -0.5px; }
+.main #intro .main_grid_line .line_element_wrap .col_grid span { display: block; width: 0; height: 2px; background-color: #dcd9cc; margin: 0 auto 14%; }
 
-#introduce .top_elm .txt_wrap p span { display: block; padding: 30px 0 0; }
+.main #intro .moving_image > div { position: absolute; background-color: black; }
 
-#introduce .top_elm .moving_image > div { position: absolute; background-color: black; }
+.main #intro .moving_image .element_1 { width: 200px; height: 240px; top: -4%; right: 28%; background: url(./../../images/main/img3.png) 0 0 repeat; }
 
-#introduce .top_elm .moving_image .element_1 { width: 200px; height: 240px; top: 51%; left: 8%; background: url(./../../images/main/img3.png) 0 0 repeat; }
+.main #intro .path_img_wrap { width: 100%; height: 100%; position: absolute; opacity: 0; }
 
-#introduce .btm_elm { padding: 300px 0 0; }
+.main #intro .path_img_wrap svg polygon, .main #intro .path_img_wrap svg polyline, .main #intro .path_img_wrap svg path, .main #intro .path_img_wrap svg circle, .main #intro .path_img_wrap svg line, .main #intro .path_img_wrap svg ellipse { width: 100%; height: 100%; stroke: red; stroke-width: .5px; fill: transparent; stroke-miterlimit: 10; }
 
-#introduce .btm_elm ul.icon_wrap { max-width: 1200px; height: 1000px; position: relative; margin: 0 auto; }
+.main #intro .path_img_wrap svg#Layer_1 { width: 300px; position: absolute; left: 0; bottom: 130px; }
 
-#introduce .btm_elm li.icon_cont { width: 200px; height: 200px; position: absolute; border: 2px solid #e1e1e1; }
+.main #intro .path_img_wrap svg#Layer_2 { max-width: 150px; position: absolute; right: 33%; top: 8%; }
 
-#introduce .btm_elm li.icon_cont:nth-of-type(1) { top: 5%; left: 8%; }
+.main #intro .path_img_wrap svg#Layer_3 { max-width: 150px; position: absolute; right: -5%; bottom: 44%; }
 
-#introduce .btm_elm li.icon_cont:nth-of-type(2) { top: 35%; left: 22%; }
+.main #introduce { width: 100%; }
 
-#introduce .btm_elm li.icon_cont:nth-of-type(3) { top: 0; right: 0; }
+.main #introduce .covering_wrap { max-width: 1920px; margin: 0 auto; }
 
-#introduce .btm_elm li.icon_cont:nth-of-type(4) { top: 19%; right: 26%; }
+.main #introduce .intro_elm { width: max-content; height: 1000px; }
 
-#introduce .btm_elm li.icon_cont:nth-of-type(5) { top: 58%; left: 0%; }
+.main #introduce .intro_elm > div:nth-of-type(2) strong { color: black; }
 
-#introduce .btm_elm li.icon_cont:nth-of-type(6) { top: 60%; right: 10%; }
+.main #introduce .intro_elm .txt_cont { width: max-content; }
 
-#introduce .btm_elm li.icon_cont:nth-of-type(7) { top: 73%; left: 37%; }
+.main #introduce .intro_elm strong { font-size: 161px; display: block; letter-spacing: -8px; color: #f9f6e7; text-decoration: #ccc; text-shadow: 1px 1px 0 #ccc, -1px 1px 0 #ccc, 1px -1px 0 #ccc, -1px -1px 0 #ccc; }
 
-#introduce .btm_elm li.icon_cont span { width: 100%; height: 100%; display: block; background-color: blue; overflow: hidden; -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%; }
+.main #introduce .intro_elm span { font-size: 19px; }
 
-#introduce .btm_elm li.icon_cont span img { width: 100%; }
+.main #introduce .top_elm { position: relative; padding: 371px 0 0; }
 
-#introduce .more_elm { margin: 300px 0; }
+.main #introduce .top_elm .small_img { width: 400px; position: relative; float: left; }
 
-#introduce .more_elm .tit_wrap { width: 100%; }
+.main #introduce .top_elm .small_img img { width: 100%; }
 
-#introduce .more_elm .tit_wrap strong { display: block; text-align: center; margin: 0 auto; font-weight: 400; font-size: 151px; letter-spacing: -10px; line-height: 121px; font-family: "NeueMachina", "YoonGothicPro750", Arial, Apple SD Gothic Neo, sans-serif; }
+.main #introduce .top_elm .small_img span { position: absolute; top: -29px; right: 0; font-family: "NeueMachina", "YoonGothicPro750", Arial, Apple SD Gothic Neo, sans-serif; }
 
-#introduce .more_elm .tit_wrap em { position: relative; top: -7px; left: 9px; font-family: "Faktum", "YoonGothicPro750", Arial, Apple SD Gothic Neo, sans-serif; font-size: 126px; }
+.main #introduce .top_elm .right_wrap { width: 800px; position: relative; float: right; margin: 150px 0 0; }
 
-#introduce .more_elm .tit_wrap span { width: max-content; display: block; margin: 0 auto; }
+.main #introduce .top_elm .right_wrap .first_txt { margin: 0 0 0 -179px; }
 
-/* (end) section 2 - introduce */
-/* (start) section 3 - project */
-#project { width: 100%; position: relative; overflow: hidden; /*  margin: 0 0 2000px; */ border-top: 1px solid black; /* Project Intro Text (프로젝트 소개) */ /* common (공통) */ /* // common (공통) */ /* 개별 */ }
+.main #introduce .top_elm .right_wrap .first_txt span { font-size: 70px; margin: 0 0 0 181px; font-weight: 500; letter-spacing: -3px; color: #f9f6e7; word-break: break-all; font-family: "NeueMachina", "YoonGothicPro750", Arial, Apple SD Gothic Neo, sans-serif; -webkit-text-stroke: 1px black; }
 
-#project .hidden_wrap { width: 100%; height: 100vh; position: absolute; top: 0; z-index: -1; }
+.main #introduce .top_elm .right_wrap .first_txt em { display: block; margin: 20px 0 10px 181px; }
 
-#project .hidden_wrap .hiden_txt:nth-of-type(1) { top: 40%; left: 20%; }
+.main #introduce .top_elm .right_wrap .bottom_txt { position: absolute; bottom: -29px; left: 0; font-family: "NeueMachina", "YoonGothicPro750", Arial, Apple SD Gothic Neo, sans-serif; }
 
-#project .hidden_wrap .hiden_txt:nth-of-type(2) { top: 0; left: 0; }
+.main #introduce .top_elm .right_wrap .img_wrap img { width: 100%; }
 
-#project .hidden_wrap .hiden_txt:nth-of-type(3) { top: 50%; right: 0; }
+.main #introduce .top_elm .txt_wrap { float: left; margin: 150px 0 0 150px; }
 
-#project .project_fix_img { width: 100%; height: 100vh; position: absolute; top: 0; left: 0; opacity: 0; }
+.main #introduce .top_elm .txt_wrap h2 { font-size: 74px; font-weight: 400; letter-spacing: -5px; font-family: "NeueMachina", "YoonGothicPro750", Arial, Apple SD Gothic Neo, sans-serif; }
 
-#project .project_fix_img:after { width: 100%; height: 100vh; content: ""; display: block; position: absolute; top: 0; left: 0; border: 5px solid red; background-color: black; opacity: .7; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.main #introduce .top_elm .txt_wrap h2 mark { color: #6941fa; background-color: transparent; }
 
-#project .project_fix_img .intro_img { width: 100%; height: 100vh; position: absolute; top: 0; background: url(./../../images/main/02_1.395187c6.jpg) 50% 50% no-repeat; background-size: cover; }
+.main #introduce .top_elm .txt_wrap p { /* font-family: $YoonGothicPro750; */ line-height: 38px; font-size: 19px; letter-spacing: -0.5px; }
 
-#project .project_fix_img .lg_img { position: absolute; top: 0; width: 100%; height: 100vh; background: url(./../../images/main/img4.jpg) 50% 50% no-repeat; background-size: cover; opacity: 0; }
+.main #introduce .top_elm .txt_wrap p span { display: block; padding: 30px 0 0; }
 
-#project .project_fix_img .msfk_img { position: absolute; top: 0; width: 100%; height: 100vh; background: url(./../../images/main/img6.jpg) 50% 50% no-repeat; background-size: cover; opacity: 0; }
+.main #introduce .top_elm .moving_image > div { position: absolute; background-color: black; }
 
-#project .project_fix_img .hyosung_img { position: absolute; top: 0; width: 100%; height: 100vh; background: url(./../../images/main/img5.jpg) 50% 50% no-repeat; background-size: cover; opacity: 0; }
+.main #introduce .top_elm .moving_image .element_1 { width: 200px; height: 240px; top: 51%; left: 8%; background: url(./../../images/main/img3.png) 0 0 repeat; }
 
-#project .content_wrap { padding: 0 0 500px; }
+.main #introduce .btm_elm { padding: 300px 0 0; }
 
-#project .project_intro { width: 100%; height: 100vh; display: flex; justify-content: center; align-items: center; flex-direction: column; }
+.main #introduce .btm_elm ul.icon_wrap { max-width: 1200px; height: 1000px; position: relative; margin: 0 auto; }
 
-#project .project_intro .first_desc, #project .project_intro .second_desc { width: 50%; height: 35px; text-align: center; overflow: hidden; }
+.main #introduce .btm_elm li.icon_cont { width: 200px; height: 200px; position: absolute; border: 2px solid #e1e1e1; }
 
-#project .project_intro .encase_txt { position: relative; color: #fff; transform: translate3d(0, 35px, 0); }
+.main #introduce .btm_elm li.icon_cont:nth-of-type(1) { top: 5%; left: 8%; }
 
-#project .project_intro .encase_txt p { font-size: 30px; line-height: 35px; }
+.main #introduce .btm_elm li.icon_cont:nth-of-type(2) { top: 35%; left: 22%; }
 
-#project .elm_cont { width: 100%; height: 100vh; /* height: 980px; */ padding: 190px 0; /* background-color: rgba(83, 56, 56, 0.473); */ }
+.main #introduce .btm_elm li.icon_cont:nth-of-type(3) { top: 0; right: 0; }
 
-#project .elm_cont .encase { max-width: 1920px; height: 100%; /*  max-width: 1300px; */ position: relative; margin: 0 auto; }
+.main #introduce .btm_elm li.icon_cont:nth-of-type(4) { top: 19%; right: 26%; }
 
-#project .elm_cont .encase .desc_wrap { text-align: center; }
+.main #introduce .btm_elm li.icon_cont:nth-of-type(5) { top: 58%; left: 0%; }
 
-#project .elm_cont .encase .desc_wrap > span { display: block; font-size: 24px; color: #fff; }
+.main #introduce .btm_elm li.icon_cont:nth-of-type(6) { top: 60%; right: 10%; }
 
-#project .elm_cont .encase .desc_wrap h2 { padding: 50px 0 0; font-family: "NeueMachina", "YoonGothicPro750", Arial, Apple SD Gothic Neo, sans-serif; font-size: 145px; color: #fff; text-align: center; display: inline-block; text-transform: none; /* -webkit-text-stroke: 6px $white; */ font-weight: 600; }
+.main #introduce .btm_elm li.icon_cont:nth-of-type(7) { top: 73%; left: 37%; }
 
-#project .elm_cont .encase .desc_wrap h2 em { position: relative; top: -9px; left: 18px; font-size: 60px; }
+.main #introduce .btm_elm li.icon_cont span { width: 100%; height: 100%; display: block; background-color: blue; overflow: hidden; -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%; }
 
-#project .elm_cont .encase .desc_wrap .sub_desc { max-width: 800px; margin: 0 auto; padding: 88px 0 0; text-align: left; }
+.main #introduce .btm_elm li.icon_cont span img { width: 100%; }
 
-#project .elm_cont .encase .desc_wrap .sub_desc strong { margin: 0 auto; font-size: 39px; font-weight: 400; letter-spacing: 0; padding: 0 0 20px; display: inline-block; line-height: 38px; color: #fff; }
+.main #introduce .more_elm { margin: 300px 0; }
 
-#project .elm_cont .encase .desc_wrap .sub_desc p { width: 705px; /* margin: 0 0 0 50px; */ font-size: 18px; font-weight: 400; line-height: 28px; color: #fff; margin: 0 auto; }
+.main #introduce .more_elm .tit_wrap { width: 100%; }
 
-#project .elm_cont .encase .desc_wrap .sub_desc p > span { margin: 0 0 0 82px; }
+.main #introduce .more_elm .tit_wrap strong { display: block; text-align: center; margin: 0 auto; font-weight: 400; font-size: 151px; letter-spacing: -10px; line-height: 121px; font-family: "NeueMachina", "YoonGothicPro750", Arial, Apple SD Gothic Neo, sans-serif; }
 
-#project .elm_cont .encase .link_wrap { width: 38%; max-width: 550px; height: 650px; position: absolute; }
+.main #introduce .more_elm .tit_wrap em { position: relative; top: -7px; left: 9px; font-family: "Faktum", "YoonGothicPro750", Arial, Apple SD Gothic Neo, sans-serif; font-size: 126px; }
 
-#project .elm_cont .encase .link_wrap .link_btn { width: 100%; height: 100%; display: block; }
+.main #introduce .more_elm .tit_wrap span { width: max-content; display: block; margin: 0 auto; }
 
-#project .elm_cont .encase .link_wrap .link_btn img { width: 100%; height: 100%; }
+.main #project { width: 100%; position: relative; overflow: hidden; /*  margin: 0 0 2000px; */ border-top: 1px solid black; /* Project Intro Text (프로젝트 소개) */ /* common (공통) */ /* // common (공통) */ /* 개별 */ }
 
-#project .elm_cont .encase .link_wrap .link_btn span { position: absolute; bottom: -40px; display: block; font-size: 22px; color: white; left: 0; }
+.main #project .hidden_wrap { width: 100%; height: 100vh; position: absolute; top: 0; z-index: -1; }
 
-#project .project_main .lg_contents .encase .desc_wrap { margin: 0 0 0 -18%; }
+.main #project .hidden_wrap .hiden_txt:nth-of-type(1) { top: 40%; left: 20%; }
 
-#project .project_main .lg_contents .encase .desc_wrap h2 { margin: 0 0 0 -233px; }
+.main #project .hidden_wrap .hiden_txt:nth-of-type(2) { top: 0; left: 0; }
 
-#project .project_main .lg_contents .encase .link_wrap { right: 2%; top: 11%; }
+.main #project .hidden_wrap .hiden_txt:nth-of-type(3) { top: 50%; right: 0; }
 
-#project .project_main .lg_contents .encase .link_wrap .link_btn span { left: 0; }
+.main #project .project_fix_img { width: 100%; height: 100vh; position: absolute; top: 0; left: 0; opacity: 0; }
 
-#project .project_main .msf_contents .encase .desc_wrap { width: 50%; float: right; margin: 0 11% 0 0; }
+.main #project .project_fix_img:after { width: 100%; height: 100vh; content: ""; display: block; position: absolute; top: 0; left: 0; border: 5px solid red; background-color: black; opacity: .7; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
-#project .project_main .msf_contents .encase .desc_wrap h2 { margin: 0 0 0 -233px; }
+.main #project .project_fix_img .intro_img { width: 100%; height: 100vh; position: absolute; top: 0; background: url(./../../images/main/02_1.395187c6.jpg) 50% 50% no-repeat; background-size: cover; }
 
-#project .project_main .msf_contents .encase .link_wrap { left: 2%; top: 11%; }
+.main #project .project_fix_img .lg_img { position: absolute; top: 0; width: 100%; height: 100vh; background: url(./../../images/main/img4.jpg) 50% 50% no-repeat; background-size: cover; opacity: 0; }
 
-#project .project_main .msf_contents .encase .link_wrap .link_btn span { left: 0; }
+.main #project .project_fix_img .msfk_img { position: absolute; top: 0; width: 100%; height: 100vh; background: url(./../../images/main/img6.jpg) 50% 50% no-repeat; background-size: cover; opacity: 0; }
 
-#project .project_main .hyo_contents .encase .desc_wrap { margin: 0 0 0 -16%; }
+.main #project .project_fix_img .hyosung_img { position: absolute; top: 0; width: 100%; height: 100vh; background: url(./../../images/main/img5.jpg) 50% 50% no-repeat; background-size: cover; opacity: 0; }
 
-#project .project_main .hyo_contents .encase .desc_wrap h2 { margin: 0 0 0 -233px; }
+.main #project .content_wrap { padding: 0 0 500px; }
 
-#project .project_main .hyo_contents .encase .link_wrap { right: 2%; top: 11%; }
+.main #project .project_intro { width: 100%; height: 100vh; display: flex; justify-content: center; align-items: center; flex-direction: column; }
 
-#project .project_main .hyo_contents .encase .link_wrap .link_btn span { left: 0; }
+.main #project .project_intro .first_desc, .main #project .project_intro .second_desc { width: 50%; height: 35px; text-align: center; overflow: hidden; }
 
-#project .last_wrap { position: relative; margin: 600px 0 0; }
+.main #project .project_intro .encase_txt { position: relative; color: #fff; transform: translate3d(0, 35px, 0); }
 
-#project .last_wrap .tit_wrap { width: 100%; color: #fff; }
+.main #project .project_intro .encase_txt p { font-size: 30px; line-height: 35px; }
 
-#project .last_wrap .tit_wrap strong { display: block; text-align: center; margin: 0 auto; font-weight: 400; font-size: 151px; letter-spacing: -10px; line-height: 121px; font-family: "NeueMachina", "YoonGothicPro750", Arial, Apple SD Gothic Neo, sans-serif; }
+.main #project .elm_cont { width: 100%; height: 100vh; /* height: 980px; */ padding: 190px 0; /* background-color: rgba(83, 56, 56, 0.473); */ }
 
-#project .last_wrap .tit_wrap em { position: relative; top: -7px; left: 9px; font-family: "Faktum", "YoonGothicPro750", Arial, Apple SD Gothic Neo, sans-serif; font-size: 126px; }
+.main #project .elm_cont .encase { max-width: 1920px; height: 100%; /*  max-width: 1300px; */ position: relative; margin: 0 auto; }
 
-#project .last_wrap .tit_wrap span { width: max-content; display: block; margin: 0 auto; }
+.main #project .elm_cont .encase .desc_wrap { text-align: center; }
 
-/* (end) section 3 - project */
-.ddd { display: block; width: 100%; height: 100%; background-size: cover; background-repeat: no-repeat; background-position: 0 0; animation: minime_animation_pc 25s steps(1) backwards; animation-play-state: paused; animation-iteration-count: initial; animation-duration: 25s; }
+.main #project .elm_cont .encase .desc_wrap > span { display: block; font-size: 24px; color: #fff; }
+
+.main #project .elm_cont .encase .desc_wrap h2 { padding: 50px 0 0; font-family: "NeueMachina", "YoonGothicPro750", Arial, Apple SD Gothic Neo, sans-serif; font-size: 145px; color: #fff; text-align: center; display: inline-block; text-transform: none; /* -webkit-text-stroke: 6px $white; */ font-weight: 600; }
+
+.main #project .elm_cont .encase .desc_wrap h2 em { position: relative; top: -9px; left: 18px; font-size: 60px; }
+
+.main #project .elm_cont .encase .desc_wrap .sub_desc { max-width: 800px; margin: 0 auto; padding: 88px 0 0; text-align: left; }
+
+.main #project .elm_cont .encase .desc_wrap .sub_desc strong { margin: 0 auto; font-size: 39px; font-weight: 400; letter-spacing: 0; padding: 0 0 20px; display: inline-block; line-height: 38px; color: #fff; }
+
+.main #project .elm_cont .encase .desc_wrap .sub_desc p { width: 705px; /* margin: 0 0 0 50px; */ font-size: 18px; font-weight: 400; line-height: 28px; color: #fff; margin: 0 auto; }
+
+.main #project .elm_cont .encase .desc_wrap .sub_desc p > span { margin: 0 0 0 82px; }
+
+.main #project .elm_cont .encase .link_wrap { width: 38%; max-width: 550px; height: 650px; position: absolute; }
+
+.main #project .elm_cont .encase .link_wrap .link_btn { width: 100%; height: 100%; display: block; }
+
+.main #project .elm_cont .encase .link_wrap .link_btn img { width: 100%; height: 100%; }
+
+.main #project .elm_cont .encase .link_wrap .link_btn span { position: absolute; bottom: -40px; display: block; font-size: 22px; color: white; left: 0; }
+
+.main #project .project_main .lg_contents .encase .desc_wrap { margin: 0 0 0 -18%; }
+
+.main #project .project_main .lg_contents .encase .desc_wrap h2 { margin: 0 0 0 -233px; }
+
+.main #project .project_main .lg_contents .encase .link_wrap { right: 2%; top: 11%; }
+
+.main #project .project_main .lg_contents .encase .link_wrap .link_btn span { left: 0; }
+
+.main #project .project_main .msf_contents .encase .desc_wrap { width: 50%; float: right; margin: 0 11% 0 0; }
+
+.main #project .project_main .msf_contents .encase .desc_wrap h2 { margin: 0 0 0 -233px; }
+
+.main #project .project_main .msf_contents .encase .link_wrap { left: 2%; top: 11%; }
+
+.main #project .project_main .msf_contents .encase .link_wrap .link_btn span { left: 0; }
+
+.main #project .project_main .hyo_contents .encase .desc_wrap { margin: 0 0 0 -16%; }
+
+.main #project .project_main .hyo_contents .encase .desc_wrap h2 { margin: 0 0 0 -233px; }
+
+.main #project .project_main .hyo_contents .encase .link_wrap { right: 2%; top: 11%; }
+
+.main #project .project_main .hyo_contents .encase .link_wrap .link_btn span { left: 0; }
+
+.main #project .last_wrap { position: relative; margin: 600px 0 0; }
+
+.main #project .last_wrap .tit_wrap { width: 100%; color: #fff; }
+
+.main #project .last_wrap .tit_wrap strong { display: block; text-align: center; margin: 0 auto; font-weight: 400; font-size: 151px; letter-spacing: -10px; line-height: 121px; font-family: "NeueMachina", "YoonGothicPro750", Arial, Apple SD Gothic Neo, sans-serif; }
+
+.main #project .last_wrap .tit_wrap em { position: relative; top: -7px; left: 9px; font-family: "Faktum", "YoonGothicPro750", Arial, Apple SD Gothic Neo, sans-serif; font-size: 126px; }
+
+.main #project .last_wrap .tit_wrap span { width: max-content; display: block; margin: 0 auto; }
+
+.main .ddd { display: block; width: 100%; height: 100%; background-size: cover; background-repeat: no-repeat; background-position: 0 0; animation: minime_animation_pc 25s steps(1) backwards; animation-play-state: paused; animation-iteration-count: initial; animation-duration: 25s; }
 
 @keyframes minime_animation_pc {}/* common css */
 ::selection { background: #fff; color: #000; text-shadow: none; }
