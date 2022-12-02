@@ -8,6 +8,7 @@
 	.covering_wrap { max-width: 1680px; height: 100%; position: relative; margin: 0 auto; display: flex; align-items: center; justify-content: center; }
 	.main_title_txt { 
       display: inline-block; position: relative;/*  top: 388px; left: 293px; */ z-index: 1;
+      top:5%;
 		h2 { 
          width: max-content; position: relative; font-size: 230px; font-weight: $medium; letter-spacing: -15px; line-height: 195px; /* mix-blend-mode: overlay; */ color: #181712;
          font-family: $NeueMachina; text-align:center; position: relative; z-index: 1;
@@ -16,10 +17,11 @@
          // background-color: #e6e0cb; 
          // background-color: #836c3b; 
          // background-color: rgb(155, 155, 155);
-         video { width: 250px; }
-			span { position: relative; left: -100px; }
+         img { width: 250px; /* height:200px; */ }
+			span { position: relative; top: -79px; }
 			em {
-				width: 177px; display: inline-block; position: relative; top: 26px;
+            // width: 177px; position: relative; bottom: 0; font-size: 340px;
+            display: inline-block;
 				img { width: 100%; }
 			}
 		} 
@@ -96,13 +98,13 @@
 		}
 	}
    .path_img_wrap {
-      position: absolute; opacity: 0;
+      position: absolute; left: 0; bottom: 130px;
       svg {
          width:300px;
-         background-color: red;
-         polygon, polyline, path {
+         // background-color: black;
+         polygon, polyline, path, circle {
             width:100%; height: 100%;
-
+            stroke: red; stroke-width: .5px; fill: transparent; stroke-miterlimit: 10;
          }
       }
    }
