@@ -59,9 +59,7 @@
 		}
 		.star_svg_item {
          width: 124px; height: 122px; position: absolute; /* top: 92px; right: 352px; */
-         top: 57px;
-         left: 301px;
-          z-index: 1;
+         top: 177px; right: 176px; z-index: 1;
 			@include scale(0);
 			path { stroke: #dcd9cc; stroke-width: 2px; fill: $subColor; stroke-miterlimit: 10; stroke-dasharray: 395; stroke-dashoffset: 0; }
 		}
@@ -98,7 +96,7 @@
 		}
 	}
    .path_img_wrap {
-      position: absolute;
+      position: absolute; opacity: 0;
       svg {
          width:300px;
          background-color: red;
