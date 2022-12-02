@@ -1,5 +1,14 @@
 @charset "UTF-8";
 .top { position: fixed; bottom: 0; left: 0; font-size: 50px; color: red; font-weight: $bold; z-index: 9999; }
+.mouse { 
+   position: fixed; bottom: 50px; left: 0; font-size: 50px; color: blue; font-weight: $bold; z-index: 9999; 
+   .page { display: block; }
+}
+.cursor {
+   width: 20px; height: 20px; background-color: $mainColor; position: fixed; left: 0; top: 0;
+   z-index: 9999;
+   @include borderRadius(100%);
+}
 
 /* Header (헤더) */
 header {

@@ -34,12 +34,14 @@ function layout() {
 function main() {
    gsap.registerPlugin(ScrollTrigger);
 
-   const pageContainer = document.querySelector(".container");
-   const menuButton = document.querySelector('#menu > button');
-   const menuDotsItems = document.querySelectorAll('.dots_item');
-   const menuLineItems = document.querySelectorAll('.line_item');
+   const pageContainer = document.querySelector(".container"); // 컨테이너
+   const menuButton = document.querySelector('#menu > button'); // 메뉴 버튼
+   const menuDotsItems = document.querySelectorAll('.dots_item'); // 메뉴 점
+   const menuLineItems = document.querySelectorAll('.line_item'); // 메뉴 X 라인 
 
-   let motionBreakBoolean = true;
+   const cursor = document.querySelector('.cursor'); // 커서
+
+   let motionBreakBoolean = true; // 메뉴 클릭 후 모션 동작시 false 
 
    /* LocomotiveScroll (Smooth Scroll) */
    const scroller = new LocomotiveScroll({
@@ -71,7 +73,6 @@ function main() {
    });
 
    // ScrollTrigger.addEventListener("refresh", () => scroller.update());
-
 
 
    scroller.on("scroll", function (t) {
@@ -144,6 +145,7 @@ function main() {
       });
    }
 
+
    /* Menu Open Motion (메뉴 오픈 모션) */
    const menuOpenMotion = () => {
       let type = true;
@@ -174,52 +176,49 @@ function main() {
 
 
    /* Intro SVG Motion (인트로 SVG 모션) */
-   gsap.to(document.querySelector('.star_svg_item'), 1, { 'scale': 1, ease: Expo.easeInOut }, .2);
-   gsap.to(document.querySelector('.circle_svg_item ellipse'), 1.5, { 'stroke-dashoffset': 0, ease: Expo.easeInOut });
-   gsap.to(document.querySelector('.rhombus_svg_item polygon'), 1.5, { 'stroke-dashoffset': 0, ease: Expo.easeInOut });
+   const IntroSVGMotion = () => {
+      const gridLine1 = [], gridLine2 = [], gridLine3 = [], gridLine4 = [];
+      const lineSpan = ['row_line_top', 'row_line_bottom', 'col_line_top', 'col_line_bottom'];
+      const gridLineWrap = [gridLine1, gridLine2, gridLine3, gridLine4];
 
-   let introLineSVG1 = [];
-   document.querySelectorAll('.row_line_top span').forEach(element => {
-      introLineSVG1.unshift(element)
-   });
-   let introLineSVG2 = [];
-   document.querySelectorAll('.row_line_bottom span').forEach(element => {
-      introLineSVG2.push(element)
-   });
-   let introLineSVG3 = [];
-   document.querySelectorAll('.col_line_top span').forEach(element => {
-      introLineSVG3.unshift(element)
-   });
-   let introLineSVG4 = [];
-   document.querySelectorAll('.col_line_bottom span').forEach(element => {
-      introLineSVG4.push(element)
-   });
-   TweenMax.staggerTo(introLineSVG1, 1, { 'width': '100%', ease: Expo.easeInOut }, .15);
-   TweenMax.staggerTo(introLineSVG2, 1, { 'width': '100%', ease: Expo.easeInOut }, .15);
-   TweenMax.staggerTo(introLineSVG3, 1, { 'width': '100%', ease: Expo.easeInOut }, .15);
-   TweenMax.staggerTo(introLineSVG4, 1, { 'width': '100%', ease: Expo.easeInOut }, .15);
+      for (let i = 0; i < lineSpan.length; i++) {
+         document.querySelectorAll('.' + lineSpan[i] + ' span').forEach(element => {
+            if (i % 2 === 0) {
+               gridLineWrap[i].unshift(element);
+            } else {
+               gridLineWrap[i].push(element);
+            }
+
+         });
+         TweenMax.staggerTo(gridLineWrap[i], 1, { 'width': '100%', ease: Expo.easeInOut }, .15);
+      }
+      gsap.to(document.querySelector('.star_svg_item'), 1, { 'scale': 1, ease: Expo.easeInOut }, .2);
+      gsap.to(document.querySelector('.circle_svg_item ellipse'), 1.5, { 'stroke-dashoffset': 0, ease: Expo.easeInOut });
+      gsap.to(document.querySelector('.rhombus_svg_item polygon'), 1.5, { 'stroke-dashoffset': 0, ease: Expo.easeInOut });
+   }
+   IntroSVGMotion();
 
 
-
-
-   let num = 0; // position 초기값 0
-   let i = 0; // count
 
    /* Moving Images Motion (움직이는 이미지 모션) */
    function movingImgMotion() {
-      i++
-      document.querySelectorAll('.moving_image > div').forEach((element) => {
-         element.style.backgroundPosition = (num -= 192) + 'px';
-      })
-      if (i > 8) {
-         i = 0;
+      let num = 0; // position 초기값 0
+      let i = 0; // count
+      setInterval(() => {
+         i++
          document.querySelectorAll('.moving_image > div').forEach((element) => {
-            element.style.backgroundPosition = '0';
+            element.style.backgroundPosition = (num -= 192) + 'px';
          })
-      }
-   }
-   setInterval(movingImgMotion, 300);
+         if (i > 8) {
+            i = 0;
+            document.querySelectorAll('.moving_image > div').forEach((element) => {
+               element.style.backgroundPosition = '0';
+            })
+         }
 
+      }, 300);
+   }
+   movingImgMotion();
 
 
 
@@ -261,7 +260,7 @@ function main() {
       scrollTrigger: {
          markers: { startColor: "red", endColor: "red" },
          trigger: ".project_fix_img",
-         scroller: ".container", 
+         scroller: ".container",
          pin: true,
          scrub: true,
          start: "top top",
@@ -270,7 +269,10 @@ function main() {
    });
 
 
-
+   /* Mouse Motion (마우스 모션) */
+   document.addEventListener('mousemove', (e) => {
+      gsap.to(cursor, .5, { left: e.pageX + 'px', top: e.pageY + 'px' });
+   });
 
 }
 

@@ -7,22 +7,21 @@
 	width: 100%; height: 980px;/* background-color: pink; */
 	.covering_wrap { max-width: 1680px; height: 100%; position: relative; margin: 0 auto; display: flex; align-items: center; justify-content: center; }
 	.main_title_txt { 
-      display: inline-block; position: relative;/*  top: 388px; left: 293px; */ z-index: 1;
-      top:5%;
+      display: inline-block; position: relative; z-index: 1; top: 3%;
 		h2 { 
-         width: max-content; position: relative; font-size: 230px; font-weight: $medium; letter-spacing: -15px; line-height: 195px; /* mix-blend-mode: overlay; */ color: #181712;
+         width: max-content; position: relative; font-size: 230px; font-weight: $medium; letter-spacing: -15px; line-height: 216px; /* mix-blend-mode: overlay; */ color: #181712;
          font-family: $NeueMachina; text-align:center; position: relative; z-index: 1;
          -webkit-text-stroke:2px #181712;
          // color:white;
          // background-color: #e6e0cb; 
          // background-color: #836c3b; 
          // background-color: rgb(155, 155, 155);
-         img { width: 250px; /* height:200px; */ }
-			span { position: relative; top: -79px; }
+         img { width: 250px; height: 180px; position: relative; top: 17px; }
+			span {	position: relative; top: 15px; }
 			em {
             // width: 177px; position: relative; bottom: 0; font-size: 340px;
             display: inline-block;
-				img { width: 100%; }
+				
 			}
 		} 
       .sticker_bg {
@@ -98,13 +97,25 @@
 		}
 	}
    .path_img_wrap {
-      position: absolute; left: 0; bottom: 130px;
+      width: 100%; height: 100%; position: absolute; opacity: 0;
       svg {
-         width:300px;
+         
          // background-color: black;
-         polygon, polyline, path, circle {
+         polygon, polyline, path, circle, line, ellipse{
             width:100%; height: 100%;
             stroke: red; stroke-width: .5px; fill: transparent; stroke-miterlimit: 10;
+         }
+         &#Layer_1 {
+            width:300px;
+            position: absolute; left: 0; bottom: 130px;
+         }
+         &#Layer_2 {
+            max-width: 150px; position: absolute; right: 33%; top: 8%;
+         }
+         &#Layer_3 {
+            max-width:150px;
+            position: absolute; right: -5%;
+            bottom: 44%;
          }
       }
    }

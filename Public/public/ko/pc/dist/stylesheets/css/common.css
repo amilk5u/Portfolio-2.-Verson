@@ -89,7 +89,7 @@ template { display: none; }
 
 [hidden] { display: none; }
 
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; text-transform: uppercase; }
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; text-transform: uppercase; cursor: none; }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
 
@@ -133,13 +133,13 @@ table { width: 100%; text-align: left; border-collapse: collapse; border-spacing
 
 body { -webkit-backface-visibility: hidden; }
 
-input[type="button"], input[type="submit"], input[type="reset"], input[type="file"]::-webkit-file-upload-button, button { padding: 0; font-family: "NeueMachina", "YoonGothicPro750", Arial, Apple SD Gothic Neo, sans-serif; outline: none; }
+input[type="button"], input[type="submit"], input[type="reset"], input[type="file"]::-webkit-file-upload-button, button { padding: 0; font-family: "Faktum", "YoonGothicPro750", Arial, Apple SD Gothic Neo, sans-serif; outline: none; }
 
 a { text-decoration: none; cursor: pointer; color: #000; }
 
 a:link, a:visited, a:active, a:hover { text-decoration: none; }
 
-select, input, button, textarea { -webkit-appearance: none; -moz-appearance: none; appearance: none; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0; background-color: transparent; border: 0 none; font-size: 20px; font-weight: 400; font-family: "NeueMachina", "YoonGothicPro750", Arial, Apple SD Gothic Neo, sans-serif; line-height: 1; text-transform: uppercase; }
+select, input, button, textarea { -webkit-appearance: none; -moz-appearance: none; appearance: none; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0; background-color: transparent; border: 0 none; font-size: 20px; font-weight: 400; font-family: "Faktum", "YoonGothicPro750", Arial, Apple SD Gothic Neo, sans-serif; line-height: 1; text-transform: uppercase; }
 
 select[type="checkbox"], input[type="checkbox"], button[type="checkbox"], textarea[type="checkbox"] { -webkit-appearance: checkbox; }
 
@@ -147,13 +147,19 @@ select[type="radio"], input[type="radio"], button[type="radio"], textarea[type="
 
 select::-ms-expand, input::-ms-expand, button::-ms-expand, textarea::-ms-expand { display: none; }
 
-html, body { font-family: "NeueMachina", "YoonGothicPro750", Arial, Apple SD Gothic Neo, sans-serif; font-size: 20px; font-weight: 400; color: #000; word-break: keep-all; line-height: 1; letter-spacing: 0; -webkit-font-smoothing: antialiased; }
+html, body { font-family: "Faktum", "YoonGothicPro750", Arial, Apple SD Gothic Neo, sans-serif; font-size: 20px; font-weight: 400; color: #000; word-break: keep-all; line-height: 1; letter-spacing: 0; -webkit-font-smoothing: antialiased; }
 
 strong, h1, h2, h3, h4, h5, h6 { font-weight: 600; text-transform: uppercase; }
 
 label, button { cursor: pointer; }
 
 .top { position: fixed; bottom: 0; left: 0; font-size: 50px; color: red; font-weight: 600; z-index: 9999; }
+
+.mouse { position: fixed; bottom: 50px; left: 0; font-size: 50px; color: blue; font-weight: 600; z-index: 9999; }
+
+.mouse .page { display: block; }
+
+.cursor { width: 20px; height: 20px; background-color: #ff5252; position: fixed; left: 0; top: 0; z-index: 9999; -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%; }
 
 /* Header (헤더) */
 header { width: 100%; height: auto; position: fixed; z-index: 5; /* Logo (로고) */ /* Menu */ /* Show Menu (펼쳐진 메뉴) */ }
@@ -233,17 +239,15 @@ header #showMenu .menu_bg_mask { width: 100%; height: 100vh; position: absolute;
 
 #intro .covering_wrap { max-width: 1680px; height: 100%; position: relative; margin: 0 auto; display: flex; align-items: center; justify-content: center; }
 
-#intro .main_title_txt { display: inline-block; position: relative; /*  top: 388px; left: 293px; */ z-index: 1; top: 5%; }
+#intro .main_title_txt { display: inline-block; position: relative; z-index: 1; top: 3%; }
 
-#intro .main_title_txt h2 { width: max-content; position: relative; font-size: 230px; font-weight: 500; letter-spacing: -15px; line-height: 195px; /* mix-blend-mode: overlay; */ color: #181712; font-family: "NeueMachina", "YoonGothicPro750", Arial, Apple SD Gothic Neo, sans-serif; text-align: center; position: relative; z-index: 1; -webkit-text-stroke: 2px #181712; }
+#intro .main_title_txt h2 { width: max-content; position: relative; font-size: 230px; font-weight: 500; letter-spacing: -15px; line-height: 216px; /* mix-blend-mode: overlay; */ color: #181712; font-family: "NeueMachina", "YoonGothicPro750", Arial, Apple SD Gothic Neo, sans-serif; text-align: center; position: relative; z-index: 1; -webkit-text-stroke: 2px #181712; }
 
-#intro .main_title_txt h2 img { width: 250px; /* height:200px; */ }
+#intro .main_title_txt h2 img { width: 250px; height: 180px; position: relative; top: 17px; }
 
-#intro .main_title_txt h2 span { position: relative; top: -79px; }
+#intro .main_title_txt h2 span { position: relative; top: 15px; }
 
 #intro .main_title_txt h2 em { display: inline-block; }
-
-#intro .main_title_txt h2 em img { width: 100%; }
 
 #intro .main_title_txt .sticker_bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #a89242; z-index: -1; -webkit-transform: rotate(-2deg); -moz-transform: rotate(-2deg); -ms-transform: rotate(-2deg); -o-transform: rotate(-2deg); transform: rotate(-2deg); }
 
@@ -293,11 +297,15 @@ header #showMenu .menu_bg_mask { width: 100%; height: 100vh; position: absolute;
 
 #intro .moving_image .element_1 { width: 200px; height: 240px; top: -4%; right: 28%; background: url(./../../images/main/img3.png) 0 0 repeat; }
 
-#intro .path_img_wrap { position: absolute; left: 0; bottom: 130px; }
+#intro .path_img_wrap { width: 100%; height: 100%; position: absolute; opacity: 0; }
 
-#intro .path_img_wrap svg { width: 300px; }
+#intro .path_img_wrap svg polygon, #intro .path_img_wrap svg polyline, #intro .path_img_wrap svg path, #intro .path_img_wrap svg circle, #intro .path_img_wrap svg line, #intro .path_img_wrap svg ellipse { width: 100%; height: 100%; stroke: red; stroke-width: .5px; fill: transparent; stroke-miterlimit: 10; }
 
-#intro .path_img_wrap svg polygon, #intro .path_img_wrap svg polyline, #intro .path_img_wrap svg path, #intro .path_img_wrap svg circle { width: 100%; height: 100%; stroke: red; stroke-width: .5px; fill: transparent; stroke-miterlimit: 10; }
+#intro .path_img_wrap svg#Layer_1 { width: 300px; position: absolute; left: 0; bottom: 130px; }
+
+#intro .path_img_wrap svg#Layer_2 { max-width: 150px; position: absolute; right: 33%; top: 8%; }
+
+#intro .path_img_wrap svg#Layer_3 { max-width: 150px; position: absolute; right: -5%; bottom: 44%; }
 
 /* (end) section 1 - intro */
 /* (start) section 2 - introduce */
