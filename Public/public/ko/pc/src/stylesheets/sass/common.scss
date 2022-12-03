@@ -3,3 +3,84 @@
 @import "./layout";
 @import "./main";
 
+/* common css */
+//기본 스타일
+::selection { background:$white; color:$black; text-shadow:none; }
+::-moz-selection { background:$white; color:$black; text-shadow:none; }
+img { vertical-align:top; image-rendering:-webkit-optimize-contrast;}
+caption { width:1px; height:1px; overflow:hidden; margin:-1px;}
+strong { font-weight: $regular; }
+
+.guide_line {
+	div {
+		&:after,
+		&:before { width: 1px; height: 100%; display: block; content: ""; position: fixed; background-color: rgb(4, 160, 160); z-index: 1000; }
+		&.guide_70 {
+			&:before {left:vw(40);}
+			&:after {right:vw(40);}
+		}
+		&.guide_center {
+			&:before {left:50%;}
+		}
+		&.guide_1180 {
+			&:before {left:50%; margin:0 0 0 -590px;}
+			&:after {left:50%; margin:0 0 0 590px;}
+		}
+		&.guide_1800 {
+			&:before {left:50%; margin:0 0 0 -900px;}
+			&:after {left:50%; margin:0 0 0 900px;}
+		}
+		&.guide_1680 { 
+			&:before {left:50%; margin:0 0 0 -840px;}
+			&:after {left:50%; margin:0 0 0 840px;}
+		}
+	}
+}
+
+
+
+
+/*! locomotive-scroll v3.5.4 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
+html.has-scroll-smooth {
+   overflow: hidden;
+}
+ 
+html.has-scroll-dragging {
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}
+
+.has-scroll-smooth body {
+   overflow: hidden;
+}
+
+.has-scroll-smooth [data-scroll-container] {
+   min-height: 100vh;
+}
+
+.c-scrollbar {
+   position: absolute;
+   right: 0;
+   top: 0;
+   height: 100vh;
+   transform-origin: center right;
+   transition: transform 0.3s, opacity 0.3s;
+}
+
+.c-scrollbar_thumb {
+   position: absolute;
+   top: 0;
+   right: 0;
+   background-color: #2b3826;
+   width: 13px;
+   border-radius: 10px;
+   margin: 2px;
+   cursor: -webkit-grab;
+   cursor: grab;
+}
+.has-scroll-dragging .c-scrollbar_thumb {
+   cursor: -webkit-grabbing;
+   cursor: grabbing;
+}

@@ -153,35 +153,6 @@ strong, h1, h2, h3, h4, h5, h6 { font-weight: 600; text-transform: uppercase; }
 
 label, button { cursor: pointer; }
 
-body { background: #edf0ed; font-family: 'SaintMonica'; color: #2b3826; position: absolute; top: 0; bottom: 0; right: 0; left: 0; text-align: justify; }
-
-.row { padding: 0 50px; }
-
-section { position: relative; }
-
-body p { text-align: justify; }
-
-#section1 { border-bottom: 1px solid #2b382680; }
-
-#section3_1, #section4_1, #section5_1 { background: #2b3826; }
-
-/*! locomotive-scroll v3.5.4 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
-html.has-scroll-smooth { overflow: hidden; }
-
-html.has-scroll-dragging { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
-
-.has-scroll-smooth body { overflow: hidden; }
-
-.has-scroll-smooth [data-scroll-container] { min-height: 100vh; }
-
-.c-scrollbar { position: absolute; right: 0; top: 0; height: 100vh; transform-origin: center right; transition: transform 0.3s, opacity 0.3s; }
-
-.c-scrollbar_thumb { position: absolute; top: 0; right: 0; background-color: #2b3826; width: 13px; border-radius: 10px; margin: 2px; cursor: -webkit-grab; cursor: grab; }
-
-.has-scroll-dragging .c-scrollbar_thumb { cursor: -webkit-grabbing; cursor: grabbing; }
-
-.sec3_title, .sec4_title, .sec5_title { display: none; }
-
 .top { position: fixed; bottom: 0; left: 0; font-size: 50px; color: red; font-weight: 600; z-index: 9999; }
 
 .mouse { position: fixed; bottom: 50px; left: 0; font-size: 50px; color: blue; font-weight: 600; z-index: 9999; }
@@ -519,6 +490,50 @@ header #showMenu .menu_bg_mask { width: 100%; height: 100vh; position: absolute;
 /* (end) section 3 - project */
 .ddd { display: block; width: 100%; height: 100%; background-size: cover; background-repeat: no-repeat; background-position: 0 0; animation: minime_animation_pc 25s steps(1) backwards; animation-play-state: paused; animation-iteration-count: initial; animation-duration: 25s; }
 
-@keyframes minime_animation_pc {}
+@keyframes minime_animation_pc {}/* common css */
+::selection { background: #fff; color: #000; text-shadow: none; }
+
+::-moz-selection { background: #fff; color: #000; text-shadow: none; }
+
+img { vertical-align: top; image-rendering: -webkit-optimize-contrast; }
+
+caption { width: 1px; height: 1px; overflow: hidden; margin: -1px; }
+
+strong { font-weight: 400; }
+
+.guide_line div:after, .guide_line div:before { width: 1px; height: 100%; display: block; content: ""; position: fixed; background-color: #04a0a0; z-index: 1000; }
+
+.guide_line div.guide_70:before { left: 2vw; }
+
+.guide_line div.guide_70:after { right: 2vw; }
+
+.guide_line div.guide_center:before { left: 50%; }
+
+.guide_line div.guide_1180:before { left: 50%; margin: 0 0 0 -590px; }
+
+.guide_line div.guide_1180:after { left: 50%; margin: 0 0 0 590px; }
+
+.guide_line div.guide_1800:before { left: 50%; margin: 0 0 0 -900px; }
+
+.guide_line div.guide_1800:after { left: 50%; margin: 0 0 0 900px; }
+
+.guide_line div.guide_1680:before { left: 50%; margin: 0 0 0 -840px; }
+
+.guide_line div.guide_1680:after { left: 50%; margin: 0 0 0 840px; }
+
+/*! locomotive-scroll v3.5.4 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
+html.has-scroll-smooth { overflow: hidden; }
+
+html.has-scroll-dragging { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+
+.has-scroll-smooth body { overflow: hidden; }
+
+.has-scroll-smooth [data-scroll-container] { min-height: 100vh; }
+
+.c-scrollbar { position: absolute; right: 0; top: 0; height: 100vh; transform-origin: center right; transition: transform 0.3s, opacity 0.3s; }
+
+.c-scrollbar_thumb { position: absolute; top: 0; right: 0; background-color: #2b3826; width: 13px; border-radius: 10px; margin: 2px; cursor: -webkit-grab; cursor: grab; }
+
+.has-scroll-dragging .c-scrollbar_thumb { cursor: -webkit-grabbing; cursor: grabbing; }
 
 /*# sourceMappingURL=../map/common.css.map */
