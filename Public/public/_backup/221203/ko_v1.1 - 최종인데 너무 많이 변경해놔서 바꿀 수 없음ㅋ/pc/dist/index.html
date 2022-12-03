@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title></title>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+   <meta name="title" content=''>
+   <meta name="Description" content=''>
+   <meta name="Keywords" content=''>
+   <meta name="Author" content="">
+   <meta name="robots" content="ALL">
+   <!-- <link rel="icon" type="image/png" href="./images/layout/favicon.ico" /> -->
+   <link rel="stylesheet" href="./stylesheets/css/common.css">
+   <script src="./javascripts/jquery-1.8.2.min.js"></script>
+</head>
+<body>
+   <div class="top">0</div>
+   <!-- <div class="cursor"></div> -->
+   <!-- <div class="mouse">
+      <div class="page">
+         <span>X : </span>
+         <span class="pageX"></span>
+         <span>px</span> 
+      </div>      
+      <div class="page">
+         <span>Y : </span> 
+         <span class="pageY"></span>
+         <span>px</span>
+      </div>
+   </div> -->
+   <!-- Guide Line (가이드 라인) -->
+   <!-- <div class="guide_line">
+      <div class="guide_center"></div>
+      <div class="guide_1680"></div>
+      <div class="guide_1800"></div>
+   </div> -->
+   <!-- // Guide Line (가이드 라인) -->
+   <div id="wrap">
+      <!-- Header (헤더)-->
+      <header>
+         <!-- Logo (메인로고) -->
+         <div id="logo">
+            <span> SMJ </span>
+         </div>
+         <!-- // Logo (메인로고) -->
+         <!-- Menu (메인 메뉴) -->
+         <nav id="menu">
+            <button type="button">
+               <div class="dots_wrap">
+                  <div class="menu_dots_cont">
+                     <span class="dots_item"></span>
+                     <span class="dots_item"></span>
+                     <span class="dots_item"></span>
+                  </div>
+                  <div class="menu_line_cont">
+                     <span class="line_item"></span>
+                     <span class="line_item"></span>
+                  </div>
+               </div>
+               <span class="circle_bg"></span>
+            </button>
+         </nav>
+         <!-- // Menu (메인 메뉴) -->
+         <!-- Show Menu (펼쳐지는 메뉴) -->
+         <div id="showMenu" class="active">
+            <div class="menu_bg_mask">
+               <div class="menu_inner">
+                  <div class="menu_contact">
+                     <span>+++</span>
+                     <ul>
+                        <li>
+                           <p>경기도 이천시 증신로 278</p>
+                        </li>
+                        <li>
+                           <p>
+                              <a href="https://www.github.com">https://www.github.com</a>
+                           </p>
+                        </li>
+                        <li>
+                           <p>
+                              <a href="mailto:amilk5u@naver.com">amilk5u@naver.com</a>
+                           </p>
+                        </li>
+                        <li>
+                           <p>
+                              <a href="https://www.github.com">jujum@tistory.com</a>
+                           </p>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="menu_list">
+                     <ul>
+                        <li>
+                           <div class="menu_list_wrap">
+                              <button type="button">
+                                 <span class="font">main</span>
+                                 <span class="back">main</span>
+                              </button>
+                              <div class="list_number">
+                                 <span>01</span>
+                              </div>
+                           </div>
+                        </li>
+                        <li>
+                           <div class="menu_list_wrap">
+                              <button type="button">
+                                 <span class="font">About</span>
+                                 <span class="back">About</span>
+                              </button>
+                              <div class="list_number">
+                                 <span>02</span>
+                              </div>
+                           </div>
+                        </li>
+                        <li>
+                           <div class="menu_list_wrap">
+                              <button type="button">
+                                 <span class="font">Work</span>
+                                 <span class="back">Work</span>
+                              </button>
+                              <div class="list_number">
+                                 <span>03</span>
+                              </div>
+                           </div> 
+                        </li>
+                        <li>
+                           <div class="menu_list_wrap">
+                              <button type="button">
+                                 <span class="font">Javascript</span>
+                                 <span class="back">Javascript</span>
+                              </button>
+                              <div class="list_number">
+                                 <span>04</span>
+                              </div>
+                           </div>
+                        </li>
+                        <li>
+                           <div class="menu_list_wrap">
+                              <button type="button">
+                                 <span class="font">React</span>
+                                 <span class="back">React</span>
+                              </button>
+                              <div class="list_number">
+                                 <span>05</span>
+                              </div>
+                           </div>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="theme_mode">
+                     <button class="theme_element" type="button">
+                        <span></span>
+                     </button>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- // Show Menu (펼쳐지는 메뉴) -->
+      </header>
+      <!--// Header (헤더)-->
+<!-- container -->
+<div class="container main">
+   <section id="intro">
+      <div class="covering_wrap">
+         <div class="main_title_txt">
+            <!-- <h2> DON'T <img src="./images/main/2.e3c634b8.jpg"></img> BE A <br>
+               <span>STRANGER <em>*</em></span>
+            </h2> -->
+            <!-- <h2> I draw <img src="./images/main/07_2.5c5c5768.jpg"></img> A <br>
+               <span>my dream <em>*</em></span>
+            </h2> -->
+            <h1>
+               <span>can't</span>
+               <img src="./images/main/07_2.5c5c5768.jpg"></img>
+               <span>help </span>
+               <br>
+               <span>but dream </span>
+               <em>*</em>
+            </h1>
+            <!-- <h2> make <img src="./images/main/07_2.5c5c5768.jpg"></img> dream <br>
+               <span> come true <em>*</em></span>
+            </h2>  -->
+            <!-- <span class="sticker_bg"></span> -->
+            <span class="slogan_txt"> <em>+++</em> <span> I do my best to make my imagination a reality</span></span>
+            <!--  <figure class="thumb_image">
+               <img src="./images/main/03_10.c36b9b61.jpg" alt="">
+            </figure> -->
+         </div>
+         <div class="main_grid_line">
+            <svg class="circle_svg_item" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="239px" height="240.833px" viewBox="0 0 239 240.833" enable-background="new 0 0 239 240.833" xml:space="preserve">
+               <ellipse fill="none" stroke="#DE1815" stroke-miterlimit="10" cx="119.5" cy="120.417" rx="119" ry="119.916" />
+            </svg>
+            <svg class="star_svg_item" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="124.283px" height="122.807px" viewBox="637.314 368.01 124.283 122.807" enable-background="new 637.314 368.01 124.283 122.807" xml:space="preserve">
+               <path d="M697.352,368.025c0,0-0.499,61.706,64.234,63.229	c0,0-59.202-0.646-64.234,59.521c0,0-3.666-57.378-60.016-59.521C637.336,431.254,695.384,433.774,697.352,368.025z" />
+            </svg>
+            <svg class="rhombus_svg_item" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="361.657px" height="241.249px" viewBox="0 0 361.657 241.249" enable-background="new 0 0 361.657 241.249" xml:space="preserve">
+               <polygon fill="none" stroke="#040000" stroke-miterlimit="10" points="0.844,120.702 120.829,0.608 360.813,120.702 240.813,240.64 	" />
+            </svg>
+            <!-- <svg class="star_svg_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="124.283px" height="122.807px" viewBox="637.314 368.01 124.283 122.807" enable-background="new 637.314 368.01 124.283 122.807" xml:space="preserve">
+               <path d="M697.352,368.025c0,0-0.499,61.706,64.234,63.229	c0,0-59.202-0.646-64.234,59.521c0,0-3.666-57.378-60.016-59.521C637.336,431.254,695.384,433.774,697.352,368.025z" />
+            </svg> -->
+            <!-- 그려지는 라인 -->
+            <div class="line_element_wrap">
+               <img class="trick_img" src="./images/main/img2.png" alt="">
+               <div class="grid_content row_grid">
+                  <div class="row_line_top">
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                  </div>
+                  <div class="row_line_bottom">
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                  </div>
+               </div>
+               <div class="grid_content col_grid">
+                  <div class="col_line_top">
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                  </div>
+                  <div class="col_line_bottom">
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                  </div>
+               </div>
+            </div>
+            <!-- 움직이는 모션 이미지 -->
+            <!-- <div class="moving_image">
+               <div class="element_1"></div>
+            </div> -->
+            <!-- <button class="btn" type="button">button</button> -->
+         </div>
+         <div class="path_img_wrap">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="180.543px" height="180.1px" viewBox="0 0 180.543 180.1" enable-background="new 0 0 180.543 180.1" xml:space="preserve">
+               <circle cx="90" cy="90" r="89.5" />
+               <path d="M178.791,69.592c4.424,20.841-2.865,39.059-22.009,34.096c-27.206-7.054-50.844-48.404-43.798-75.585c4.861-18.751,23.264-17.142,38.747-4.091C164.315,34.618,175.271,53.008,178.791,69.592z" />
+               <path d="M172.435,89.008c7.109,32.865-4.408,61.552-34.854,53.659C94.314,131.45,56.594,66.189,67.692,23.373c7.658-29.537,36.912-26.932,61.568-6.306C149.299,33.829,166.78,62.855,172.435,89.008z" />
+               <path d="M155.899,106.069c8.941,36.295-3.975,67.637-39.719,58.371c-50.798-13.17-96.145-85.694-83.989-132.59C40.58-0.5,74.83,2.925,104.05,26.091C127.797,44.917,148.79,77.187,155.899,106.069z" />
+               <path d="M71.72,135.178c4.717,20.449-2.504,38.208-22.02,33.147C21.965,161.136-2.503,120.406,4.376,93.87c4.746-18.307,23.473-16.538,39.353-3.599C56.635,100.786,67.966,118.905,71.72,135.178z" />
+               <path d="M110.839,124.633c6.84,32.761-4.599,61.435-34.468,53.69C33.921,167.317-2.85,102.364,8.237,59.595c7.649-29.505,36.372-27.033,60.502-6.558C88.353,69.676,105.396,98.562,110.839,124.633z" />
+               <path d="M44.071,129.456C8.41,117.297-12.383,89.636,12.935,64.914C48.92,29.782,133.497,31.22,168.089,66.647c23.859,24.438,4.308,51.071-29.852,62.866C110.478,139.099,72.451,139.133,44.071,129.456z" />
+               <path d="M177.491,78.345c5.785,27.456-3.809,51.469-28.946,44.953c-35.722-9.262-66.716-63.719-57.431-99.543c6.408-24.713,30.575-22.615,50.893-5.437C158.521,32.278,172.889,56.496,177.491,78.345z" />
+               <path d="M133.063,116.343c7.862,36.254-4.846,67.891-38.471,59.175C46.81,163.129,5.132,91.132,17.372,43.909c8.447-32.577,40.754-29.694,67.987-6.934C107.495,55.473,126.81,87.495,133.063,116.343z" />
+               <path d="M165.548,96.701c8.186,35.388-4.311,66.11-38.124,57.345C79.372,141.587,36.964,71.1,48.864,25.189c8.212-31.673,40.654-28.602,68.17-6.204C139.396,37.185,159.04,68.543,165.548,96.701z" />
+            </svg>
+            <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="180.543px" height="180.1px" viewBox="0 0 180.543 180.1" enable-background="new 0 0 180.543 180.1" xml:space="preserve">
+               <circle cx="90" cy="90" r="89.5" />
+               <path d="M178.791,69.592c4.424,20.841-2.865,39.059-22.009,34.096c-27.206-7.054-50.844-48.404-43.798-75.585c4.861-18.751,23.264-17.142,38.747-4.091C164.315,34.618,175.271,53.008,178.791,69.592z" />
+               <path d="M172.435,89.008c7.109,32.865-4.408,61.552-34.854,53.659C94.314,131.45,56.594,66.189,67.692,23.373c7.658-29.537,36.912-26.932,61.568-6.306C149.299,33.829,166.78,62.855,172.435,89.008z" />
+               <path d="M155.899,106.069c8.941,36.295-3.975,67.637-39.719,58.371c-50.798-13.17-96.145-85.694-83.989-132.59C40.58-0.5,74.83,2.925,104.05,26.091C127.797,44.917,148.79,77.187,155.899,106.069z" />
+               <path d="M71.72,135.178c4.717,20.449-2.504,38.208-22.02,33.147C21.965,161.136-2.503,120.406,4.376,93.87c4.746-18.307,23.473-16.538,39.353-3.599C56.635,100.786,67.966,118.905,71.72,135.178z" />
+               <path d="M110.839,124.633c6.84,32.761-4.599,61.435-34.468,53.69C33.921,167.317-2.85,102.364,8.237,59.595c7.649-29.505,36.372-27.033,60.502-6.558C88.353,69.676,105.396,98.562,110.839,124.633z" />
+               <path d="M44.071,129.456C8.41,117.297-12.383,89.636,12.935,64.914C48.92,29.782,133.497,31.22,168.089,66.647c23.859,24.438,4.308,51.071-29.852,62.866C110.478,139.099,72.451,139.133,44.071,129.456z" />
+               <path d="M177.491,78.345c5.785,27.456-3.809,51.469-28.946,44.953c-35.722-9.262-66.716-63.719-57.431-99.543c6.408-24.713,30.575-22.615,50.893-5.437C158.521,32.278,172.889,56.496,177.491,78.345z" />
+               <path d="M133.063,116.343c7.862,36.254-4.846,67.891-38.471,59.175C46.81,163.129,5.132,91.132,17.372,43.909c8.447-32.577,40.754-29.694,67.987-6.934C107.495,55.473,126.81,87.495,133.063,116.343z" />
+               <path d="M165.548,96.701c8.186,35.388-4.311,66.11-38.124,57.345C79.372,141.587,36.964,71.1,48.864,25.189c8.212-31.673,40.654-28.602,68.17-6.204C139.396,37.185,159.04,68.543,165.548,96.701z" />
+            </svg>
+         </div>
+      </div>
+   </section>
+   <section id="introduce">
+      <div class="covering_wrap">
+         <!-- <div class="content_elm intro_elm">
+            <div>
+               <div class="txt_cont">
+                  <strong>Let me introduce </strong>
+               </div>
+            </div>
+            <div>
+               <div class="txt_cont">
+                  <strong>with the brand!</strong>
+               </div>
+            </div>
+            <div>
+               <div class="txt_cont">
+                  <strong>web development department.</strong>
+               </div>
+            </div>
+         </div> -->
+         <div class="content_elm top_elm">
+            <div class="painting_deo">
+               <div class="deco_box box1"></div>
+            </div>
+            <div class="small_img">
+               <figure>
+                  <img src="./images/main/13.1332e080.jpg" alt="">
+                  <figcaption>Let me introduce myself.</figcaption>
+               </figure>
+            </div>
+            <div class="right_wrap">
+               <div class="first_txt">
+                  <span>NJOYING WHAT I LIKE AND DOING W E1LL IS WHAT I DREAM OF NJOYING WHAT I LIKE AND DOING </span>
+                  <em>꿈을 갖고 현실로 만드는 재미있는 즐거움을 찾는 나.. 괜찮을까?</em>
+               </div>
+               <div class="img_wrap">
+                  <img src="./images/main/30.0d7e638a.jpg" alt="">
+               </div>
+               <span class="bottom_txt">2019 @ ONE DAY I SEE MY PICTURES</span>
+            </div>
+            <div class="txt_wrap">
+               <h2> IT'S ALL MY OWN <mark>'LIKE'</mark> :D ENJOYING WHAT I LIKE <br> AND DOING WELL IS WHAT I DREAM OF </h2>
+               <p>
+                  <span> 저는 4년차 웹 퍼블리셔 신민주입니다. 쉽고, 재밌고, 남다르게 표현하는 걸 좋아합니다. <br> 탄탄한 코드 위에 감각적인 UI를 그려냅니다. <br> CSS와 JavaScript를 활용한 동적 모션을 좋아하고, 컴포넌트 단위의 유지보수에 최적화된 마크업에 관심이 많습니다. <br> 사용자 입장에서 생각하는 걸 좋아해서 계속 고민하며 더 나은 방향에 대해 사람들과 얘기 나누곤 합니다.<br>
+                  </span>
+                  <span> 프로덕트가 사용자들의 기억에 남도록 하는 게 저의 일입니다. 저는 제 일을 좋아합니다. <br> 좋아하니까 즐기게 되고, 더 잘하고 싶어집니다. <br> 그러다보면 거기에 저만의 특별한 무언가가 담기게 되더라고요.<br> 목표를 향해 성큼성큼 나아가는 의지, 끊임없이 솟아오르는 영감, 그리고 생기발랄함까지. <br>
+                  </span>
+                  <span> 모두 제가 가진 저만의 ‘다움’입니다 :) <br> 좋아하는 일을 즐기면서 잘하는 것, 제가 꿈꾸는 저의 모습입니다. </span>
+               </p>
+            </div>
+         </div>
+         <div class="content_elm btm_elm">
+            <ul class="icon_wrap">
+               <li class="icon_cont">
+                  <span>
+                     <img src="./images/main/govote.png" alt="">
+                  </span>
+               </li>
+               <li class="icon_cont">
+                  <span>
+                     <img src="./images/main/bc.png" alt="">
+                  </span>
+               </li>
+               <li class="icon_cont">
+                  <span>
+                     <img src="./images/main/damu.png" alt="">
+                  </span>
+               </li>
+               <li class="icon_cont">
+                  <span>
+                     <img src="./images/main/hca.png" alt="">
+                  </span>
+               </li>
+               <li class="icon_cont">
+                  <span>
+                     <img src="./images/main/hyodu.png" alt="">
+                  </span>
+               </li>
+               <li class="icon_cont">
+                  <span>
+                     <img src="./images/main/ico.png" alt="">
+                  </span>
+               </li>
+            </ul>
+         </div>
+         <div class="content_elm more_elm">
+            <div class="tit_wrap">
+               <strong>Want To see <br>how mw help <br>brands<em>?</em></strong>
+               <span>브랜드와 저를 이어주는 저를 소개합니다!</span>
+            </div>
+         </div>
+      </div>
+   </section>
+   <section id="project">
+      <div class="hidden_wrap">
+         <div class="hiden_txt"> </div>
+         <div class="hiden_txt"> </div>
+         <div class="hiden_txt"> </div>
+      </div>
+      <div class="project_fix_img">
+         <div class="intro_img bg_img"> </div>
+         <div class="lg_img bg_img"> </div>
+         <div class="msfk_img bg_img"> </div>
+         <div class="hyosung_img bg_img"> </div>
+      </div>
+      <div class="content_wrap">
+         <div class="project_intro">
+            <div class="first_desc">
+               <div class="encase_txt">
+                  <p>inside our minds1</p>
+                  <p>inside our minds2</p>
+               </div>
+            </div>
+            <div class="second_desc">
+               <div class="encase_txt">
+                  <p>PLAYING WITH SHADOWS1</p>
+                  <p>PLAYING WITH SHADOWS2</p>
+               </div>
+            </div>
+         </div>
+         <div class="project_main">
+            <div class="lg_contents elm_cont">
+               <div class="encase">
+                  <div class="desc_wrap">
+                     <!-- <span>① fll page site</span> -->
+                     <h2>LG. Oled</h2>
+                     <div class="sub_desc">
+                        <strong>(of the printing and) typesetting industry. Lorem Ipsum has been the industry's standard</strong>
+                        <p> <span> ite</span> Work Creative Website 미디어 쿼리를 이용하여 PC, Tablet, Mobile 등의 디바이스에서도 유연하게 이용할 수 있도록 반응형으로 제작하였습니다.</p>
+                     </div>
+                  </div>
+                  <div class="link_wrap">
+                     <button type="button" class="link_btn">
+                        <img src="./images/main/06_1_1.c57c0f66.jpg" alt="">
+                        <span>2018 @ 2022 / </span>
+                     </button>
+                  </div>
+               </div>
+            </div>
+            <div class="msf_contents elm_cont">
+               <div class="encase">
+                  <div class="desc_wrap">
+                     <h2> MSFK. </h2>
+                     <div class="sub_desc">
+                        <strong>(of the printing and) typesetting industry. Lorem Ipsum has been the industry's standard</strong>
+                        <p> <span> ite</span> Work Creative Website 미디어 쿼리를 이용하여 PC, Tablet, Mobile 등의 디바이스에서도 유연하게 이용할 수 있도록 반응형으로 제작하였습니다.</p>
+                     </div>
+                  </div>
+                  <div class="link_wrap">
+                     <button type="button" class="link_btn">
+                        <img src="./images/main/06_2_1.a2eced00.jpg" alt="">
+                        <span>2018 @ 2022 / </span>
+                     </button>
+                  </div>
+               </div>
+            </div>
+            <div class="hyo_contents elm_cont">
+               <div class="encase">
+                  <div class="desc_wrap">
+                     <h2> Hyosung.</h2>
+                     <div class="sub_desc">
+                        <strong>(of the printing and) typesetting industry. Lorem Ipsum has been the industry's standard</strong>
+                        <p> <span> ite</span> Work Creative Website 미디어 쿼리를 이용하여 PC, Tablet, Mobile 등의 디바이스에서도 유연하게 이용할 수 있도록 반응형으로 제작하였습니다.</p>
+                     </div>
+                  </div>
+                  <div class="link_wrap">
+                     <button type="button" class="link_btn">
+                        <img src="./images/main/06_3_1.6b0ee774.jpg" alt="">
+                        <span>2018 @ 2022 / </span>
+                     </button>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="last_wrap">
+            <div class="tit_wrap">
+               <strong>Want To see <br>how mw help <br>brands<em>?</em></strong>
+               <span>브랜드와 저를 이어주는 저를 소개합니다!</span>
+            </div>
+         </div>
+      </div>
+   </section>
+   <section class="sec4"></section>
+</div>
+<!-- //container --> 		<!--footer-->
+		<footer></footer>
+		<!--//footer-->
+      <!-- lottie & scrollTrigger JS-->
+      <!-- <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script> -->
+      <!-- <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script> -->
+      <!-- <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script> -->
+      <!-- <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script> -->
+      <!-- //lottie & scrollTrigger JS-->
+      <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+		<!-- <script src="./javascripts/plugin.js"></script> -->
+		<script src="./javascripts/design_common.js"></script>
+		</div>
+	</body>
+</html>
