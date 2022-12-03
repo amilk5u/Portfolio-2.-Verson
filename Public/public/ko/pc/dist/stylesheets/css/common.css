@@ -234,14 +234,14 @@ header #showMenu .menu_bg_mask { width: 100%; height: 100vh; position: absolute;
 /* container */
 .container { width: 100%; background-color: #f9f6e7; padding: 0 0 1000px; }
 
-/* (start) section 1 - intro */
-#intro { width: 100%; height: 980px; /* background-color: pink; */ }
+/* section 1 - intro */
+#intro { width: 100%; height: 980px; }
 
 #intro .covering_wrap { max-width: 1680px; height: 100%; position: relative; margin: 0 auto; display: flex; align-items: center; justify-content: center; }
 
-#intro .main_title_txt { display: inline-block; position: relative; z-index: 1; top: 3%; }
+#intro .main_title_txt { display: inline-block; position: relative; z-index: 2; top: 3%; /* display: none; */ }
 
-#intro .main_title_txt h1 { width: max-content; position: relative; font-size: 230px; font-weight: 500; letter-spacing: -15px; line-height: 216px; /* mix-blend-mode: overlay; */ color: #181712; font-family: "NeueMachina", "YoonGothicPro750", Arial, Apple SD Gothic Neo, sans-serif; text-align: center; position: relative; z-index: 1; -webkit-text-stroke: 2px #181712; }
+#intro .main_title_txt h1 { width: max-content; position: relative; font-size: 230px; font-weight: 500; letter-spacing: -15px; line-height: 216px; /* mix-blend-mode: overlay; */ color: #181712; font-family: "NeueMachina", "YoonGothicPro750", Arial, Apple SD Gothic Neo, sans-serif; text-align: center; position: relative; z-index: 1; -webkit-text-stroke: 4px #181712; }
 
 #intro .main_title_txt h1 img { width: 250px; height: 180px; position: relative; top: 17px; }
 
@@ -249,7 +249,7 @@ header #showMenu .menu_bg_mask { width: 100%; height: 100vh; position: absolute;
 
 #intro .main_title_txt h1 em { display: inline-block; }
 
-#intro .main_title_txt .sticker_bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #a89242; z-index: -1; -webkit-transform: rotate(-2deg); -moz-transform: rotate(-2deg); -ms-transform: rotate(-2deg); -o-transform: rotate(-2deg); transform: rotate(-2deg); }
+#intro .main_title_txt .sticker_bg { width: 100%; height: 100%; position: absolute; top: 0; left: 0; background-color: #a89242; z-index: -1; -webkit-transform: rotate(-2deg); -moz-transform: rotate(-2deg); -ms-transform: rotate(-2deg); -o-transform: rotate(-2deg); transform: rotate(-2deg); }
 
 #intro .main_title_txt .slogan_txt { position: absolute; top: -157px; left: 9%; font-size: 12px; }
 
@@ -261,17 +261,17 @@ header #showMenu .menu_bg_mask { width: 100%; height: 100vh; position: absolute;
 
 #intro .main_title_txt .thumb_image img { width: 100%; }
 
-#intro .main_grid_line { max-width: 840px; max-height: 840px; position: absolute; right: 0; top: 50px; /* border: 1px solid black; */ /*  opacity: .2; */ /* mix-blend-mode: multiply; */ z-index: -1; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; /* 	.grid_line_svg { width: 850px; height: 850px; line { stroke: #e1e1e1; stroke-width: 2px; fill: none; stroke-miterlimit: 10; stroke-dasharray: 420; stroke-dashoffset: 420; } } */ }
+#intro .main_grid_line { max-width: 840px; max-height: 840px; position: absolute; right: 0; top: 50px; /* border: 1px solid black; */ /*  opacity: .2; */ /* mix-blend-mode: multiply; */ z-index: 1; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; /* 	.grid_line_svg { width: 850px; height: 850px; line { stroke: #e1e1e1; stroke-width: 2px; fill: none; stroke-miterlimit: 10; stroke-dasharray: 420; stroke-dashoffset: 420; } } */ }
 
-#intro .main_grid_line .circle_svg_item { width: 239px; height: 240px; position: absolute; bottom: 0; right: 0; z-index: 1; }
+#intro .main_grid_line .circle_svg_item { width: 28.5714%; height: 28.5714%; position: absolute; bottom: 0; right: 0; z-index: 1; }
 
 #intro .main_grid_line .circle_svg_item ellipse { stroke: #dcd9cc; stroke-width: 2px; fill: #f9f6e7; stroke-miterlimit: 10; stroke-dasharray: 750; stroke-dashoffset: 750; }
 
-#intro .main_grid_line .star_svg_item { width: 124px; height: 122px; position: absolute; /* top: 92px; right: 352px; */ top: 177px; right: 176px; z-index: 1; -webkit-transform: scale(0); -moz-transform: scale(0); -ms-transform: scale(0); -o-transform: scale(0); transform: scale(0); }
+#intro .main_grid_line .star_svg_item { width: 14.761%; height: 14.523%; position: absolute; top: 21.1%; right: 20.9%; z-index: 1; -webkit-transform: scale(0); -moz-transform: scale(0); -ms-transform: scale(0); -o-transform: scale(0); transform: scale(0); }
 
 #intro .main_grid_line .star_svg_item path { stroke: #dcd9cc; stroke-width: 2px; fill: #f9f6e7; stroke-miterlimit: 10; stroke-dasharray: 395; stroke-dashoffset: 0; }
 
-#intro .main_grid_line .rhombus_svg_item { width: 360px; height: 240px; position: absolute; top: 0; left: 0; z-index: 1; }
+#intro .main_grid_line .rhombus_svg_item { width: 42.857%; height: 28.571%; position: absolute; top: 0; left: 0; z-index: 1; }
 
 #intro .main_grid_line .rhombus_svg_item polygon { stroke: #dcd9cc; stroke-width: 2px; fill: #f9f6e7; stroke-miterlimit: 10; stroke-dasharray: 880; stroke-dashoffset: 880; }
 
@@ -279,25 +279,31 @@ header #showMenu .menu_bg_mask { width: 100%; height: 100vh; position: absolute;
 
 #intro .main_grid_line .line_element_wrap .trick_img { width: 100%; opacity: 0; }
 
-#intro .main_grid_line .line_element_wrap .grid_content { width: 100%; height: 100%; position: absolute; top: 0; left: 0; }
+#intro .main_grid_line .line_element_wrap .grid_content { width: 100%; height: 100%; position: absolute; top: 0; left: 0; display: flex; flex-direction: column; justify-content: space-between; }
 
-#intro .main_grid_line .line_element_wrap .row_grid { width: 100%; height: 100%; }
+#intro .main_grid_line .line_element_wrap .grid_content span { display: block; width: 0; height: 2px; background-color: #dcd9cc; margin: 0 auto; }
 
-#intro .main_grid_line .line_element_wrap .row_grid > div { width: 100%; height: auto; }
+#intro .main_grid_line .line_element_wrap .grid_content > div { width: 100%; height: 42.976%; display: flex; justify-content: space-between; flex-direction: column; }
 
-#intro .main_grid_line .line_element_wrap .row_grid span { display: block; width: 0; height: 2px; background-color: #dcd9cc; margin: 0 auto 14%; }
+#intro .main_grid_line .line_element_wrap .col_grid { -webkit-transform: rotate(90deg); -moz-transform: rotate(90deg); -ms-transform: rotate(90deg); -o-transform: rotate(90deg); transform: rotate(90deg); }
 
-#intro .main_grid_line .line_element_wrap .col_grid { width: 100%; height: 100%; -webkit-transform: rotate(90deg); -moz-transform: rotate(90deg); -ms-transform: rotate(90deg); -o-transform: rotate(90deg); transform: rotate(90deg); }
+#intro .main_grid_line .intro_down_btn { width: 28.5714%; height: 28.5714%; position: absolute; bottom: 0; right: 0; z-index: 1; background-color: black; }
 
-#intro .main_grid_line .line_element_wrap .col_grid > div { width: 100%; height: auto; }
+#intro .main_grid_line .intro_down_btn span { width: 100%; height: 100%; position: absolute; top: 50%; left: 50%; -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%; -webkit-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -o-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
 
-#intro .main_grid_line .line_element_wrap .col_grid span { display: block; width: 0; height: 2px; background-color: #dcd9cc; margin: 0 auto 14%; }
+#intro .main_grid_line .intro_down_btn span.pop_1 { background-color: blue; }
+
+#intro .main_grid_line .intro_down_btn span.pop_2 { background-color: red; }
+
+#intro .main_grid_line .intro_down_btn span.pop_3 { background-color: pink; }
+
+#intro .main_grid_line .arrow_svg { width: 30px; height: 42px; position: absolute; top: 0; left: 0; z-index: 2; }
 
 #intro .moving_image > div { position: absolute; background-color: black; }
 
 #intro .moving_image .element_1 { width: 200px; height: 240px; top: -4%; right: 28%; background: url(./../../images/main/img3.png) 0 0 repeat; }
 
-#intro .path_img_wrap { width: 100%; height: 100%; position: absolute; opacity: 0; }
+#intro .path_img_wrap { width: 100%; height: 100%; position: absolute; display: none; }
 
 #intro .path_img_wrap svg polygon, #intro .path_img_wrap svg polyline, #intro .path_img_wrap svg path, #intro .path_img_wrap svg circle, #intro .path_img_wrap svg line, #intro .path_img_wrap svg ellipse { width: 100%; height: 100%; stroke: red; stroke-width: .5px; fill: transparent; stroke-miterlimit: 10; }
 
@@ -307,8 +313,11 @@ header #showMenu .menu_bg_mask { width: 100%; height: 100vh; position: absolute;
 
 #intro .path_img_wrap svg#Layer_3 { max-width: 150px; position: absolute; right: -5%; bottom: 44%; }
 
-/* (end) section 1 - intro */
-/* (start) section 2 - introduce */
+@media screen and (max-width: 750px) { #intro .main_grid_line .circle_svg_item ellipse { stroke-width: 3px; }
+  #intro .main_grid_line .star_svg_item path { stroke-width: 3px; }
+  #intro .main_grid_line .rhombus_svg_item polygon { stroke-width: 3px; } }
+
+/*  section 2 - introduce */
 #introduce { width: 100%; }
 
 #introduce .covering_wrap { max-width: 1920px; margin: 0 auto; }
@@ -391,8 +400,7 @@ header #showMenu .menu_bg_mask { width: 100%; height: 100vh; position: absolute;
 
 #introduce .more_elm .tit_wrap span { width: max-content; display: block; margin: 0 auto; }
 
-/* (end) section 2 - introduce */
-/* (start) section 3 - project */
+/* section 3 - project */
 #project { width: 100%; position: relative; overflow: hidden; /*  margin: 0 0 2000px; */ border-top: 1px solid black; background-color: black; /* Project Intro Text (프로젝트 소개) */ /* common (공통) */ /* // common (공통) */ /* 개별 */ }
 
 #project .hidden_wrap { width: 100%; height: 100vh; position: absolute; top: 0; z-index: -1; }
@@ -487,7 +495,6 @@ header #showMenu .menu_bg_mask { width: 100%; height: 100vh; position: absolute;
 
 #project .last_wrap .tit_wrap span { width: max-content; display: block; margin: 0 auto; }
 
-/* (end) section 3 - project */
 .ddd { display: block; width: 100%; height: 100%; background-size: cover; background-repeat: no-repeat; background-position: 0 0; animation: minime_animation_pc 25s steps(1) backwards; animation-play-state: paused; animation-iteration-count: initial; animation-duration: 25s; }
 
 @keyframes minime_animation_pc {}/* common css */

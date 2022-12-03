@@ -2,36 +2,22 @@
 /* container */
 .container { width: 100%; background-color: $subColor; padding: 0 0 1000px; }
 
-/* (start) section 1 - intro */
+/* section 1 - intro */
 #intro {
-	width: 100%; height: 980px;/* background-color: pink; */
+	width: 100%; height: 980px;
 	.covering_wrap { max-width: 1680px; height: 100%; position: relative; margin: 0 auto; display: flex; align-items: center; justify-content: center; }
 	.main_title_txt { 
-      display: inline-block; position: relative; z-index: 1; top: 3%;
+      display: inline-block; position: relative; z-index: 2; top: 3%; /* display: none; */
 		h1 { 
          width: max-content; position: relative; font-size: 230px; font-weight: $medium; letter-spacing: -15px; line-height: 216px; /* mix-blend-mode: overlay; */ color: #181712;
          font-family: $NeueMachina; text-align:center; position: relative; z-index: 1;
-         -webkit-text-stroke:2px #181712;
-         // color:white;
-         // background-color: #e6e0cb; 
-         // background-color: #836c3b; 
-         // background-color: rgb(155, 155, 155);
+         -webkit-text-stroke: 4px #181712;
          img { width: 250px; height: 180px; position: relative; top: 17px; }
 			span {	position: relative; top: 15px; }
-			em {
-            // width: 177px; position: relative; bottom: 0; font-size: 340px;
-            display: inline-block;
-				
-			}
+			em { display: inline-block; }
 		} 
       .sticker_bg {
-         position: absolute; top:0; left:0;
-         width: 100%;
-         height: 100%;
-         // background-color: $mainColor; 
-         // background-color: #836c3b; 
-         background-color: #a89242; 
-         z-index: -1;
+         width: 100%; height: 100%; position: absolute; top: 0; left: 0; background-color: #a89242; z-index: -1;
          @include rotate(-2);
       }
 		.slogan_txt {  
@@ -40,50 +26,59 @@
 			> span { display: block; padding: 10px 0 0; }
 		}
 		.thumb_image {
-         width: 300px;
-         height: 160px;
-         position: absolute;
-         top: 15px;
-         left: 492px;
-         overflow: hidden;
-         z-index: -1;
+         width: 300px; height: 160px; position: absolute; top: 15px; left: 492px; overflow: hidden; z-index: -1;
 			img { width: 100%; }
 		}
 	}
 	.main_grid_line {
 		max-width: 840px; max-height: 840px; position: absolute; right: 0; top: 50px; /* border: 1px solid black; */   /*  opacity: .2; */
-      /* mix-blend-mode: multiply; */ z-index: -1;
+      /* mix-blend-mode: multiply; */ z-index: 1;      
 		@include boxSizing;
 		.circle_svg_item {
-         width: 239px; height: 240px; position: absolute; bottom: 0; right: 0; z-index: 1;
+         width: 28.5714%; height: 28.5714%; position: absolute; bottom: 0; right: 0; z-index: 1;
 			ellipse { stroke: #dcd9cc; stroke-width: 2px; fill: $subColor; stroke-miterlimit: 10; stroke-dasharray: 750; stroke-dashoffset: 750; }
 		}
 		.star_svg_item {
-         width: 124px; height: 122px; position: absolute; /* top: 92px; right: 352px; */
-         top: 177px; right: 176px; z-index: 1;
+         width: 14.761%; height: 14.523%; position: absolute; top: 21.1%; right: 20.9%; z-index: 1;
 			@include scale(0);
 			path { stroke: #dcd9cc; stroke-width: 2px; fill: $subColor; stroke-miterlimit: 10; stroke-dasharray: 395; stroke-dashoffset: 0; }
 		}
 		.rhombus_svg_item {
-         width: 360px; height: 240px; position: absolute; top: 0; left: 0; z-index: 1;
+         width: 42.857%; height: 28.571%; position: absolute; top: 0; left: 0; z-index: 1;
 			polygon { stroke: #dcd9cc; stroke-width: 2px; fill: $subColor; stroke-miterlimit: 10; stroke-dasharray: 880; stroke-dashoffset: 880; }
 		}
 		.line_element_wrap {
 			width: 100%; height: 100%; position: relative; /* opacity: 0;  */
+         // background-color: #a5a5a5;
 			.trick_img { width: 100%; opacity: 0; }
-			.grid_content { width: 100%; height: 100%; position: absolute; top: 0; left: 0; }
-			.row_grid {
-				width: 100%; height: 100%;
-				> div { width: 100%; height: auto; }
-				span { display: block; width: 0; height: 2px; background-color:  #dcd9cc; margin: 0 auto 14%; }
-			}
-			.col_grid {
-				width: 100%; height: 100%;
+			.grid_content { 
+            width: 100%; height: 100%; position: absolute; top: 0; left: 0; display: flex; flex-direction: column; justify-content: space-between; 
+            span { display: block; width: 0; height: 2px; background-color:  #dcd9cc; margin:0 auto; }
+            > div { width: 100%; height: 42.976%; display: flex; justify-content: space-between; flex-direction: column; }
+         }
+			.col_grid { 
 				@include rotate(90);
-				> div { width: 100%; height: auto; }
-				span { display: block; width: 0; height: 2px; background-color:  #dcd9cc; margin: 0 auto 14%; }
 			}
 		}
+      .intro_down_btn {
+         width: 28.5714%; height: 28.5714%; position: absolute; bottom: 0; right: 0; z-index: 1;
+         background-color: black;
+         span {
+            width:100%; height: 100%;
+            position: absolute; top:50%; left:50%;
+            @include borderRadius(100%);
+            @include translate(-50%,-50%);
+            &.pop_1 { background-color: blue; }
+            &.pop_2 { background-color: red; }
+            &.pop_3 { background-color: pink; }
+            // path { stroke-linejoin:round;  stroke: black; stroke-width: 3px; fill: none; stroke-miterlimit: 10; stroke-dasharray: 880; stroke-dashoffset: 880; }
+            // polygon { stroke-linejoin:round;stroke: black; stroke-width: 3px; fill: none; stroke-miterlimit: 10; stroke-dasharray: 880; stroke-dashoffset: 880; }
+         }
+      }
+      .arrow_svg {
+         width:30px; height: 42px; 
+         position: absolute; top:0; left: 0; z-index: 2;
+      }
 	/* 	.grid_line_svg {
 			width: 850px; height: 850px;
 			line { stroke: #e1e1e1; stroke-width: 2px; fill: none; stroke-miterlimit: 10; stroke-dasharray: 420; stroke-dashoffset: 420; }
@@ -97,32 +92,33 @@
 		}
 	}
    .path_img_wrap {
-      width: 100%; height: 100%; position: absolute; opacity: 0;
+      width: 100%; height: 100%; position: absolute; display: none;
       svg {
-         
-         // background-color: black;
-         polygon, polyline, path, circle, line, ellipse{
-            width:100%; height: 100%;
-            stroke: red; stroke-width: .5px; fill: transparent; stroke-miterlimit: 10;
+         polygon, polyline, path, circle, line, ellipse { width: 100%; height: 100%; stroke: red; stroke-width: .5px; fill: transparent; stroke-miterlimit: 10; }
+         &#Layer_1 { width: 300px; position: absolute; left: 0; bottom: 130px; }
+         &#Layer_2 { max-width: 150px; position: absolute; right: 33%; top: 8%; }
+         &#Layer_3 { max-width: 150px; position: absolute; right: -5%; bottom: 44%; }
+      }
+   }
+   @include tablet () {
+      // background-color: red;
+   }
+   @include mobile () {
+      .main_grid_line {
+         .circle_svg_item {
+            ellipse {  stroke-width: 3px; }
          }
-         &#Layer_1 {
-            width:300px;
-            position: absolute; left: 0; bottom: 130px;
+         .star_svg_item {
+            path {  stroke-width: 3px; }
          }
-         &#Layer_2 {
-            max-width: 150px; position: absolute; right: 33%; top: 8%;
-         }
-         &#Layer_3 {
-            max-width:150px;
-            position: absolute; right: -5%;
-            bottom: 44%;
+         .rhombus_svg_item {
+            polygon { stroke-width: 3px; }
          }
       }
    }
 }
-/* (end) section 1 - intro */
 
-/* (start) section 2 - introduce */
+/*  section 2 - introduce */
 #introduce {
 	width: 100%;
    .covering_wrap { max-width: 1920px; margin: 0 auto; }
@@ -209,9 +205,8 @@
 		}
 	}
 }
-/* (end) section 2 - introduce */
 
-/* (start) section 3 - project */
+/* section 3 - project */
 #project {
 	width: 100%; position: relative; overflow: hidden;/*  margin: 0 0 2000px; */
    border-top:1px solid black;
@@ -335,7 +330,6 @@
 		}
 	}
 }
-/* (end) section 3 - project */
 
 
 $total: 24;

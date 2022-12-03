@@ -5,15 +5,15 @@
 @import "./mixin/flex";
 @import "./mixin/text-overflow";
 @import "./mixin/transform";
-@import "./mixin/transition";
+@import "./mixin/transition"; 
 
 @mixin appearance ($opt : none) {
 	-webkit-appearance: $opt;
 	-moz-appearance: $opt;
 	appearance: $opt;
-}
+} 
 @mixin borderRadius ($size) {
-	-webkit-border-radius: $size;
+	-webkit-border-radius: $size; 
 	-moz-border-radius: $size;
 	border-radius: $size;
 }
@@ -243,13 +243,13 @@
 
 
 // Break Point (Desktop First 기준 내림차순 설정)
-$desktop-s-width	: 1650px;
+$desktop-width	: 1650px;
 $tablet-width		: 1320px;
 $mob-width		: 750px;
 
 // Desktop (데스크탑)
 @mixin desktop {
-	@media screen and (max-width: #{$desktop-s-width}) {
+	@media screen and (max-width: #{$desktop-width}) {
 		@content;
 	}
 }

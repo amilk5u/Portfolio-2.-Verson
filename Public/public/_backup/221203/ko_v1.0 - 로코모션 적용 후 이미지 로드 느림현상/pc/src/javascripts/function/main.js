@@ -15,7 +15,7 @@ function main() {
       el: document.querySelector('#wrap'),
       smooth: true
    })
-
+  
    /* LocomotiveScroll (Smooth Scroll) */
    // const scroller = new LocomotiveScroll({
    //    el: pageContainer,
@@ -209,7 +209,7 @@ function main() {
          start: "top top",
          end: '+=' + (document.querySelector('#project').offsetHeight * 1.5)
       }
-   });
+   }); 
 
 
    /* Mouse Motion (마우스 모션) */
