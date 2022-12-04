@@ -1,3 +1,4 @@
+
 @charset "UTF-8";
 /* container */
 .container { width: 100%; background-color: $subColor; padding: 0 0 1000px; }
@@ -7,14 +8,23 @@
 	width: 100%; height: 980px;
 	.covering_wrap { max-width: 1680px; height: 100%; position: relative; margin: 0 auto; display: flex; align-items: center; justify-content: center; }
 	.main_title_txt { 
-      display: inline-block; position: relative; z-index: 2; top: 1%; /* display: none; */
+      display: inline-block; position: relative; z-index: 2; top: 1%; left: -5%;
 		h1 { 
-         width: max-content; position: relative; font-size: 230px; font-weight: $medium; letter-spacing: -15px; line-height: 216px; /* mix-blend-mode: overlay; */ color: #181712;
-         font-family: $NeueMachina; text-align:center; position: relative; z-index: 1;
+         width: max-content; position: relative; font-size: vw(230); font-weight: $medium; letter-spacing: -15px; line-height: 216px; /* mix-blend-mode: overlay; */ color: #181712;
+         font-family: $NeueMachina; text-align:center; position: relative; z-index: 1; 
          -webkit-text-stroke: 4px #181712;
          img { width: 250px; height: 180px; position: relative; top: 17px; }
 			span {	position: relative; top: 15px; }
-			em { display: inline-block; }
+         .star_element {
+            width: 130px; height: 126px; display: inline-block; position: relative; top: 50%; left: -33px;
+            svg { 
+               width: 100%; height: 100%; position: absolute; top: 0; left: 0; right: 0; bottom: 0; margin: auto; animation: identifier 5s linear infinite;
+               path { stroke: none; fill:$mainColor; }
+            }
+         }
+         @keyframes identifier {
+            100% { @include rotate(360); }
+         }
 		} 
       .sticker_bg {
          width: 100%; height: 100%; position: absolute; top: 0; left: 0; background-color: #a89242; z-index: -1;
@@ -48,48 +58,76 @@
 			polygon { stroke: #dcd9cc; stroke-width: 2px; fill: $subColor; stroke-miterlimit: 10; stroke-dasharray: 880; stroke-dashoffset: 880; }
 		}
 		.line_element_wrap {
-			width: 100%; height: 100%; position: relative; /* opacity: 0;  */
-         // background-color: #a5a5a5;
+			width: 100%; height: 100%; position: relative; 
 			.trick_img { width: 100%; opacity: 0; }
 			.grid_content { 
             width: 100%; height: 100%; position: absolute; top: 0; left: 0; display: flex; flex-direction: column; justify-content: space-between; 
             span { display: block; width: 0; height: 2px; background-color:  #dcd9cc; margin:0 auto; }
             > div { width: 100%; height: 42.976%; display: flex; justify-content: space-between; flex-direction: column; }
          }
-			.col_grid { 
-				@include rotate(90);
-			}
+			.col_grid { @include rotate(90); }
 		}
       .intro_down_btn {
          width: 28.5714%; height: 28.5714%; position: absolute; bottom: 0; right: 0; z-index: 1;
-         &:hover {
-            .pop_1 { width: 100%; height: 100%; }
-            .pop_2 { width: 100%; height: 100%; }
-            .pop_3 { width: 100%; height: 100%; }
+         &:after {
+            width: 100%; height: 100%; position: absolute; top: 50%; left: 50%; content: ""; display: block; border: 2px solid #dcd9cc;
+            @include translate(-50%,-50%);
+            @include borderRadius(100%);
+            @include boxSizing;
+         }
+         &.is_enter {
+            .circle_1 { width: 100%; height: 100%;transition-duration: .4s; transition-delay: 0; }
+            .circle_2 { width: 100%; height: 100%;transition-duration: .4s; transition-delay: .1s; }
+            .circle_3 { width: 100%; height: 100%;transition-duration: .6s; transition-delay: .3s; }
+            .fake_arrow {
+               path { stroke-dashoffset: 0; transition-delay: .5s; transition-duration:.5s;  }
+               polyline { stroke-dashoffset: 0; transition-delay: .5s; transition-duration:.5s;  }
+            }
          }
          span {
-            width:0; height: 0;
-            position: absolute; top:50%; left:50%;
+            width: 0; height: 0; position: absolute; top: 50%; left: 50%;
             @include borderRadius(100%);
             @include translate(-50%,-50%);
-            
-            &.pop_1 { background-color: blue; 
-               transition-delay: .1s; transition-property: all;
-               transition-duration: 0.5s;
+            &.circle_1 { 
+               transition-property: all;
+               transition-timing-function: cubic-bezier(.54,.17,.43,.98);
+               transition-delay: 0;  
+               background-color: #fb5454; 
+               opacity: .6;
             }
-            &.pop_2 { 
-               background-color: red;  
-               transition-delay: .2s; transition-property: all;
-               transition-duration: 0.5s;
+            &.circle_2 { 
+               transition-property: all;
+               transition-timing-function: cubic-bezier(.54,.17,.43,.98);
+               transition-delay: 0;  
+               background-color:$mainColor;  
             }
-            &.pop_3 { background-color: pink; 
-               transition-delay: .5s; transition-property: all;
-               transition-duration: 0.5s;
+            &.circle_3 { 
+               transition-property: all;
+               transition-timing-function: cubic-bezier(.54,.17,.43,.98);
+               transition-delay: 0;  
+               background-color: $subColor; 
             }
          }
          .arrow_svg {
             width: 12.5%; height: 17.5%; position: absolute; top: 50%; left: 50%;
             @include translate(-50%,-50%);
+            path { 
+               fill: none; stroke: $mainColor; stroke-width: 3; stroke-linejoin: round; stroke-miterlimit: 10; stroke-dasharray: 60; stroke-dashoffset: 60; 
+               transition-timing-function: cubic-bezier(.54,.17,.43,.98);
+               transition-delay: 0;  transition-property: stroke-dashoffset;
+               transition-duration: .2s;
+            }
+            polyline { 
+               fill: none; stroke: $mainColor; stroke-width: 3; stroke-linejoin: round; stroke-miterlimit: 10; stroke-dasharray: 27; stroke-dashoffset: -27; 
+               transition-timing-function: cubic-bezier(.54,.17,.43,.98);
+               transition-delay: 0; transition-property: stroke-dashoffset;
+               transition-duration: .2s;
+            }
+         }
+         .front_arrow {
+            z-index: -1;
+            path { stroke-dashoffset: 0; }
+            polyline { stroke-dashoffset: 0; }
          }
       }
 	/* 	.grid_line_svg {
@@ -119,13 +157,18 @@
    @include mobile () {
       .main_grid_line {
          .circle_svg_item {
-            ellipse {  stroke-width: 3px; }
+            ellipse {  stroke-width: 2px; }
          }
          .star_svg_item {
-            path {  stroke-width: 3px; }
+            path {  stroke-width: 2px; }
          }
          .rhombus_svg_item {
-            polygon { stroke-width: 3px; }
+            polygon { stroke-width: 2px; }
+         }
+         .line_element_wrap {
+            .grid_content { 
+               span { height:1px;  }
+            }
          }
       }
    }
@@ -223,7 +266,6 @@
 #project {
 	width: 100%; position: relative; overflow: hidden;/*  margin: 0 0 2000px; */
    border-top:1px solid black;
-   background-color: black;
 	.hidden_wrap {
 		width: 100%; height: 100vh; position: absolute; top: 0; z-index: -1;
 		.hiden_txt {

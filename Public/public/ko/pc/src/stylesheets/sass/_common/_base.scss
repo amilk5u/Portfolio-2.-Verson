@@ -76,3 +76,60 @@ html, body {
 }
 strong, h1, h2, h3, h4, h5, h6 {font-weight:$bold; text-transform: uppercase;}
 label, button { cursor:pointer;}
+
+
+body {
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   right: 0;
+   left: 0;
+   text-align: justify;
+}
+
+
+/*! locomotive-scroll v3.5.4 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
+html.has-scroll-smooth {
+   overflow: hidden;
+}
+ 
+html.has-scroll-dragging {
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}
+
+.has-scroll-smooth body {
+   overflow: hidden;
+}
+
+.has-scroll-smooth [data-scroll-container] {
+   min-height: 100vh;
+}
+
+.c-scrollbar {
+   position: absolute;
+   right: 0;
+   top: 0;
+   height: 100vh;
+   transform-origin: center right;
+   transition: transform 0.3s, opacity 0.3s;
+}
+
+.c-scrollbar_thumb { 
+   position: absolute;
+   top: 0;
+   right: 0;
+   background-color: #2b3826;
+   width: 13px;
+   border-radius: 10px;
+   margin: 2px;
+   cursor: -webkit-grab;
+   cursor: grab;
+}
+.has-scroll-dragging .c-scrollbar_thumb {
+   cursor: -webkit-grabbing;
+   cursor: grabbing;
+}
+

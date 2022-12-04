@@ -19,13 +19,13 @@ let windowPageYOffset = () => {
 /* Window Size Report */
 let reportWindowSize = () => {
    windowScrollTop = window.pageYOffset;
-   window.addEventListener("resize", windowMeasurement);
-   window.addEventListener("scroll", windowPageYOffset);
+   window.addEventListener('resize', windowMeasurement);
+   window.addEventListener('scroll', windowPageYOffset);
    windowMeasurement();  
 }
 
 /* Window Load */
-window.addEventListener("load", reportWindowSize);
+window.addEventListener('load', reportWindowSize);
 
 layout(); 
 main();  

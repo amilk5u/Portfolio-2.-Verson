@@ -19,13 +19,13 @@ let windowPageYOffset = () => {
 /* Window Size Report */
 let reportWindowSize = () => {
    windowScrollTop = window.pageYOffset;
-   window.addEventListener("resize", windowMeasurement);
-   window.addEventListener("scroll", windowPageYOffset);
+   window.addEventListener('resize', windowMeasurement);
+   window.addEventListener('scroll', windowPageYOffset);
    windowMeasurement();  
 }
 
 /* Window Load */
-window.addEventListener("load", reportWindowSize);
+window.addEventListener('load', reportWindowSize);
 
 layout(); 
 main();  
@@ -42,6 +42,7 @@ function main() {
       const cursor = document.querySelector('.cursor'); // 커서
 
       let motionBreakBoolean = true; // 메뉴 클릭 후 모션 동작시 false 
+
 
       /* LocomotiveScroll (Smooth Scroll) */
       const scroller = new LocomotiveScroll({
@@ -78,6 +79,26 @@ function main() {
       });
 
 
+
+
+
+
+      
+
+      const introDownButton = document.querySelector('.intro_down_btn');
+      /* Intro Button Hover */
+      introDownButton.addEventListener('mouseenter', () => {
+         introDownButton.classList.add('is_enter');
+      })
+      introDownButton.addEventListener('mouseleave', () => {
+         introDownButton.classList.remove('is_enter');
+      })
+
+
+
+
+
+
       /* Menu Click Event (메뉴 클릭 함수) */
       const menuClickToggle = () => {
          let menuActiveTrue = document.querySelector('header').classList.contains('is-opened');
@@ -90,12 +111,14 @@ function main() {
          }
       }
 
+
       /* Menu Click Event (메뉴 클릭 이벤트) */
       menuButton.addEventListener('click', menuClickToggle);
 
+
       /* Menu Close Motion (메뉴 닫기 모션) */
       const menuCloseMotion = () => {
-         let type = false;
+         let _type = false;
          let menuCloseTimeLine = gsap.timeline();
 
          menuDotsItems[0].style.left = -document.querySelector('.dots_wrap').offsetWidth / 3 + 'px';
@@ -107,7 +130,7 @@ function main() {
          gsap.to(document.querySelector('.menu_bg_mask'), 1, { 'clip-path': 'circle(0% at calc(100% - 80px) 70px)', ease: "power2.inOut", });
          gsap.to(document.querySelector('#showMenu'), 1, {
             'clip-path': 'circle(0% at calc(100% - 80px) 70px)', ease: "power2.inOut",
-            onCompleteParams: [type],
+            onCompleteParams: [_type],
             onComplete: menuClickCallBack,
             delay: .3
          });
@@ -116,7 +139,7 @@ function main() {
 
       /* Menu Open Motion (메뉴 오픈 모션) */
       const menuOpenMotion = () => {
-         let type = true;
+         let _type = true;
          let menuOpenTimeLine = gsap.timeline();
          menuOpenTimeLine.to(menuDotsItems, .3, { left: 0 });
          menuOpenTimeLine.to(menuDotsItems, .3, { display: 'none', opacity: 0, delay: -.1 });
@@ -124,15 +147,15 @@ function main() {
          TweenMax.staggerTo(document.querySelectorAll('.menu_list_wrap'), .8, { top: 0, ease: "power2.inOut", delay: .3 }, .1);
          gsap.to(document.querySelector('#showMenu'), 1, {
             'clip-path': 'circle(150% at calc(100% - 80px) 70px)', ease: "power2.inOut",
-            onCompleteParams: [type],
+            onCompleteParams: [_type],
             onComplete: menuClickCallBack
          });
          gsap.to(document.querySelector('.menu_bg_mask'), 1, { 'clip-path': 'circle(150% at calc(100% - 80px) 70px)', ease: "power2.inOut", delay: .3 });
       }
 
       /* Menu Click CallBack Motion (메뉴 클릭 시 콜백) */
-      const menuClickCallBack = (obj) => {
-         if (obj) {
+      const menuClickCallBack = (type) => {
+         if (type) {
             document.querySelector('header').classList.add('is-opened');
             motionBreakBoolean = true;
          } else {
@@ -141,6 +164,7 @@ function main() {
             TweenMax.to(document.querySelectorAll('.menu_list_wrap'), .5, { top: 110, delay: .3 });
          }
       }
+
 
       /* Intro SVG Motion (인트로 SVG 모션) */
       const IntroSVGMotion = () => {
@@ -165,6 +189,7 @@ function main() {
       }
       IntroSVGMotion();
 
+
       /* Moving Images Motion (움직이는 이미지 모션) */
       function movingImgMotion() {
          let num = 0; // position 초기값 0
@@ -185,6 +210,7 @@ function main() {
       }
       movingImgMotion();
 
+
       /* Introduce Time Line (섹션 고정) */
       let introduceTimeLine = gsap.timeline({
          scrollTrigger: {
@@ -202,13 +228,14 @@ function main() {
       introduceTimeLine.to(document.querySelectorAll('.encase_txt'), { 'transform': 'translate3d(0, 0, 0)', duration: 1 });
       introduceTimeLine.to(document.querySelectorAll('.encase_txt'), { 'transform': 'translate3d(0, ' + -encase_txt + 'px' + ', 0)', duration: 1, delay: .5 });
 
+
       /* Project Images Scale Time Line (이미지 확대 트리거) */
       let projectImgScaleTimeLine = gsap.timeline({
          scrollTrigger: {
             trigger: ".project_fix_img",
             scroller: ".container",
             // pin: true,
-            scrub: true, 
+            scrub: true,
             start: "top top",
             end: '+=' + (document.querySelector('#project').offsetHeight * 1.5)
          }
@@ -217,6 +244,7 @@ function main() {
       projectImgScaleTimeLine.to('.lg_img', { scale: 1.5, delay: -0.8, duration: 1 })
       projectImgScaleTimeLine.to('.msfk_img', { scale: 1.5, delay: -0.8, duration: 1 })
       projectImgScaleTimeLine.to('.hyosung_img', { scale: 1.5, delay: -0.8, duration: 1 })
+
 
       /* Project Images Fix Time Line (백그라운드 이미지 고정) */
       let bgFixTimeLine = gsap.timeline({
@@ -231,8 +259,8 @@ function main() {
          }
       });
       /* Mouse Motion (마우스 모션) */
-      document.addEventListener('mousemove', (e) => {
+      /* document.addEventListener('mousemove', (e) => {
          gsap.to(cursor, .5, { left: e.pageX + 'px', top: e.pageY + 'px' });
-      });
+      }); */
    });
 }
