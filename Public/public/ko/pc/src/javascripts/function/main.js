@@ -49,7 +49,7 @@ function main() {
 
 
 
-      
+
 
       const introDownButton = document.querySelector('.intro_down_btn');
       /* Intro Button Hover */
@@ -225,8 +225,14 @@ function main() {
          }
       });
       /* Mouse Motion (마우스 모션) */
-      /* document.addEventListener('mousemove', (e) => {
-         gsap.to(cursor, .5, { left: e.pageX + 'px', top: e.pageY + 'px' });
-      }); */
+      document.addEventListener('mousemove', (e) => {
+         gsap.to(cursor, .001, { left: e.pageX + 'px', top: e.pageY + 'px' });
+      });
+      document.querySelector('.c-scrollbar').addEventListener('mouseenter', (e) => {
+         gsap.to(cursor, .001, { display: 'none' });
+      });
+      document.querySelector('.c-scrollbar').addEventListener('mouseleave', (e) => {
+         gsap.to(cursor, .001, { display: 'block' });
+      });
    });
 }

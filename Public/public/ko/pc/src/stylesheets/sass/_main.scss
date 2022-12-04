@@ -1,7 +1,7 @@
 
 @charset "UTF-8";
 /* container */
-.container { width: 100%; background-color: $subColor; padding: 0 0 1000px; }
+.container { width: 100%; background-color: $subColor; padding: 0 0 1000px; cursor: none; }
 
 /* section 1 - intro */
 #intro {
@@ -10,8 +10,8 @@
 	.main_title_txt { 
       display: inline-block; position: relative; z-index: 2; top: 1%; left: -5%;
 		h1 { 
-         width: max-content; position: relative; font-size: vw(230); font-weight: $medium; letter-spacing: -15px; line-height: 216px; /* mix-blend-mode: overlay; */ color: #181712;
-         font-family: $NeueMachina; text-align:center; position: relative; z-index: 1; 
+         width: max-content; position: relative; font-size: 230px; font-weight: $medium; letter-spacing: -15px; line-height: 216px; /* mix-blend-mode: overlay; */ color: #181712;
+         font-family: $NeueMachina; text-align:center; position: relative; z-index: 1;
          -webkit-text-stroke: 4px #181712;
          img { width: 250px; height: 180px; position: relative; top: 17px; }
 			span {	position: relative; top: 15px; }
@@ -178,6 +178,34 @@
 #introduce {
 	width: 100%;
    .covering_wrap { max-width: 1920px; margin: 0 auto; }
+   .navigation {
+      max-width: 1680px; margin: 0 auto;
+      @extend %clearfix;
+      > div { float: left; }
+      .txt_wrap {
+         width:50%;
+         p { max-width: 550px; font-size: 30px; }
+      }
+      .summary_list {
+         width:50%;
+         button { 
+            width: 100%; height: 100%; display: block; text-align: left; font-weight: $regular; font-size: 23px;
+            padding: 15px 0;
+            position: relative;
+            span { 
+               font-weight: $medium; 
+               position: absolute; top:50%; right:0;
+               @include translate(0,-50%);
+            }
+            em {
+               width: 100%; height: 1px;
+               position: absolute; bottom:0;
+               background-color: black;
+               left:0;
+            }
+         }
+      }
+   }
    .intro_elm {
       width: max-content; height: 1000px;
       > div {

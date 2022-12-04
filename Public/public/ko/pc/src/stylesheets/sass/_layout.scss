@@ -7,6 +7,7 @@
 .cursor {
    width: 20px; height: 20px; background-color: $mainColor; position: fixed; left: 0; top: 0;
    z-index: 10;
+   pointer-events:none;
    @include borderRadius(100%);
 }
 .c-scrollbar_thumb {

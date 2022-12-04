@@ -273,37 +273,37 @@ $mob-width		: 750px;
 }
 
 @function vw($size) {
-	$vwSize: $size / 20;
-	@return #{$vwSize}vw;
+	$vwSize: (768 * 0.01);
+	@return ($size / $vwSize) * 1vw;
 }
 
-@media only screen and (max-width:768px) {
-	html {font-size:18px !important;}
-}
-@media only screen and (max-width:718px) {
-	html {font-size:17px !important;}
-}
-@media only screen and (max-width:669px) {
-	html {font-size:16px !important;}
-}
-@media only screen and (max-width:620px) {
-	html {font-size:15px !important;}
-}
-@media only screen and (max-width:571px) {
-	html {font-size:14px !important;}
-}
-@media only screen and (max-width:522px) {
-	html {font-size:13px !important;}
-}
-@media only screen and (max-width:473px) {
-	html {font-size:12px !important;}
-}
-@media only screen and (max-width:424px) {
-	html {font-size:11px !important;}
-}
-@media only screen and (max-width:375px) {
-	html {font-size:10px !important;}
-}
-@media only screen and (max-width:325px) {
-	html {font-size:8px !important;}
-}
+// @media only screen and (max-width:768px) {
+// 	html {font-size:18px !important;}
+// }
+// @media only screen and (max-width:718px) {
+// 	html {font-size:17px !important;}
+// }
+// @media only screen and (max-width:669px) {
+// 	html {font-size:16px !important;}
+// }
+// @media only screen and (max-width:620px) {
+// 	html {font-size:15px !important;}
+// }
+// @media only screen and (max-width:571px) {
+// 	html {font-size:14px !important;}
+// }
+// @media only screen and (max-width:522px) {
+// 	html {font-size:13px !important;}
+// }
+// @media only screen and (max-width:473px) {
+// 	html {font-size:12px !important;}
+// }
+// @media only screen and (max-width:424px) {
+// 	html {font-size:11px !important;}
+// }
+// @media only screen and (max-width:375px) {
+// 	html {font-size:10px !important;}
+// }
+// @media only screen and (max-width:325px) {
+// 	html {font-size:8px !important;}
+// }

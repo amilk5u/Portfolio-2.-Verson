@@ -109,27 +109,7 @@ table { width: 100%; text-align: left; border-collapse: collapse; border-spacing
 /* Input - color setting */
 /* Button - color setting */
 /** BASE SETTING */
-#introduce .top_elm:after { content: " "; display: block; clear: both; }
-
-@media only screen and (max-width: 768px) { html { font-size: 18px !important; } }
-
-@media only screen and (max-width: 718px) { html { font-size: 17px !important; } }
-
-@media only screen and (max-width: 669px) { html { font-size: 16px !important; } }
-
-@media only screen and (max-width: 620px) { html { font-size: 15px !important; } }
-
-@media only screen and (max-width: 571px) { html { font-size: 14px !important; } }
-
-@media only screen and (max-width: 522px) { html { font-size: 13px !important; } }
-
-@media only screen and (max-width: 473px) { html { font-size: 12px !important; } }
-
-@media only screen and (max-width: 424px) { html { font-size: 11px !important; } }
-
-@media only screen and (max-width: 375px) { html { font-size: 10px !important; } }
-
-@media only screen and (max-width: 325px) { html { font-size: 8px !important; } }
+#introduce .navigation:after, #introduce .top_elm:after { content: " "; display: block; clear: both; }
 
 body { -webkit-backface-visibility: hidden; }
 
@@ -176,7 +156,7 @@ html.has-scroll-dragging { -webkit-user-select: none; -moz-user-select: none; -m
 
 .mouse .page { display: block; }
 
-.cursor { width: 20px; height: 20px; background-color: #ff5252; position: fixed; left: 0; top: 0; z-index: 10; -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%; }
+.cursor { width: 20px; height: 20px; background-color: #ff5252; position: fixed; left: 0; top: 0; z-index: 10; pointer-events: none; -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%; }
 
 /* Header (헤더) */
 header { width: 100%; height: auto; position: fixed; z-index: 5; /* Logo (로고) */ /* Menu */ /* Show Menu (펼쳐진 메뉴) */ }
@@ -249,7 +229,7 @@ header #showMenu .menu_bg_mask { width: 100%; height: 100vh; position: absolute;
 
 /* Footer (푸터) */
 /* container */
-.container { width: 100%; background-color: #f9f6e7; padding: 0 0 1000px; }
+.container { width: 100%; background-color: #f9f6e7; padding: 0 0 1000px; cursor: none; }
 
 /* section 1 - intro */
 #intro { width: 100%; height: 980px; }
@@ -258,7 +238,7 @@ header #showMenu .menu_bg_mask { width: 100%; height: 100vh; position: absolute;
 
 #intro .main_title_txt { display: inline-block; position: relative; z-index: 2; top: 1%; left: -5%; }
 
-#intro .main_title_txt h1 { width: max-content; position: relative; font-size: 11.5vw; font-weight: 500; letter-spacing: -15px; line-height: 216px; /* mix-blend-mode: overlay; */ color: #181712; font-family: "NeueMachina", "YoonGothicPro750", Arial, Apple SD Gothic Neo, sans-serif; text-align: center; position: relative; z-index: 1; -webkit-text-stroke: 4px #181712; }
+#intro .main_title_txt h1 { width: max-content; position: relative; font-size: 230px; font-weight: 500; letter-spacing: -15px; line-height: 216px; /* mix-blend-mode: overlay; */ color: #181712; font-family: "NeueMachina", "YoonGothicPro750", Arial, Apple SD Gothic Neo, sans-serif; text-align: center; position: relative; z-index: 1; -webkit-text-stroke: 4px #181712; }
 
 #intro .main_title_txt h1 img { width: 250px; height: 180px; position: relative; top: 17px; }
 
@@ -371,6 +351,22 @@ header #showMenu .menu_bg_mask { width: 100%; height: 100vh; position: absolute;
 #introduce { width: 100%; }
 
 #introduce .covering_wrap { max-width: 1920px; margin: 0 auto; }
+
+#introduce .navigation { max-width: 1680px; margin: 0 auto; }
+
+#introduce .navigation > div { float: left; }
+
+#introduce .navigation .txt_wrap { width: 50%; }
+
+#introduce .navigation .txt_wrap p { max-width: 550px; font-size: 30px; }
+
+#introduce .navigation .summary_list { width: 50%; }
+
+#introduce .navigation .summary_list button { width: 100%; height: 100%; display: block; text-align: left; font-weight: 400; font-size: 23px; padding: 15px 0; position: relative; }
+
+#introduce .navigation .summary_list button span { font-weight: 500; position: absolute; top: 50%; right: 0; -webkit-transform: translate(0, -50%); -moz-transform: translate(0, -50%); -ms-transform: translate(0, -50%); -o-transform: translate(0, -50%); transform: translate(0, -50%); }
+
+#introduce .navigation .summary_list button em { width: 100%; height: 1px; position: absolute; bottom: 0; background-color: black; left: 0; }
 
 #introduce .intro_elm { width: max-content; height: 1000px; }
 
@@ -560,9 +556,9 @@ strong { font-weight: 400; }
 
 .guide_line div:after, .guide_line div:before { width: 1px; height: 100%; display: block; content: ""; position: fixed; background-color: #04a0a0; z-index: 1000; }
 
-.guide_line div.guide_70:before { left: 2vw; }
+.guide_line div.guide_70:before { left: 5.20833vw; }
 
-.guide_line div.guide_70:after { right: 2vw; }
+.guide_line div.guide_70:after { right: 5.20833vw; }
 
 .guide_line div.guide_center:before { left: 50%; }
 
