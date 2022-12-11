@@ -262,11 +262,5 @@ function main() {
       document.addEventListener('mousemove', (e) => {
          gsap.to(cursor, .001, { left: e.pageX + 'px', top: e.pageY + 'px' });
       });
-      document.querySelector('.c-scrollbar').addEventListener('mouseenter', (e) => {
-         gsap.to(cursor, .001, { display: 'none' });
-      });
-      document.querySelector('.c-scrollbar').addEventListener('mouseleave', (e) => {
-         gsap.to(cursor, .001, { display: 'block' });
-      });
    });
-}
+} 
